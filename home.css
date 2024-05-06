@@ -1043,27 +1043,23 @@ hr {
 }
 
 .serviceCard {
-  /* position: relative; */
-  padding: 20px;
-  max-width: 384px;
-  min-height: 208px;
+  background: linear-gradient(270deg, #44CD77 -23.46%, #2871FF 100%); /* Dark card background */
+    border: 1px solid #08f; /* Bright cyan border */
+    padding: 2px;
+    /* width: 300px; */
+    box-shadow: 0 0 10px #08f; /* Neon glow effect */
+    position: relative;
+    clip-path: polygon(12% 0%, 100% 0%, 100% 100%,0% 100%, 0% 20%); /* Clipping the top left corner */
+
 }
 .serviceCardContent {
-  /* position: absolute; */
-  z-index: 999;
-  /* inset: 0; */
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  background-image: url(Home/Card.svg);
-  background-repeat: no-repeat;
-  /* background-position: center; */
-  background-size: cover;
-  border-right: 1px solid red;
-  /* background: linear-gradient(to right, red, purple); */
-  /* border-right-width:1px; */
-  /* -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, transparent), color-stop(0.5, grey), color-stop(0.5, grey), color-stop(1, transparent)) 0 100%; */
+  background-color: #000; /* Dark card background */
+    border: 1px solid #08f; /* Bright cyan border */
+    padding: 50px;
+    /* width: 280px; */
+    box-shadow: 0 0 10px #08f; /* Neon glow effect */
+    position: relative;
+    clip-path: polygon(12% 0%, 100% 0%, 100% 100%,0% 100%, 0% 20%); /* Clipping the top left corner */
   
 }
 .serviceCardContent p {
@@ -1113,6 +1109,17 @@ hr {
   /* height: 208px;  */
   /* width: fit-content; */
   /* border: 1px solid red; */
+}
+.path{
+  position: absolute;
+  top: 10%;
+  right: 2%;
+  /* left: 2%; */
+}
+.frame1{
+  position: absolute;
+  left: -5px;
+  top: 60px;
 }
 
 
