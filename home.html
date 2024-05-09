@@ -27,11 +27,12 @@
     <title>Home</title>
   </head>
   <body>
+    <!-- <img src="glow1.svg" alt="" class="getInTouchGlowR">
+    <img src="glow1.svg" alt="" class="getInTouchGlowL"> -->
+    <div class="glowContainer">
+      <img src="glow1.svg" alt="" class="lightImg" />
+    </div>
     <header>
-      <div class="glowContainer">
-        <img src="glow1.svg" alt="" class="lightImg" />
-      </div>
-
       <!-- <img src="glow.svg" alt="" class="lightImg" /> -->
       <nav>
         <div class="logoContainer">
@@ -44,8 +45,8 @@
           <li><a href="#">FAQ</a></li>
           <li><a href="#">BLOG</a></li>
           <li><a href="#">CONTACT US</a></li>
-          <li class="options">
-            <div class="select" onclick="appear()">
+          <li class="options" onclick="appear()">
+            <div class="select">
               EN
               <img
                 src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
@@ -149,8 +150,12 @@
                 translation and localization services.
               </p>
               <div class="btnContainer">
-                <button class="btn">How It Work</button>
-                <button class="btn">Get in Touch</button>
+                <div class="btnContainer1">
+                  <button class="btn">How It Work</button>
+                </div>
+                <div class="btnContainer1">
+                  <button class="btn">Get in Touch</button>
+                </div>
               </div>
 
               <div class="shape1Container">
@@ -164,10 +169,12 @@
           <div class="learnMore">
             <p>learn more</p>
             <!-- <div class="arrow"></div> -->
-            <img src="arrow-down-02.png" alt="" />
+            <a href="#whyTranslateSection"
+              ><img src="arrow-down-02.png" alt=""
+            /></a>
           </div>
         </section>
-        <section>
+        <section id="whyTranslateSection">
           <div class="whyTranslate">
             <h3>
               WHY LOCALIZE & <span class="specialWord">TRANSLATE</span> YOUR
@@ -372,12 +379,20 @@
               <div class="serviceCard">
                 <div class="serviceCardContent">
                   <div class="serviceCardImgContainer">
-                    <img src="Home/In Game TEXT.png" alt="" />
+                    <img src="Home/Marketing Materials.png" alt="" />
                   </div>
-                  <h3>In Game TEXT</h3>
+                  <h3>Marketing Materials</h3>
                   <p>
-                    We translate and adapt all in-game texts, including
-                    dialogues, menus, subtitles, achievements, and more.
+                    We provide localization services for marketing materials
+                    such as trailers, websites, press release, and social media
+                    content, ensuring your game’s message resonates with
+                    international audiences.
+                    <span class="tooltiptext"
+                      >We provide localization services for marketing materials
+                      such as trailers, websites, press release, and social
+                      media content, ensuring your game’s message resonates with
+                      international audiences.</span
+                    >
                   </p>
                   <img src="_Path_.svg" alt="" class="path" />
                   <img src="Frame.svg" alt="" class="frame1" />
@@ -386,12 +401,14 @@
               <div class="serviceCard">
                 <div class="serviceCardContent">
                   <div class="serviceCardImgContainer">
-                    <img src="Home/In Game TEXT.png" alt="" />
+                    <img src="Home/Legal Documents.png" alt="" />
                   </div>
-                  <h3>In Game TEXT</h3>
+                  <h3>Legal Documents</h3>
                   <p>
-                    We translate and adapt all in-game texts, including
-                    dialogues, menus, subtitles, achievements, and more.
+                    Our team ensures compliance with legal and regulatory
+                    requirements by translating end-user license agreements,
+                    terms of service, privacy policies, and other legal
+                    documents.
                   </p>
                   <img src="_Path_.svg" alt="" class="path" />
                   <img src="Frame.svg" alt="" class="frame1" />
@@ -400,12 +417,12 @@
               <div class="serviceCard">
                 <div class="serviceCardContent">
                   <div class="serviceCardImgContainer">
-                    <img src="Home/In Game TEXT.png" alt="" />
+                    <img src="Home/Website Localization.png" alt="" />
                   </div>
-                  <h3>In Game TEXT</h3>
+                  <h3>Website Localization</h3>
                   <p>
-                    We translate and adapt all in-game texts, including
-                    dialogues, menus, subtitles, achievements, and more.
+                    We adapt your game's website, making it accessible and
+                    engaging for players from different linguistic backgrounds.
                   </p>
                   <img src="_Path_.svg" alt="" class="path" />
                   <img src="Frame.svg" alt="" class="frame1" />
@@ -519,10 +536,17 @@
               </p>
             </div>
             <div class="processCards">
+              <img src="Home/Illustration (1).png" alt="" class="processBG" />
+              <img src="glow1.svg" alt="" class="processGlow" />
               <div class="processCardsLine"></div>
-              <img src="Home/1.svg" alt="" class="arrow-down1">
-              <img src="Home/2.svg" alt="" class="arrow-down2">
-              <img src="Home/3.svg" alt="" class="arrow-down3">
+              <img src="Home/1.svg" alt="" class="arrow-down1" />
+              <img src="Home/2.svg" alt="" class="arrow-down2" />
+              <img src="Home/3.svg" alt="" class="arrow-down3" />
+              <img src="Home/4.svg" alt="" class="arrow-down4" />
+              <img src="Home/5.svg" alt="" class="arrow-down5" />
+              <img src="Home/6.svg" alt="" class="arrow-down6" />
+              <img src="Home/7.svg" alt="" class="arrow-down7" />
+              <img src="Home/8.svg" alt="" class="arrow-down8" />
               <div class="processCard1">
                 <div class="processChar"><h2>A</h2></div>
                 <div>
@@ -589,7 +613,7 @@
               <div class="processCard7">
                 <div class="processChar"><h2>G</h2></div>
                 <div>
-                  <h4>Editing & Proofreading Again</h4>
+                  <h4>Editing & Proofreading</h4>
                   <p>
                     Based on the testing results, we refine and polish the
                     localized content to ensure optimal performance.
@@ -606,6 +630,24 @@
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="getInTouch">
+            <img src="Home/CTA (1).png" alt="" class="getInTouchBg" />
+
+            <!-- <div class="getInTouchGlowR"></div> -->
+            <h3>Get in <span class="specialWord">Touch</span></h3>
+            <p>
+              Ready to expand your game's reach and conquer new markets? Contact
+              Aralingual today for a personalized consultation and take your
+              game to the next level of international success. Our team is here
+              to answer any questions you may have and provide you with a
+              tailored localization solution.
+            </p>
+            <div class="getInTouchBtn">
+              <button class="TouchBtn" href="#">Get in touch now!</button>
             </div>
           </div>
         </section>
