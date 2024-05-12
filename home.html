@@ -41,7 +41,7 @@
 
         <ul class="nav-list" id="nav-list">
           <li><a href="#" class="active">HOME</a></li>
-          <li><a href="#">ABOUT US</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
           <li><a href="#">FAQ</a></li>
           <li><a href="#">BLOG</a></li>
           <li><a href="#">CONTACT US</a></li>
@@ -57,76 +57,76 @@
                 style="font-size: 12px; padding-top: 5px"
               ></i>
             </div>
-            <div class="dropDown">
-              <ul>
-                <li onclick="changeLang('ltr')">
-                  <a href="#" class="language"
-                    >AR
-                    <img
-                      src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
-                      alt=""
-                  /></a>
-                </li>
-                <li onclick="changeLang('rtl')">
-                  <a href="#" class="language"
-                    >CN
-                    <img
-                      src="Aralingual - Update Assets 2024/Assets/Icon language/CN.svg"
-                      alt=""
-                  /></a>
-                </li>
-                <li onclick="changeLang('rtl')">
-                  <a href="#" class="language"
-                    >JA
-                    <img
-                      src="Aralingual - Update Assets 2024/Assets/Icon language/JA.svg"
-                      alt=""
-                  /></a>
-                </li>
-                <li onclick="changeLang('rtl')">
-                  <a href="#" class="language"
-                    >KO
-                    <img
-                      src="Aralingual - Update Assets 2024/Assets/Icon language/KO.svg"
-                      alt=""
-                  /></a>
-                </li>
-                <li onclick="changeLang('rtl')">
-                  <a href="#" class="language"
-                    >DE
-                    <img
-                      src="Aralingual - Update Assets 2024/Assets/Icon language/DE.svg"
-                      alt=""
-                  /></a>
-                </li>
-                <li onclick="changeLang('rtl')">
-                  <a href="#" class="language"
-                    >FR
-                    <img
-                      src="Aralingual - Update Assets 2024/Assets/Icon language/FR.svg"
-                      alt=""
-                  /></a>
-                </li>
-                <li onclick="changeLang('rtl')">
-                  <a href="#" class="language"
-                    >PO
-                    <img
-                      src="Aralingual - Update Assets 2024/Assets/Icon language/PO.svg"
-                      alt=""
-                  /></a>
-                </li>
-                <li onclick="changeLang('rtl')">
-                  <a href="#" class="language"
-                    >SE
-                    <img
-                      src="Aralingual - Update Assets 2024/Assets/Icon language/SE.svg"
-                      alt=""
-                  /></a>
-                </li>
-              </ul>
-            </div>
           </li>
         </ul>
+        <div class="dropDown">
+          <ul>
+            <li onclick="changeLang('ltr')">
+              <a href="#" class="language"
+                >AR
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >CN
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/CN.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >JA
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/JA.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >KO
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/KO.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >DE
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/DE.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >FR
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/FR.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >PO
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/PO.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >SE
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/SE.svg"
+                  alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
         <div class="humbrger" id="humbrger" onclick="show()">
           <div class="bar"></div>
           <div class="bar2"></div>
@@ -339,9 +339,10 @@
                     <img src="Home/In Game TEXT.svg" alt="" />
                   </div>
                   <h3>In Game TEXT</h3>
-                  <p>
+                  <p class="tooltip">
                     We translate and adapt all in-game texts, including
                     dialogues, menus, subtitles, achievements, and more.
+                    <span class="tooltiptext">Tooltip text</span>
                   </p>
                   <img src="_Path_.svg" alt="" class="path" />
                   <img src="Frame.svg" alt="" class="frame1" />
@@ -667,7 +668,6 @@
               <li><a href="#">FAQ</a></li>
               <li><a href="#">BLOG</a></li>
               <li><a href="#">CONTACT US</a></li>
-              <li><a href="#">EN </a></li>
             </ul>
             <div class="social-links">
               <a href="#"><img src="Facebook.svg" alt="Facebook" /></a>
