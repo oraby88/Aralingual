@@ -40,24 +40,19 @@
 }
 
 body {
-  max-width: 1440px;
   margin-inline: auto;
   background-color: var(--black-700);
   /* margin-top: 30px; */
   font-family: "Rajdhani", sans-serif;
-  padding: 0 30px;
   color: var(--color-white);
   position: relative;
   z-index: 99999;
 }
 @media screen and (max-width: 600px) {
-  body {
-    padding: 0 20px;
-  }
 }
 
 section {
-  margin: 90px 0;
+  margin: 120px 0;
   padding: 0 100px;
 }
 header {
@@ -72,8 +67,8 @@ header {
   /* filter: blur(20px); */
   /* -webkit-filter: blur(20px); */
 
-  /* -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px); */
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 h3 {
   font-size: 42px;
@@ -84,7 +79,7 @@ article {
 
 @media screen and (max-width: 992px) {
   section {
-    padding: 0;
+    padding: 0 20px;
   }
   header {
     padding: 20px 0;
@@ -123,17 +118,12 @@ nav {
   right: 0;
   gap: 120px;
   margin: 0 auto;
-  padding: 0 30px;
+  /* padding: 0 30px; */
   z-index: 999999999999999;
 }
 @media screen and (max-width: 992px) {
   nav {
-    padding: 0 30px 0 30px;
-  }
-}
-@media screen and (max-width: 600px) {
-  nav {
-    padding: 0 20px 0 20px;
+    padding: 0 20px;
   }
 }
 .nav-list {
@@ -558,8 +548,6 @@ nav ul li a:focus {
   color: var(--color-white);
 }
 
-
-
 /* Why Translate? */
 
 .whyTranslate {
@@ -584,8 +572,6 @@ nav ul li a:focus {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  leading-trim: both;
-  text-edge: cap;
   font-size: 42px;
   font-weight: var(--fw-700);
   line-height: 52px;
@@ -647,6 +633,9 @@ nav ul li a:focus {
   background-clip: padding-box, border-box; */
   /* background-image: url(Card.svg); */
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
 .cardFrameContainer img {
   width: 100%;
@@ -660,15 +649,16 @@ nav ul li a:focus {
   max-width: 376px;
 }
 .card img {
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 .card h3 {
-  font-size: 21px;
+  font-size: 24px;
   /* font-weight: var(--fw-700); */
   background: linear-gradient(80.7deg, white 10.1%, #71717a 63.2%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  width: 50%;
+  /* width: 50%; */
+  line-height: 26px;
 }
 .card p {
   overflow: hidden;
@@ -681,10 +671,10 @@ nav ul li a:focus {
   /* white-space: nowrap;  */
   /* overflow: hidden;
   text-overflow: ellipsis;  */
-  --max-lines: 3; 
+  --max-lines: 3;
   overflow: hidden;
-   
-  display: -webkit-box; 
+
+  display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: var(--max-lines);
 }
@@ -719,7 +709,6 @@ nav ul li a:focus {
   .cardImgContainer img {
     width: 30px;
   }
-
 }
 
 .card2 {
@@ -1037,7 +1026,7 @@ nav ul li a:focus {
   .path {
     width: 100%;
   }
-  .servicesContainer{
+  .servicesContainer {
     row-gap: 40px;
   }
 }
@@ -1203,20 +1192,20 @@ nav ul li a:focus {
   }
 }
 
-.serviceCard::before,
-.serviceCard::after {
+.serviceCardContainer::before,
+.serviceCardContainer::after {
   content: "";
   position: absolute;
   /* inset: 0; */
 }
-.serviceCard::before {
+.serviceCardContainer::before {
   background-color: #44cd77;
   content: "";
   display: block;
   width: 10px;
   height: 32px;
-  right: -5px;
-  top: 80px;
+  right: -3px;
+  top: 50px;
   z-index: 999;
 }
 
@@ -1241,23 +1230,19 @@ nav ul li a:focus {
 }
 
 .serviceCardContainer {
-  /* max-width: fit */
-  /* width: 382px; */
-  /* height: 208px;  */
-  /* width: fit-content; */
-  /* border: 1px solid red; */
+  position: relative;
 }
 .path {
   position: absolute;
   top: 10%;
-  right: 2%;
+  right: 1%;
   /* left: 2%; */
   /* width: 100%; */
   /* height: 100%; */
 }
 .frame1 {
   position: absolute;
-  left: -5px;
+  left: -3px;
   top: 70px;
 }
 
@@ -1640,6 +1625,7 @@ nav ul li a:focus {
   clip-path: polygon(92% 0, 100% 32%, 100% 100%, 10% 100%, 0 70%, 0 0);
   background: linear-gradient(270deg, #44cd77 -43.46%, #2871ff 100%);
   border: 0;
+  color: var(--color-white);
 }
 .getInTouchGlowL {
   position: absolute;
@@ -1650,18 +1636,22 @@ nav ul li a:focus {
 }
 .getInTouchGlowR {
   position: absolute;
-  width: 800px;
-  height: 500px;
-  right: -52%;
-  top: -100%;
-  background: rgb(63, 94, 251);
-  background: radial-gradient(
-    circle,
-    rgba(63, 94, 251, 1) 0%,
-    rgb(15, 15, 15, 1) 64%
+  width: 1200px;
+  height: 800px;
+  right: 0%;
+  /* top: 90%; */
+  bottom: 0;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    90deg,
+    rgba(34, 193, 195, 0) 0%,
+    rgba(40, 113, 255, 0.4) 100%
   );
   z-index: -3;
   overflow: hidden;
+  box-shadow: -18px 17px 91px 1px rgba(0,0,0,0.75);
+-webkit-box-shadow: -18px 17px 91px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: -18px 17px 91px 1px rgba(0,0,0,0.75);
 }
 @media screen and (max-width: 600px) {
   .getInTouch p {
@@ -1699,8 +1689,15 @@ nav ul li a:focus {
   }
 }
 
-
 /* footer */
+.footer-content {
+  padding: 0 100px;
+}
+@media screen and (max-width: 992px) {
+  .footer-content {
+    padding: 0 20px;
+  }
+}
 
 .footer-left {
   display: flex;
@@ -1781,6 +1778,3 @@ hr {
     gap: 5px;
   }
 }
-
-
-

@@ -30,119 +30,279 @@
     <!-- <div class="glowContainer">
       <img src="glow1.svg" alt="" class="lightImg" />
     </div> -->
+
     <header>
-        <!-- <img src="glow.svg" alt="" class="lightImg" /> -->
-        <nav>
-          <div class="logoContainer">
-            <img src="Group.png" alt="logo" />
-          </div>
-  
-          <ul class="nav-list" id="nav-list">
-            <li><a href="home.html" class="active">HOME</a></li>
-            <li><a href="#">ABOUT US</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">BLOG</a></li>
-            <li><a href="#">CONTACT US</a></li>
-            <li class="options" onclick="appear()">
-              <div class="select">
-                EN
+      <!-- <img src="glow.svg" alt="" class="lightImg" /> -->
+      <nav>
+        <div class="logoContainer">
+          <img src="Group.png" alt="logo" />
+        </div>
+
+        <ul class="nav-list" id="nav-list">
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="about.html" class="active">ABOUT US</a></li>
+          <li><a href="FAQs.html">FAQ</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">CONTACT US</a></li>
+          <li class="options" onclick="appear()">
+            <div class="select">
+              EN
+              <img
+                src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
+                alt=""
+              />&nbsp;
+              <i
+                class="fa-solid fa-chevron-down"
+                style="font-size: 12px; padding-top: 5px"
+              ></i>
+            </div>
+          </li>
+        </ul>
+        <div class="dropDown">
+          <ul>
+            <li onclick="changeLang('ltr')">
+              <a href="#" class="language"
+                >AR
                 <img
-                  src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
                   alt=""
-                />&nbsp;
-                <i
-                  class="fa-solid fa-chevron-down"
-                  style="font-size: 12px; padding-top: 5px"
-                ></i>
-              </div>
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >CN
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/CN.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >JA
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/JA.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >KO
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/KO.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >DE
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/DE.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >FR
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/FR.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >PO
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/PO.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >SE
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/SE.svg"
+                  alt=""
+              /></a>
             </li>
           </ul>
-          <div class="dropDown">
-            <ul>
-              <li onclick="changeLang('ltr')">
-                <a href="#" class="language"
-                  >AR
-                  <img
-                    src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
-                    alt=""
-                /></a>
-              </li>
-              <li onclick="changeLang('rtl')">
-                <a href="#" class="language"
-                  >CN
-                  <img
-                    src="Aralingual - Update Assets 2024/Assets/Icon language/CN.svg"
-                    alt=""
-                /></a>
-              </li>
-              <li onclick="changeLang('rtl')">
-                <a href="#" class="language"
-                  >JA
-                  <img
-                    src="Aralingual - Update Assets 2024/Assets/Icon language/JA.svg"
-                    alt=""
-                /></a>
-              </li>
-              <li onclick="changeLang('rtl')">
-                <a href="#" class="language"
-                  >KO
-                  <img
-                    src="Aralingual - Update Assets 2024/Assets/Icon language/KO.svg"
-                    alt=""
-                /></a>
-              </li>
-              <li onclick="changeLang('rtl')">
-                <a href="#" class="language"
-                  >DE
-                  <img
-                    src="Aralingual - Update Assets 2024/Assets/Icon language/DE.svg"
-                    alt=""
-                /></a>
-              </li>
-              <li onclick="changeLang('rtl')">
-                <a href="#" class="language"
-                  >FR
-                  <img
-                    src="Aralingual - Update Assets 2024/Assets/Icon language/FR.svg"
-                    alt=""
-                /></a>
-              </li>
-              <li onclick="changeLang('rtl')">
-                <a href="#" class="language"
-                  >PO
-                  <img
-                    src="Aralingual - Update Assets 2024/Assets/Icon language/PO.svg"
-                    alt=""
-                /></a>
-              </li>
-              <li onclick="changeLang('rtl')">
-                <a href="#" class="language"
-                  >SE
-                  <img
-                    src="Aralingual - Update Assets 2024/Assets/Icon language/SE.svg"
-                    alt=""
-                /></a>
-              </li>
-            </ul>
-          </div>
-          <div class="humbrger" id="humbrger" onclick="show()">
-            <div class="bar"></div>
-            <div class="bar2"></div>
-            <div class="bar"></div>
-          </div>
-        </nav>
-      </header>
-
-      <section class="welcome-section">
-        <div class="welcomeBG">
-            <img src="Aralingual - Update Assets 2024/Website/About Us/About-us.png" alt="" >
         </div>
-        <div class="welcome-words">
+        <div class="humbrger" id="humbrger" onclick="show()">
+          <div class="bar"></div>
+          <div class="bar2"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+    </header>
+    <article>
+      <main>
+        <section class="welcome-section">
+          <div class="welcomeBG">
+            <img
+              src="Aralingual - Update Assets 2024/Website/About Us/About-us.png"
+              alt=""
+            />
+          </div>
+          <div class="welcome-words">
             <h3>Welcome to Aralingual</h3>
-        </div>
-      </section>
+            <h1>Pioneering Arabic Game Localization</h1>
+            <p>for Unparalleled Gaming Experiences!</p>
+          </div>
+        </section>
+        <section class="about-section">
+          <div class="welcomeBG">
+            <img
+              src="Aralingual - Update Assets 2024/Website/About Us/BG-About.png"
+              alt=""
+            />
+          </div>
+          <div class="about-words">
+            <h3>About <span class="special-word"> Aralingual </span></h3>
+            <p>
+              At Aralingual, our journey began with a mission to revolutionize
+              the gaming landscape for Arab gamers. We recognized the immense
+              potential of the Arabic-speaking market and understood the
+              frustrations they faced due to the absence of localized Arabic
+              games. This not only resulted in a subpar gaming experience but
+              also led to piracy and the creation of temporary Arabic versions,
+              ultimately causing a significant loss of players, reputation, and
+              revenue
+            </p>
+          </div>
+          <div class="aboutCards">
+            <div class="aboutCard">
+              <div class="notiglow"></div>
+              <div class="notiborderglow"></div>
+              <p class="aboutCardBody">
+                Driven by our passion for gaming and the desire to bridge this
+                gap, we embarked on a quest to bring the same level of gaming
+                excellence enjoyed by players worldwide to Arabic-speaking
+                countries. We realized the true significance of this market,
+                particularly in the realm of mobile games, where the potential
+                for success is staggering. In fact, Saudi Arabia boasts <span class="specialSentance">the
+                highest average revenue per mobile paying user </span>(ARPPU) rate,
+                with an astounding $270 per person, surpassing even the figures
+                in China by 88%.
+              </p>
+            </div>
+            <div style="width: 100%">
+              <div class="aboutCard" id="card2">
+                <div class="notiglow"></div>
+                <div class="notiborderglow"></div>
+                <p class="aboutCardBody">
+                  With an unwavering dedication to merging passion and
+                  practicality, our goal is to provide the Arab world with an
+                  extraordinary gaming experience. By doing so, we open the
+                  doors to billions of dollars in revenue for gaming companies
+                  that have yet to tap into this thriving, rapidly expaWhat sets
+                  us apart at Aralingual is our commitment to empowering video
+                  game companies to unlock the full potential of the
+                  Arabic-speaking market. We offer comprehensive localization
+                  services tailored specifically to the unique needs and
+                  preferences of Arab gamers. Through meticulous translation and
+                  adaptation, we ensure that your game resonates deeply with
+                  Arabic-speaking players, immersing them in captivating
+                  narratives, intuitive interfaces, and culturally relevant
+                  gaming experiences.nding, and youth-oriented market.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="team-section">
+          <div class="teamSectionContainer">
+            <div class="teamCard">
+              <img
+                src="Aralingual - Update Assets 2024/Website/About Us/Card-view.png"
+                alt=""
+                class="teamImg"
+              />
+            </div>
+            <div class="teamWords">
+              <p>
+                Our team of expert linguists, gaming enthusiasts, and industry
+                professionals combine their knowledge and expertise to deliver
+                outstanding results. We understand the intricacies of gaming
+                culture and employ our linguistic prowess to convey the essence
+                and emotion of your game accurately. By meticulously adapting
+                your game's content, including dialogues, menus, subtitles, and
+                more, we create an environment where Arab gamers feel truly
+                understood and engaged.
+              </p>
+              <p>
+                Partnering with Aralingual means gaining a trusted ally who
+                shares your vision for global success. We are committed to
+                delivering exceptional quality and meeting your specific project
+                requirements, all while adhering to your game's unique style,
+                tone, and gameplay mechanics. Our rigorous quality assurance
+                processes guarantee flawless translations, ensuring that every
+                element of your game is culturally sensitive, immersive, and
+                ready to captivate Arabic-speaking players.
+              </p>
+            </div>
+          </div>
+          <div class="teamFooter">
+            <p>
+              Embrace the limitless possibilities of the Arabic-speaking market
+              by collaborating with Aralingual. We are here to guide you through
+              the intricacies of game localization and open the doors to
+              unrivaled growth and success. Together, let's revolutionize the
+              gaming industry, captivate a new audience, and unleash the
+              untapped potential of the Arab world.
+            </p>
+            <img src="shape-1.svg" alt="" class="sahpe1">
+          </div>
+        </section>
+        <section>
+          <div class="gameImgComtainer">
+            <img
+              src="Aralingual - Update Assets 2024/Website/About Us/game.png"
+              alt=""
+              class="gameImg"
+            />
+            <div class="gameImgCard1">
+              <img
+                src="Aralingual - Update Assets 2024/Website/About Us/Frame 48.svg"
+                alt=""
+                class="gameImgFrame1"
+              />
+              <div>
+                <p>Services one</p>
+                <h4>Website Localization</h4>
+              </div>
+            </div>
+            <div class="gameImgCard2">
+              <img
+                src="Aralingual - Update Assets 2024/Website/About Us/Frame 48 (1).svg"
+                alt=""
+                class="gameImgFrame2"
+              />
+              <div>
+                <p>Services Two</p>
+                <h4>Legal Documents</h4>
+              </div>
+            </div>
+          </div>
 
+        </section>
+        <section>
+          <div class="getInTouch">
+            <img src="Home/CTA (1).png" alt="" class="getInTouchBg" />
 
+            <!-- <div class="getInTouchGlowR"></div> -->
+            <h3>Get in <span class="specialWord">Touch</span></h3>
+            <p>
+              Ready to expand your game's reach and conquer new markets? Contact
+              Aralingual today for a personalized consultation and take your
+              game to the next level of international success. Our team is here
+              to answer any questions you may have and provide you with a
+              tailored localization solution.
+            </p>
+            <div class="getInTouchBtn">
+              <button class="TouchBtn" href="#">Get in touch now!</button>
+            </div>
+          </div>
+        </section>
+      </main>
 
       <footer>
         <!-- <img src="Ellipse 1833.svg" alt="" class="darkImg" /> -->
@@ -173,5 +333,6 @@
           </div>
         </div>
       </footer>
+    </article>
   </body>
 </html>
