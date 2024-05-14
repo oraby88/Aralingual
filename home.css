@@ -1728,7 +1728,7 @@ hr {
   opacity: 0.2;
 }
 .footer-right {
-  margin: 15px 0;
+  padding: 15px 0;
   text-align: center;
 }
 .footer-content p {

@@ -462,6 +462,15 @@ nav ul li a:focus {
     font-size: 17px;
   }
 }
+@media screen and (max-width: 400px) {
+  .welcome-words h1 {
+    font-size: 32px;
+  }
+  .welcome-words p {
+    font-size: 15px;
+  }
+}
+
 
 /* question section */
 
@@ -503,6 +512,14 @@ nav ul li a:focus {
   /* font-size: 42px; */
   font-weight: var(--fw-700);
   line-height: 52px;
+}
+@media screen and (max-width:400px) {
+  .questions-section h3 {
+    font-size: 36px;
+  }
+  .questions-section p{
+    font-size: 16px;
+  }
 }
 
 .questions-sectionWords {
@@ -563,6 +580,10 @@ nav ul li a:focus {
   font-weight: var(--fw-500);
   line-height: 28px; /* 140% */
 }
+.questionAndNumberContainer{
+  display: flex;
+  gap: 25px;
+}
 .question-number {
   display: flex;
   gap: 25px;
@@ -585,6 +606,14 @@ nav ul li a:focus {
     font-style: normal;
     font-weight: 500;
     line-height: 120%; /* 26.4px */
+  }
+}
+@media screen and (max-width: 400px) {
+  .question-card h4 {
+    font-size: 16px;
+  }
+  .question-number h2 {
+    font-size: 16px;
   }
 }
 
@@ -735,8 +764,12 @@ nav ul li a:focus {
   overflow: hidden;
 }
 @media screen and (max-width: 600px) {
+  .getInTouch h3 {
+    font-size: 36px;
+  }
   .getInTouch p {
     width: 100%;
+    font-size: 18px;
   }
   .getInTouchBg {
     width: 100%;
