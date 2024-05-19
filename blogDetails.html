@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Aralingual - Update Assets 2024/Assets/Logo & Favicon/Favicon.svg"
+    />
+    <link rel="stylesheet" href="blogDetails.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bitter:ital,wght@0,100..900;1,100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&family=Rajdhani:wght@300;400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="scripts.js"></script>
+    <title>Blog</title>
+  </head>
+  <body>
+    <!-- <div class="glowContainer">
+      <img src="glow1.svg" alt="" class="lightImg" />
+    </div> -->
+    <div class="footerGlow"></div>
+    <div class="glow2"></div>
+    <header>
+      <!-- <img src="glow.svg" alt="" class="lightImg" /> -->
+      <nav>
+        <div class="logoContainer">
+          <img src="Group.png" alt="logo" />
+        </div>
+
+        <ul class="nav-list" id="nav-list">
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="FAQs.html">FAQ</a></li>
+          <li><a href="Blog.html" class="active">BLOG</a></li>
+          <li><a href="#">CONTACT US</a></li>
+          <li class="options" onclick="appear()">
+            <div class="select">
+              EN
+              <img
+                src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
+                alt=""
+              />&nbsp;
+              <i
+                class="fa-solid fa-chevron-down"
+                style="font-size: 12px; padding-top: 5px"
+              ></i>
+            </div>
+          </li>
+        </ul>
+        <div class="dropDown">
+          <ul>
+            <li onclick="changeLang('ltr')">
+              <a href="#" class="language"
+                >AR
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >CN
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/CN.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >JA
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/JA.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >KO
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/KO.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >DE
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/DE.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >FR
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/FR.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >PO
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/PO.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >SE
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/SE.svg"
+                  alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="humbrger" id="humbrger" onclick="show()">
+          <div class="bar"></div>
+          <div class="bar2"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+    </header>
+    <article>
+      <main>
+        <section class="welcome-section">
+          <img
+            src="Aralingual - Update Assets 2024/Website/Blog/Icons/welcomeGlow.png"
+            alt=""
+            class="welcomeGlow"
+          />
+          <div></div>
+          <div class="welcomeBG">
+            <img
+              src="Aralingual - Update Assets 2024/Website/Blog Details/Image/Hero Section.png"
+              alt=""
+            />
+          </div>
+          <div class="welcome-words">
+            <div>
+              <h3>
+                <a href="Blog.html" style="text-decoration: none"
+                  >Back To Blogs</a
+                >
+              </h3>
+            </div>
+            <h1>VIDEO GAME LOCALIZATION TO ARABIC why and how?</h1>
+            <p>By : Haitham mohamed | September 30, 2022 - 8:49 PM</p>
+          </div>
+        </section>
+        <section>
+          <div class="whereArabicSection">
+            <div class="left-side">
+              <div>
+                <h3>Where Do They Speak Arabic?</h3>
+                <p>
+                  The governments of 22 countries recognize Arabic language as
+                  their official language. Arabic is the 5th most popular
+                  language worldwide with about 6% of the world’s population
+                  (450Million). Saudi Arabia leads the most appealing
+                  Arabic-speaking market, and they are followed by Kuwait, UAE,
+                  and Bahrain. So, you see why video game translation is
+                  important!
+                </p>
+              </div>
+              <div class="whyArabicMarketsDiv">
+                <h3>
+                  Why Game Translation | Why Should Games be Localized to
+                  Arabic-Speaking Markets?
+                </h3>
+                <img
+                  src="Aralingual - Update Assets 2024/Website/Blog Details/Image/Art-img.png"
+                  alt=""
+                />
+                <div>
+                  <p>
+                    Video game Localization is to be prioritized to get a
+                    foothold in the Middle East. Below are the reasons you need
+                    to gain the lucrative assets available in the Middle East!
+                    The ARPPU in KSA is $270, and it’s the highest in the
+                    world.The common name called “killer whales” in the game
+                    developer world was given to some of the 40% of Saudi gamers
+                    that spend about $1000 monthly. The entire 40% pay for
+                    in-app purchases. Meanwhile, the Chinese users or gamers
+                    bring $32 compared to KSA’s $270.
+                  </p>
+                  <p>
+                    The vast number of the Arab population are young! They are
+                    below 25 years old, and this generation are tech-savvy and
+                    exposed to hedonistic things most of the time. For instance,
+                    there are internet cafes in Beirut where natives play AAA
+                    shooters just like Call of Duty.
+                  </p>
+                  <p>
+                    The smartphone has penetrated into the most developed Arabic
+                    country! Just in 2019, about 46% usage was seen in Saudi
+                    Arabia. It holds massive potential as well as opportunities
+                    for mobile games. So, video game translation or game
+                    localization is the key to success.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <h3>What Are The Games That Thrive In The Arab World?</h3>
+                <p>
+                  The preferences of users are unique to their countries. Gamers
+                  generally prefer action, sports, racing, or arcade style
+                  games. These games and casual games do fantastically well.
+                  There isn’t much competition, especially when the game
+                  contains cultural elements or the game is localized. For
+                  instance, when a player travels to places around the Arab
+                  World, the game will thrive or succeed.
+                </p>
+              </div>
+              <div class="difficultiesInArabicDiv">
+                <h3>What Are The Difficulties Present In The Arabic Market?</h3>
+                <div>
+                  <p>
+                    It is important to take cognizance of the fact that online
+                    transaction support, internet speed as well as average
+                    income differs from one county to another. Despite
+                    considering this varying factor, it is also good to know the
+                    lucrative smaller populations. For instance, the Arabian
+                    Gulf states are regarded as the smallest when it comes to
+                    population, but the market there is more appealing than that
+                    of Northern African – Morocco and Egypt.
+                  </p>
+                  <p>
+                    This means that markets must be analyzed and evaluated
+                    independent of the other by international game development
+                    companies. That is, video game localization companies should
+                    evaluate them independently based on design, game genre and
+                    the monetization model.
+                  </p>
+                  <p>
+                    Some years back, piracy was a thing in the games market in
+                    the Arab World. However, it is nothing to worry about now.
+                    With access to Steam, Xbox, PlayStation and app stores,
+                    there is an increase in affordability and accessibility of
+                    foreign games. More so, Arabic gamers demand professional
+                    localization and do not like low-quality translated games.
+                  </p>
+                  <p>
+                    At the forefront of content localization into Arabic from
+                    English were MMO games. The likes of Ubisoft, EA, Sony and
+                    other western developers at least provided Arabic subtitles
+                    and localized some of their games to Arabic. Examples
+                    include: Uncharted 4: A Thief’s End, FIFA, Assassin’s Creed,
+                    The Division, Uncharted: The Lost Legacy and so on.
+                  </p>
+                  <p>
+                    Ubisoft localized the game “The Division” into Arabic as
+                    well as open a nice studio in Abu Dhabi, UAE. Meanwhile,
+                    apart from translating FIFA, EA featured local leagues and
+                    teams.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <h3>
+                  What Are The Essentials Of Game Localization And Game
+                  Localization Services?
+                </h3>
+                <ul>
+                  <li>
+                    The use of Latin
+                    <p>
+                      It is good to localize everything, but then, Arabic
+                      markets are fine with having Latin figures/numbers rather
+                      than Arabic ones and transliterating proper names.
+                    </p>
+                  </li>
+                  <li>
+                    RTL Text Orientation
+                    <p>
+                      Right to Left languages means you should not lock (or
+                      force) text direction in your game, and the whole
+                      interface should be read from left to right. The RTL
+                      languages include Arabic, Urdu, and Hebrew, among others,
+                      and if the game’s UI is not suited for RTL languages, the
+                      necessary effect is reached by game developers who mirror
+                      their game.
+                    </p>
+                  </li>
+                  <li>
+                    Specifications of Gender
+                    <p>
+                      It is believed that translation to the Arab World is
+                      culturalization 90% and takes an effort of 10%. This is
+                      because Arabic gamers enjoy games that contain their
+                      celebrities and prominent historical figures. They love
+                      games with elements of their culture. FIFA, for one,
+                      includes Arabic soccer stars in their Arabic version of
+                      the game.
+                    </p>
+                    <p>
+                      Amazing fact: Text can be reduced when translating from
+                      Arabic to English and vice versa. The shortened text
+                      occurs sometimes because Arabic is an “emotional” language
+                      with a lot of word combinations that are used to increase
+                      the feelings behind meaning.
+                    </p>
+                  </li>
+                  <li>
+                    Cultural Context
+                    <p>
+                      It is believed that translation to the Arab World is
+                      culturalization 90% and takes an effort of 10%. This is
+                      because Arabic gamers enjoy games that contain their
+                      celebrities and prominent historical figures. They love
+                      games with elements of their culture. FIFA, for one,
+                      includes Arabic soccer stars in their Arabic version of
+                      the game.
+                    </p>
+                    <p>
+                      Amazing fact: Just to localize the game “Paramanyu” for
+                      Middle East and North Africa region, Netmarble oversaw UX
+                      tests among 30 groups. The Korean company used the study
+                      to discover that users found a huge number of buttons
+                      confusing. Netmarble then improved its features and
+                      drastically reduced the buttons to 15. They further
+                      introduced important characters, maps and landmarks.
+                      “Traveling Millionaire” (رحلة المليونير) is the title of
+                      the game.
+                    </p>
+                  </li>
+                  <li>
+                    Some topics are sensitive
+                    <p>
+                      It is important to note that there are several topics that
+                      are sensitive when considering video game translation. The
+                      use of Quran or Bible verses should be avoided during the
+                      process of video games translation. Even so, nudity,
+                      homosexuality, explicit sexual scenes, alcohol and
+                      religious symbols are things to avoid, too. Game
+                      translators usually amend the original or main version of
+                      the game if it contains the above mentioned. This is done
+                      to avoid offending the government or Arab gamers. It is a
+                      no-no to offend Islam.
+                    </p>
+                    <p>
+                      Amazing fact: Some topics that are inappropriate in some
+                      countries are accepted elsewhere! Regional differences are
+                      key. For instance, a Christmas theme may be accepted in
+                      Tunisia or Morocco, but Saudi Arabia will most likely not
+                      accept it.
+                    </p>
+                  </li>
+                  <li>
+                    The Arabic Dialects
+                    <p>
+                      The most commonly used dialect in media and education is
+                      the Modern Standard Arabic (MSA). It’s a language that’s
+                      most common in official environments, and as a result,
+                      everyone can relate with it. This is a reason game
+                      developers use it, even during in-game events in a
+                      particular country.
+                    </p>
+                    <p>
+                      For instance, FIFA 2012 has one of the most prominent
+                      Tunisian commentators as its voice-over despite being
+                      localized into MSA.
+                    </p>
+                    <p>
+                      Meanwhile, certain parts of some games are left in French
+                      for North Africa or English. They are not localized. Like
+                      the Racing game “Need for Speed”, it contains some parts
+                      of the car which are different in various countries. It
+                      would have been wrong to leave them in Modern Standard
+                      Arabic because not all users will understand what it means
+                      or its intended meaning.
+                    </p>
+                    <p>
+                      The governments of 22 countries recognize Arabic language
+                      as their official language. Arabic is the 5th most popular
+                      language worldwide with about 6% of the world’s population
+                      (450Million). Saudi Arabia leads the most appealing
+                      Arabic-speaking market, and they are followed by Kuwait,
+                      UAE, and Bahrain. So, you see why video game translation
+                      is important!
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="buttonsContainer">
+                <div class="button">
+                  <a href="https://www.arabingames.com/" target="_blank" class="btnLink">
+                    Previous Blog
+                  </a>
+                </div>
+                <div class="button">
+                  <a href="https://www.arabingames.com/" target="_blank" class="btnLink"> 
+                    Next Blog
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <div>
+              <div>
+                <h3>Table of Contents</h3>
+                <div class="tableContentDiv">
+                  <p>Where Do They Speak Arabic?</p>
+                  <p>
+                    Why Game Translation | Why Should Games be Localized to
+                    Arabic-Speaking Markets?
+                  </p>
+                  <p>What Are The Games That Thrive In The Arab World?</p>
+                  <p>What Are The Difficulties Present In The Arabic Market?</p>
+                  <p>
+                    What Are The Essentials Of Game Localization And Game
+                    Localization Services?
+                  </p>
+                  <ul>
+                    <li>Where Do They Speak Arabic?</li>
+                    <li>Where Do They Speak Arabic?</li>
+                    <li>Where Do They Speak Arabic?</li>
+                    <li>Where Do They Speak Arabic?</li>
+                  </ul>
+                </div>
+                <hr class="hrMain" />
+                <div>
+                  <h3>our latest blog</h3>
+                  <div class="cardContainer">
+                    <div class="Card">
+                      <div class="serviceCard">
+                        <div class="serviceCardContent">
+                          <div class="CardsImge-holder">
+                            <img
+                              src="Aralingual - Update Assets 2024/Website/Blog Details/Image/Arblog-1.png"
+                              alt=""
+                              class="img"
+                            />
+                            <!-- <img src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-1.png" alt="" class="blogImg1"> -->
+                          </div>
+                        </div>
+                      </div>
+                      <img src="Frame.svg" alt="" class="frame2" />
+                    </div>
+                    <div class="cardsWordsContainer">
+                      <h4>
+                        Lucrative Business in the Arabic Speaking Market | Video
+                        Game
+                      </h4>
+                      <p>September 30, 2022 - 8:49 PM</p>
+                      <div class="socialComunicationContainer">
+                        <div class="btnContainer">
+                          <button class="btn">Read More</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="hr" />
+                  <div class="cardContainer">
+                    <div class="Card">
+                      <div class="serviceCard">
+                        <div class="serviceCardContent">
+                          <div class="CardsImge-holder">
+                            <img
+                              src="Aralingual - Update Assets 2024/Website/Blog Details/Image/Arblog-3.png"
+                              alt=""
+                              class="img"
+                            />
+                            <!-- <img src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-1.png" alt="" class="blogImg1"> -->
+                          </div>
+                        </div>
+                      </div>
+                      <img src="Frame.svg" alt="" class="frame2" />
+                    </div>
+                    <div class="cardsWordsContainer">
+                      <h4>
+                        Lucrative Business in the Arabic Speaking Market | Video
+                        Game
+                      </h4>
+                      <p>September 30, 2022 - 8:49 PM</p>
+                      <div class="socialComunicationContainer">
+                        <div class="btnContainer">
+                          <button class="btn">Read More</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="hr" />
+                  <div class="cardContainer">
+                    <div class="Card">
+                      <div class="serviceCard">
+                        <div class="serviceCardContent">
+                          <div class="CardsImge-holder">
+                            <img
+                              src="Aralingual - Update Assets 2024/Website/Blog Details/Image/Arblog-1.png"
+                              alt=""
+                              class="img"
+                            />
+                            <!-- <img src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-1.png" alt="" class="blogImg1"> -->
+                          </div>
+                        </div>
+                      </div>
+                      <img src="Frame.svg" alt="" class="frame2" />
+                    </div>
+                    <div class="cardsWordsContainer">
+                      <h4>
+                        Lucrative Business in the Arabic Speaking Market | Video
+                        Game
+                      </h4>
+                      <p>September 30, 2022 - 8:49 PM</p>
+                      <div class="socialComunicationContainer">
+                        <div class="btnContainer">
+                          <button class="btn">Read More</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="hr" />
+                  <div class="cardContainer">
+                    <div class="Card">
+                      <div class="serviceCard">
+                        <div class="serviceCardContent">
+                          <div class="CardsImge-holder">
+                            <img
+                              src="Aralingual - Update Assets 2024/Website/Blog Details/Image/Arblog-1.png"
+                              alt=""
+                              class="img"
+                            />
+                            <!-- <img src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-1.png" alt="" class="blogImg1"> -->
+                          </div>
+                        </div>
+                      </div>
+                      <img src="Frame.svg" alt="" class="frame2" />
+                    </div>
+                    <div class="cardsWordsContainer">
+                      <h4>
+                        Lucrative Business in the Arabic Speaking Market | Video
+                        Game
+                      </h4>
+                      <p>September 30, 2022 - 8:49 PM</p>
+                      <div class="socialComunicationContainer">
+                        <div class="btnContainer">
+                          <button class="btn">Read More</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="hrMain" />
+                <h3>Share this post</h3>
+
+                <div class="socialMediaLinks">
+                  <div class="iconBigContainer">
+                    <span class="tooltiptext"
+                      >Share With Facebook
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog Details/Icons/Tail.svg"
+                        alt=""
+                        class="tail"
+                      />
+                    </span>
+                    <div class="IconContainer">
+                      <a href="" class="Icon"
+                        ><img
+                          src="Aralingual - Update Assets 2024/Website/Blog Details/Icons/facebook.svg"
+                          alt=""
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="iconBigContainer">
+                    <span class="tooltiptext"
+                      >Share With Whatsup
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog Details/Icons/Tail.svg"
+                        alt=""
+                        class="tail"
+                      />
+                    </span>
+                    <div class="IconContainer">
+                      <a href="" class="Icon"
+                        ><img
+                          src="Aralingual - Update Assets 2024/Website/Blog Details/Icons/whatsup.svg"
+                          alt=""
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="iconBigContainer">
+                    <span class="tooltiptext"
+                      >Share With Twitter
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog Details/Icons/Tail.svg"
+                        alt=""
+                        class="tail"
+                      />
+                    </span>
+                    <div class="IconContainer">
+                      <a href="" class="Icon"
+                        ><img
+                          src="Aralingual - Update Assets 2024/Website/Blog Details/Icons/twitter.svg"
+                          alt=""
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="iconBigContainer">
+                    <span class="tooltiptext"
+                      >Share With LinkedIn
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog Details/Icons/Tail.svg"
+                        alt=""
+                        class="tail"
+                      />
+                    </span>
+                    <div class="IconContainer">
+                      <a href="" class="Icon"
+                        ><img
+                          src="Aralingual - Update Assets 2024/Website/Blog Details/Icons/linkedIn.svg"
+                          alt=""
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="iconBigContainer">
+                    <span class="tooltiptext"
+                      >Share With New Tiwtter
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog Details/Icons/Tail.svg"
+                        alt=""
+                        class="tail"
+                      />
+                    </span>
+                    <div class="IconContainer">
+                      <a href="" class="Icon"
+                        ><img
+                          src="Aralingual - Update Assets 2024/Website/Blog Details/Icons/new-twitter.svg"
+                          alt=""
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <img
+            src="Aralingual - Update Assets 2024/Website/Blog/Icons/blogGlow.png"
+            alt=""
+            class="FAQRightBotomGlow"
+          />
+          <div class="getInTouch">
+            <img src="Home/CTA (1).png" alt="" class="getInTouchBg" />
+
+            <!-- <div class="getInTouchGlowR"></div> -->
+            <h3>Gotany more <span class="special-word">Questions</span> ?</h3>
+            <p>
+              We are constantly updating our FAQ section to address the concerns
+              and inquiries of our clients. If you have any specific questions
+              or requirements, please don't hesitate to reach out to us. Our
+              dedicated team is here to provide you with the information and
+              assistance you need for a successful game localization journey.
+            </p>
+            <div class="getInTouchBtn">
+              <button class="TouchBtn" href="#">Get in touch now!</button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <!-- <img src="Ellipse 1833.svg" alt="" class="darkImg" /> -->
+
+        <div class="footer-content">
+          <div class="footer-left">
+            <div class="logo">
+              <img src="Group.png" alt="logo" />
+            </div>
+
+            <ul>
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">ABOUT US</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">BLOG</a></li>
+              <li><a href="#">CONTACT US</a></li>
+            </ul>
+            <div class="social-links">
+              <a href="#"><img src="Facebook.svg" alt="Facebook" /></a>
+              <a href="#"><img src="Twitter.svg" alt="Twitter" /></a>
+              <a href="#"><img src="Linkedin.svg" alt="Linkedin" /></a>
+              <a href="#"><img src="Instagram.svg" alt="Instagram" /></a>
+              <a href="#"><img src="new-twitter.svg" alt="new-twitter" /></a>
+            </div>
+          </div>
+          <hr />
+          <div class="footer-right">
+            <p>©Aralingual 2024. All rights reserved</p>
+          </div>
+        </div>
+      </footer>
+    </article>
+  </body>
+</html>

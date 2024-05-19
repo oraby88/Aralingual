@@ -115,7 +115,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   right: 0;
   gap: 120px;
   margin: 0 auto;
@@ -399,6 +399,7 @@ nav ul li a:focus {
   position: absolute;
   inset: 0;
   z-index: -3;
+  object-fit: cover;
 }
 .welcome-section {
   position: relative;

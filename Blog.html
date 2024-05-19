@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Aralingual - Update Assets 2024/Assets/Logo & Favicon/Favicon.svg"
+    />
+    <link rel="stylesheet" href="Blog.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bitter:ital,wght@0,100..900;1,100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&family=Rajdhani:wght@300;400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="scripts.js"></script>
+    <title>Blog</title>
+  </head>
+  <body>
+    <!-- <div class="glowContainer">
+      <img src="glow1.svg" alt="" class="lightImg" />
+    </div> -->
+    <div class="footerGlow"></div>
+    <div class="glow2"></div>
+    <header>
+      <!-- <img src="glow.svg" alt="" class="lightImg" /> -->
+      <nav>
+        <div class="logoContainer">
+          <img src="Group.png" alt="logo" />
+        </div>
+
+        <ul class="nav-list" id="nav-list">
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="FAQs.html">FAQ</a></li>
+          <li><a href="Blog.html" class="active">BLOG</a></li>
+          <li><a href="#">CONTACT US</a></li>
+          <li class="options" onclick="appear()">
+            <div class="select">
+              EN
+              <img
+                src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
+                alt=""
+              />&nbsp;
+              <i
+                class="fa-solid fa-chevron-down"
+                style="font-size: 12px; padding-top: 5px"
+              ></i>
+            </div>
+          </li>
+        </ul>
+        <div class="dropDown">
+          <ul>
+            <li onclick="changeLang('ltr')">
+              <a href="#" class="language"
+                >AR
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >CN
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/CN.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >JA
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/JA.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >KO
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/KO.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >DE
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/DE.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >FR
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/FR.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >PO
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/PO.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="changeLang('rtl')">
+              <a href="#" class="language"
+                >SE
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/SE.svg"
+                  alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="humbrger" id="humbrger" onclick="show()">
+          <div class="bar"></div>
+          <div class="bar2"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+    </header>
+    <article>
+      <main>
+        <section class="welcome-section">
+          <img
+            src="Aralingual - Update Assets 2024/Website/Blog/Icons/welcomeGlow.png"
+            alt=""
+            class="welcomeGlow"
+          />
+          <div></div>
+          <div class="welcomeBG">
+            <img
+              src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-Header.png"
+              alt=""
+            />
+          </div>
+          <div class="welcome-words">
+            <div><h3>Our Blogs</h3></div>
+            <h1>Exploring the world's largest games news</h1>
+            <p>
+              Unlock the full potential of your video game with professional
+              translation and localization services.
+            </p>
+          </div>
+        </section>
+        <section class="questions-section">
+          <div class="questions-sectionWords">
+            <h3>
+              frequently asked <span class="special-word">questions</span>
+            </h3>
+            <p>
+              Reference site about Lorem Ipsum, giving information on its
+              origins, as well as a random Lipsum generator.
+            </p>
+          </div>
+          <a href="blogDetails.html" style="text-decoration: none;">
+            <div class="mainCardContainer">
+              <div class="mainCard">
+                <div class="serviceCard">
+                  <div class="serviceCardContent">
+                    <div class="img-holder">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-10 1.png"
+                        alt=""
+                        class="img"
+                      />
+                      <!-- <img src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-1.png" alt="" class="blogImg1"> -->
+                    </div>
+                  </div>
+                </div>
+                <img src="Frame.svg" alt="" class="frame1" />
+              </div>
+              <div class="mainCardWords">
+                <h3>the coons have won the KINGSCON, what’s next?</h3>
+                <p>
+                  World leaders gathered at the Global Climate Summit to discuss
+                  urgent climate action, emissions reductions, and renewable
+                  energy targets.
+                </p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Category</th>
+                      <th>Publication Date</th>
+                      <th>Author</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Environment</td>
+                      <td>October 10, 2023</td>
+                      <td>Haitham Mohamed</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="socialComunicationContainer">
+                  <div class="like-share-container">
+                    <div class="like">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/like.svg"
+                        alt=""
+                      />
+                      <p>14K</p>
+                    </div>
+                    <div class="share">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/share.svg"
+                        alt=""
+                      />
+                      <p>204</p>
+                    </div>
+                  </div>
+                  <div class="btnContainer">
+                    <button class="btn">Read More</button>
+                  </div>
+                </div>
+              </div>
+            </div></a
+          >
+          <div class="CardsContainer">
+            <div class="cardContainer">
+              <div class="Card">
+                <div class="serviceCard">
+                  <div class="serviceCardContent">
+                    <div class="CardsImge-holder">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-2.png"
+                        alt=""
+                        class="img"
+                      />
+                      <!-- <img src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-1.png" alt="" class="blogImg1"> -->
+                    </div>
+                  </div>
+                </div>
+                <img src="Frame.svg" alt="" class="frame2" />
+              </div>
+              <div class="cardsWordsContainer">
+                <h4>
+                  Lucrative Business in the Arabic Speaking Market | Video Game
+                  Localization
+                </h4>
+                <p>News</p>
+                <div class="socialComunicationContainer">
+                  <div class="like-share-container">
+                    <div class="like">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/like.svg"
+                        alt=""
+                      />
+                      <p>14K</p>
+                    </div>
+                    <div class="share">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/share.svg"
+                        alt=""
+                      />
+                      <p>204</p>
+                    </div>
+                  </div>
+                  <div class="btnContainer">
+                    <button class="btn">Read More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cardContainer">
+              <div class="Card">
+                <div class="serviceCard">
+                  <div class="serviceCardContent">
+                    <div class="CardsImge-holder">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-3.png"
+                        alt=""
+                        class="img"
+                      />
+                      <!-- <img src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-1.png" alt="" class="blogImg1"> -->
+                    </div>
+                  </div>
+                </div>
+                <img src="Frame.svg" alt="" class="frame2" />
+              </div>
+              <div class="cardsWordsContainer">
+                <h4>
+                  Lucrative Business in the Arabic Speaking Market | Video Game
+                  Localization
+                </h4>
+                <p>News</p>
+                <div class="socialComunicationContainer">
+                  <div class="like-share-container">
+                    <div class="like">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/like.svg"
+                        alt=""
+                      />
+                      <p>14K</p>
+                    </div>
+                    <div class="share">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/share.svg"
+                        alt=""
+                      />
+                      <p>204</p>
+                    </div>
+                  </div>
+                  <div class="btnContainer">
+                    <button class="btn">Read More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cardContainer">
+              <div class="Card">
+                <div class="serviceCard">
+                  <div class="serviceCardContent">
+                    <div class="CardsImge-holder">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-4.png"
+                        alt=""
+                        class="img"
+                      />
+                      <!-- <img src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-1.png" alt="" class="blogImg1"> -->
+                    </div>
+                  </div>
+                </div>
+                <img src="Frame.svg" alt="" class="frame2" />
+              </div>
+              <div class="cardsWordsContainer">
+                <h4>
+                  Lucrative Business in the Arabic Speaking Market | Video Game
+                  Localization
+                </h4>
+                <p>News</p>
+                <div class="socialComunicationContainer">
+                  <div class="like-share-container">
+                    <div class="like">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/like.svg"
+                        alt=""
+                      />
+                      <p>14K</p>
+                    </div>
+                    <div class="share">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/share.svg"
+                        alt=""
+                      />
+                      <p>204</p>
+                    </div>
+                  </div>
+                  <div class="btnContainer">
+                    <button class="btn">Read More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cardContainer">
+              <div class="Card">
+                <div class="serviceCard">
+                  <div class="serviceCardContent">
+                    <div class="CardsImge-holder">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-5.png"
+                        alt=""
+                        class="img"
+                      />
+                      <!-- <img src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-1.png" alt="" class="blogImg1"> -->
+                    </div>
+                  </div>
+                </div>
+                <img src="Frame.svg" alt="" class="frame2" />
+              </div>
+              <div class="cardsWordsContainer">
+                <h4>
+                  Lucrative Business in the Arabic Speaking Market | Video Game
+                  Localization
+                </h4>
+                <p>News</p>
+                <div class="socialComunicationContainer">
+                  <div class="like-share-container">
+                    <div class="like">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/like.svg"
+                        alt=""
+                      />
+                      <p>14K</p>
+                    </div>
+                    <div class="share">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/share.svg"
+                        alt=""
+                      />
+                      <p>204</p>
+                    </div>
+                  </div>
+                  <div class="btnContainer">
+                    <button class="btn">Read More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cardContainer">
+              <div class="Card">
+                <div class="serviceCard">
+                  <div class="serviceCardContent">
+                    <div class="CardsImge-holder">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-6.png"
+                        alt=""
+                        class="img"
+                      />
+                      <!-- <img src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-1.png" alt="" class="blogImg1"> -->
+                    </div>
+                  </div>
+                </div>
+                <img src="Frame.svg" alt="" class="frame2" />
+              </div>
+              <div class="cardsWordsContainer">
+                <h4>
+                  Lucrative Business in the Arabic Speaking Market | Video Game
+                  Localization
+                </h4>
+                <p>News</p>
+                <div class="socialComunicationContainer">
+                  <div class="like-share-container">
+                    <div class="like">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/like.svg"
+                        alt=""
+                      />
+                      <p>14K</p>
+                    </div>
+                    <div class="share">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/share.svg"
+                        alt=""
+                      />
+                      <p>204</p>
+                    </div>
+                  </div>
+                  <div class="btnContainer">
+                    <button class="btn">Read More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cardContainer">
+              <div class="Card">
+                <div class="serviceCard">
+                  <div class="serviceCardContent">
+                    <div class="CardsImge-holder">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-7.png"
+                        alt=""
+                        class="img"
+                      />
+                      <!-- <img src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-1.png" alt="" class="blogImg1"> -->
+                    </div>
+                  </div>
+                </div>
+                <img src="Frame.svg" alt="" class="frame2" />
+              </div>
+              <div class="cardsWordsContainer">
+                <h4>
+                  Lucrative Business in the Arabic Speaking Market | Video Game
+                  Localization
+                </h4>
+                <p>News</p>
+                <div class="socialComunicationContainer">
+                  <div class="like-share-container">
+                    <div class="like">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/like.svg"
+                        alt=""
+                      />
+                      <p>14K</p>
+                    </div>
+                    <div class="share">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/share.svg"
+                        alt=""
+                      />
+                      <p>204</p>
+                    </div>
+                  </div>
+                  <div class="btnContainer">
+                    <button class="btn">Read More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cardContainer">
+              <div class="Card">
+                <div class="serviceCard">
+                  <div class="serviceCardContent">
+                    <div class="CardsImge-holder">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-8.png"
+                        alt=""
+                        class="img"
+                      />
+                      <!-- <img src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-1.png" alt="" class="blogImg1"> -->
+                    </div>
+                  </div>
+                </div>
+                <img src="Frame.svg" alt="" class="frame2" />
+              </div>
+              <div class="cardsWordsContainer">
+                <h4>
+                  Lucrative Business in the Arabic Speaking Market | Video Game
+                  Localization
+                </h4>
+                <p>News</p>
+                <div class="socialComunicationContainer">
+                  <div class="like-share-container">
+                    <div class="like">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/like.svg"
+                        alt=""
+                      />
+                      <p>14K</p>
+                    </div>
+                    <div class="share">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/share.svg"
+                        alt=""
+                      />
+                      <p>204</p>
+                    </div>
+                  </div>
+                  <div class="btnContainer">
+                    <button class="btn">Read More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cardContainer">
+              <div class="Card">
+                <div class="serviceCard">
+                  <div class="serviceCardContent">
+                    <div class="CardsImge-holder">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-9.png"
+                        alt=""
+                        class="img"
+                      />
+                      <!-- <img src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-1.png" alt="" class="blogImg1"> -->
+                    </div>
+                  </div>
+                </div>
+                <img src="Frame.svg" alt="" class="frame2" />
+              </div>
+              <div class="cardsWordsContainer">
+                <h4>
+                  Lucrative Business in the Arabic Speaking Market | Video Game
+                  Localization
+                </h4>
+                <p>News</p>
+                <div class="socialComunicationContainer">
+                  <div class="like-share-container">
+                    <div class="like">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/like.svg"
+                        alt=""
+                      />
+                      <p>14K</p>
+                    </div>
+                    <div class="share">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/share.svg"
+                        alt=""
+                      />
+                      <p>204</p>
+                    </div>
+                  </div>
+                  <div class="btnContainer">
+                    <button class="btn">Read More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cardContainer">
+              <div class="Card">
+                <div class="serviceCard">
+                  <div class="serviceCardContent">
+                    <div class="CardsImge-holder">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-10.png"
+                        alt=""
+                        class="img"
+                      />
+                      <!-- <img src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-1.png" alt="" class="blogImg1"> -->
+                    </div>
+                  </div>
+                </div>
+                <img src="Frame.svg" alt="" class="frame2" />
+              </div>
+              <div class="cardsWordsContainer">
+                <h4>
+                  Lucrative Business in the Arabic Speaking Market | Video Game
+                  Localization
+                </h4>
+                <p>News</p>
+                <div class="socialComunicationContainer">
+                  <div class="like-share-container">
+                    <div class="like">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/like.svg"
+                        alt=""
+                      />
+                      <p>14K</p>
+                    </div>
+                    <div class="share">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/share.svg"
+                        alt=""
+                      />
+                      <p>204</p>
+                    </div>
+                  </div>
+                  <div class="btnContainer">
+                    <button class="btn">Read More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pagination">
+            <div class="back-next-btn-container">
+              <a href="#" class="back-next-btns">&laquo;</a>
+            </div>
+            <div class="cardPageContainer">
+              <a href="#" class="cardPage" id="cardPage1">1</a>
+            </div>
+            <div class="cardPageContainer">
+              <a href="#" class="cardPage">2</a>
+            </div>
+            <div class="cardPageContainer">
+              <a href="#" class="cardPage">3</a>
+            </div>
+            <div class="cardPageContainer">
+              <a href="#" class="cardPage">4</a>
+            </div>
+            <div class="cardPageContainer">
+              <a href="#" class="cardPage">5</a>
+            </div>
+            <div class="back-next-btn-container">
+              <a href="#" class="back-next-btns">&raquo;</a>
+            </div>
+          </div>
+        </section>
+        <section>
+          <img
+            src="Aralingual - Update Assets 2024/Website/Blog/Icons/blogGlow.png"
+            alt=""
+            class="FAQRightBotomGlow"
+          />
+          <div class="getInTouch">
+            <img src="Home/CTA (1).png" alt="" class="getInTouchBg" />
+
+            <!-- <div class="getInTouchGlowR"></div> -->
+            <h3>Gotany more <span class="special-word">Questions</span> ?</h3>
+            <p>
+              We are constantly updating our FAQ section to address the concerns
+              and inquiries of our clients. If you have any specific questions
+              or requirements, please don't hesitate to reach out to us. Our
+              dedicated team is here to provide you with the information and
+              assistance you need for a successful game localization journey.
+            </p>
+            <div class="getInTouchBtn">
+              <button class="TouchBtn" href="#">Get in touch now!</button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <!-- <img src="Ellipse 1833.svg" alt="" class="darkImg" /> -->
+
+        <div class="footer-content">
+          <div class="footer-left">
+            <div class="logo">
+              <img src="Group.png" alt="logo" />
+            </div>
+
+            <ul>
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">ABOUT US</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">BLOG</a></li>
+              <li><a href="#">CONTACT US</a></li>
+            </ul>
+            <div class="social-links">
+              <a href="#"><img src="Facebook.svg" alt="Facebook" /></a>
+              <a href="#"><img src="Twitter.svg" alt="Twitter" /></a>
+              <a href="#"><img src="Linkedin.svg" alt="Linkedin" /></a>
+              <a href="#"><img src="Instagram.svg" alt="Instagram" /></a>
+              <a href="#"><img src="new-twitter.svg" alt="new-twitter" /></a>
+            </div>
+          </div>
+          <hr />
+          <div class="footer-right">
+            <p>©Aralingual 2024. All rights reserved</p>
+          </div>
+        </div>
+      </footer>
+    </article>
+  </body>
+</html>
