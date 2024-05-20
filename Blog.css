@@ -687,7 +687,7 @@ nav ul li a:focus {
   .mainCardWords table thead th,
   .mainCardWords table tbody td {
     font-size: 14px;
-}
+  }
 }
 
 .socialComunicationContainer {
@@ -917,8 +917,8 @@ nav ul li a:focus {
   background-color: white;
 }
 
-#cardPage1{
-  background-color: transparent ;
+#cardPage1 {
+  background-color: transparent;
 }
 
 @media screen and (max-width: 600px) {
@@ -1010,6 +1010,9 @@ nav ul li a:focus {
   z-index: -3;
   overflow: hidden;
 }
+.showInSmallSizes {
+  display: none;
+}
 @media screen and (max-width: 600px) {
   .getInTouch h3 {
     font-size: 36px;
@@ -1017,6 +1020,18 @@ nav ul li a:focus {
   .getInTouch p {
     width: 100%;
     font-size: 18px;
+  }
+  .getInTouchBg {
+    width: 100%;
+  }
+  .special-word {
+    font-size: 36px;
+  }
+  .hideInSmallSizes {
+    display: none;
+  }
+  .showInSmallSizes {
+    display: inline;
   }
   .getInTouchBg {
     width: 100%;

@@ -488,7 +488,7 @@ nav ul li a:focus {
   text-align: center;
   place-content: center;
   clip-path: polygon(88% 0, 100% 32%, 100% 100%, 12% 100%, 0 68%, 0 0);
-  padding: 2px;
+  padding: 1px;
   /* position: relative; */
   z-index: 3;
   display: flex;
@@ -1598,6 +1598,15 @@ nav ul li a:focus {
     }
   } */
 
+
+.homeRightGlow{
+  position: absolute;
+  /* width: 100%; */
+  right: 0;
+  z-index: -1;
+  bottom: 0;
+}
+
 /* Get In Touch Section*/
 
 .getInTouch {
@@ -1649,13 +1658,44 @@ nav ul li a:focus {
   );
   z-index: -3;
   overflow: hidden;
-  box-shadow: -18px 17px 91px 1px rgba(0,0,0,0.75);
--webkit-box-shadow: -18px 17px 91px 1px rgba(0,0,0,0.75);
--moz-box-shadow: -18px 17px 91px 1px rgba(0,0,0,0.75);
+  box-shadow: -18px 17px 91px 1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -18px 17px 91px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -18px 17px 91px 1px rgba(0, 0, 0, 0.75);
+}
+.special-word{
+  background: var(
+    --Font,
+    linear-gradient(270deg, #44cd77 23.66%, #2871ff 57.68%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 42px;
+  font-weight: var(--fw-700);
+  line-height: 52px;
+}
+.showInSmallSizes {
+  display: none;
 }
 @media screen and (max-width: 600px) {
+  .getInTouch h3 {
+    font-size: 36px;
+  }
   .getInTouch p {
     width: 100%;
+    font-size: 18px;
+  }
+  .getInTouchBg {
+    width: 100%;
+  }
+  .special-word {
+    font-size: 36px;
+  }
+  .hideInSmallSizes {
+    display: none;
+  }
+  .showInSmallSizes {
+    display: inline;
   }
   .getInTouchBg {
     width: 100%;

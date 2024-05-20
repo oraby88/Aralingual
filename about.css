@@ -56,6 +56,12 @@ section {
   margin: 90px 0;
   padding: 0 100px;
 }
+section:first-child {
+  margin: 75px 0 0 0;
+}
+section:nth-child(2) {
+  margin: 0 0 90px 0;
+}
 header {
   /* position: fixed; */
   position: fixed;
@@ -285,16 +291,6 @@ nav ul li a:focus {
     padding-top: 100px;
   }
 
-  /* nav ul li:where(:hover, :focus)::before {
-      content: "";
-      display: block;
-      position: relative;
-      width: 15px;
-      left: 48%;
-      top: 37px;
-      border-bottom: 2px solid var(--color-blue-700);
-      z-index: 2;
-    } */
   .options {
     position: static;
   }
@@ -404,8 +400,6 @@ nav ul li a:focus {
 .welcome-section {
   position: relative;
   height: 700px;
-  /* background-image: url("Aralingual - Update Assets 2024/Website/About Us/About-us.png");
-  background-size: cover; */
 }
 .welcome-words {
   display: flex;
@@ -413,6 +407,7 @@ nav ul li a:focus {
   /* align-items: center; */
   justify-content: center;
   height: 100%;
+  gap: 24px;
 }
 .welcome-words h3 {
   font-size: 20px;
@@ -422,8 +417,6 @@ nav ul li a:focus {
   border-radius: 20px;
   border-bottom: 1px solid #18c8ff;
   width: fit-content;
-  /* position: absolute;
-    top: 20%; */
 
   background: linear-gradient(80.7deg, white 10.1%, #71717a 63.2%);
   -webkit-text-fill-color: transparent;
@@ -442,7 +435,6 @@ nav ul li a:focus {
 }
 .welcome-words p {
   color: #dadada;
-
   font-size: 20px;
   font-style: normal;
   font-weight: var(--fw-500);
@@ -466,13 +458,22 @@ nav ul li a:focus {
 
 /* about-section */
 
+
+
 .about-section {
   position: relative;
   /* height: 700px; */
   /* background-image: url("Aralingual - Update Assets 2024/Website/About Us/BG-About.png");
   background-size: cover; */
 }
-
+.aboutBG img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  object-fit: cover;
+}
 .about-words h3 {
   font-size: 42px;
   font-style: normal;
@@ -562,7 +563,6 @@ nav ul li a:focus {
   /* font-size: 18px; */
   font-weight: var(--fw-500);
   line-height: 24px; /* 155.556% */
-  
 }
 
 .aboutCard:before {
@@ -606,7 +606,6 @@ nav ul li a:focus {
 .aboutCard:hover .aboutCardBody {
   transform: translateX(0.25rem);
 }
-
 
 .specialSentance {
   background: linear-gradient(270deg, #44cd77 23.66%, #2871ff 57.68%);
@@ -691,9 +690,9 @@ nav ul li a:focus {
 }
 @media (max-width: 768px) {
   .teamWords p,
-.teamFooter p {
-  font-size: 18px;
-}
+  .teamFooter p {
+    font-size: 18px;
+  }
 }
 .sahpe1 {
   width: 50%;
@@ -790,6 +789,20 @@ nav ul li a:focus {
   }
 }
 
+.aboutRightGlow {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.aboutLeftGlow {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+}
+
 /* Get In Touch Section*/
 
 .getInTouch {
@@ -841,9 +854,28 @@ nav ul li a:focus {
   z-index: -3;
   overflow: hidden;
 }
+.showInSmallSizes {
+  display: none;
+}
 @media screen and (max-width: 600px) {
+  .getInTouch h3 {
+    font-size: 36px;
+  }
   .getInTouch p {
     width: 100%;
+    font-size: 18px;
+  }
+  .getInTouchBg {
+    width: 100%;
+  }
+  .special-word {
+    font-size: 36px;
+  }
+  .hideInSmallSizes {
+    display: none;
+  }
+  .showInSmallSizes {
+    display: inline;
   }
   .getInTouchBg {
     width: 100%;
@@ -888,7 +920,7 @@ hr {
   opacity: 0.2;
 }
 .footer-right {
-  margin: 15px 0;
+  padding: 15px 0;
   text-align: center;
 }
 .footer-content p {
