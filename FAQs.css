@@ -117,7 +117,7 @@ nav {
   align-items: center;
   /* max-width: 1440px; */
   right: 0;
-  gap: 120px;
+  gap: 135px;
   margin: 0 auto;
   /* padding: 0 30px; */
   z-index: 999999999999999;
@@ -393,6 +393,10 @@ backdrop-filter: blur(22.5px);
     display: flex;
     justify-content: center;
   }
+  .active{
+    background: linear-gradient(270deg, #44cd77 -43.46%, #2871ff 100%);
+    color: var(--color-white) !important;
+  }
 }
 @media screen and (max-width: 380px) {
   .dropDown {
@@ -507,6 +511,7 @@ backdrop-filter: blur(22.5px);
   z-index: -1;
   left: 0;
   top: -20%;
+  height: 100%;
 }
 @media screen and (max-width: 600px) {
   .FAQLeftGlow {
@@ -711,6 +716,7 @@ backdrop-filter: blur(22.5px);
 
 .display {
   display: flex;
+  justify-content: center;
 }
 
 .hr {
@@ -909,6 +915,10 @@ hr {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+}
+.footerActive{
+  color: var(--color-blue-700) !important;
+  font-weight: var(--fw-700);
 }
 @media screen and (max-width: 992px) {
   .footer-left {

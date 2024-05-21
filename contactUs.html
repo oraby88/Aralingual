@@ -30,8 +30,6 @@
     <!-- <div class="glowContainer">
       <img src="glow1.svg" alt="" class="lightImg" />
     </div> -->
-    <div class="footerGlow"></div>
-    <div class="glow2"></div>
     <header>
       <!-- <img src="glow.svg" alt="" class="lightImg" /> -->
       <nav>
@@ -136,9 +134,14 @@
     </header>
     <article>
       <main>
+        <img
+          src="Aralingual - Update Assets 2024/Website/Contact us/Images/contactUsLeftGlow.png"
+          alt=""
+          class="contactUsLeftGlow"
+        />
         <section class="welcome-section">
           <img
-            src="Aralingual - Update Assets 2024/Website/Blog/Icons/welcomeGlow.png"
+            src="Aralingual - Update Assets 2024/Website/Contact us/Images/contactUsRightGlow.png"
             alt=""
             class="welcomeGlow"
           />
@@ -174,7 +177,7 @@
                 <div class="serviceCardContent">
                   <div class="CardsImge-holder">
                     <img
-                      src="Aralingual - Update Assets 2024/Website/Blog/Images/Blog-4.png"
+                      src="Aralingual - Update Assets 2024/Website/Contact us/Images/Form-img.png"
                       alt=""
                       class="img"
                     />
@@ -185,6 +188,171 @@
               <img src="Frame.svg" alt="" class="frame2" />
             </div>
           </dv>
+          <div class="contactForm">
+            <h3>
+              Get in Touch with <span class="special-word">Aralingual</span>
+            </h3>
+            <form action="post">
+              <div class="firstNameContainer">
+                <label for="firstName">First Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter First Name"
+                  id="firstName"
+                />
+              </div>
+              <div class="lastNameContainer">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter Last Name"
+                  id="lastName"
+                />
+              </div>
+              <div class="emailContainer">
+                <label for="email">Email</label>
+                <input type="email" placeholder="Enter your Email" id="email" />
+              </div>
+              <div class="phoneContainer">
+                <label for="phone">Phone</label>
+                <div class="languageDropdown">
+                  <div class="options2" onclick="NumberLanguageAppear()">
+                    <div class="phoneSelect">
+                      <img
+                        src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
+                        alt=""
+                      />&nbsp;
+                      <i
+                        class="fa-solid fa-chevron-down"
+                        style="font-size: 12px; padding-top: 5px"
+                      ></i>
+                    </div>
+                    <div class="phoneDropdown">
+                      <ul>
+                        <li onclick="changeLang('ltr')">
+                          <a href="#" class="language">
+                            <img
+                              src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
+                              alt=""
+                          /></a>
+                        </li>
+                        <li onclick="changeLang('rtl')">
+                          <a href="#" class="language">
+                            <img
+                              src="Aralingual - Update Assets 2024/Assets/Icon language/CN.svg"
+                              alt=""
+                          /></a>
+                        </li>
+                        <li onclick="changeLang('rtl')">
+                          <a href="#" class="language">
+                            <img
+                              src="Aralingual - Update Assets 2024/Assets/Icon language/JA.svg"
+                              alt=""
+                          /></a>
+                        </li>
+                        <li onclick="changeLang('rtl')">
+                          <a href="#" class="language">
+                            <img
+                              src="Aralingual - Update Assets 2024/Assets/Icon language/KO.svg"
+                              alt=""
+                          /></a>
+                        </li>
+                        <li onclick="changeLang('rtl')">
+                          <a href="#" class="language">
+                            <img
+                              src="Aralingual - Update Assets 2024/Assets/Icon language/DE.svg"
+                              alt=""
+                          /></a>
+                        </li>
+                        <li onclick="changeLang('rtl')">
+                          <a href="#" class="language">
+                            <img
+                              src="Aralingual - Update Assets 2024/Assets/Icon language/FR.svg"
+                              alt=""
+                          /></a>
+                        </li>
+                        <li onclick="changeLang('rtl')">
+                          <a href="#" class="language">
+                            <img
+                              src="Aralingual - Update Assets 2024/Assets/Icon language/PO.svg"
+                              alt=""
+                          /></a>
+                        </li>
+                        <li onclick="changeLang('rtl')">
+                          <a href="#" class="language">
+                            <img
+                              src="Aralingual - Update Assets 2024/Assets/Icon language/SE.svg"
+                              alt=""
+                          /></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="Enter Phone Number"
+                    id="phone"
+                  />
+                </div>
+              </div>
+              <div class="MessageContainer">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  placeholder="Enter your Message"
+                  rows="7"
+                  cols="70"
+                ></textarea>
+              </div>
+              <div class="checkAgreeContainer">
+                <div class="container">
+                  <input type="checkbox" class="checkAgree" id="check" />
+                  <span class="checkmark"></span>
+                </div>
+                <label for="check"
+                  >I agree with Terms of Use and Privacy Policy</label
+                >
+              </div>
+              <div class="btnContainer">
+                <button type="submit" id="btn">Send Now</button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="information">
+          <div class="workingHours">
+            <h3>Working Hours</h3>
+            <div class="btnsInfoContainer">
+              <div class="btnInfoContainer">
+                <button class="btnInfo">
+                  Monday - Friday: 8:30am - 5:00pm
+                </button>
+              </div>
+              <div class="btnInfoContainer">
+                <button class="btnInfo">Saturday: 8:30am – 2:00pm</button>
+              </div>
+            </div>
+          </div>
+          <div class="emailAndPhone">
+            <h3>Email & Pohne Number</h3>
+            <div class="btnsInfoContainer">
+              <div class="btnInfoContainer">
+                <button class="btnInfo">go-global@aralingual.com</button>
+              </div>
+            </div>
+          </div>
+          <div class="ourOffice">
+            <h3>Our Office</h3>
+            <div class="btnsInfoContainer">
+              <p>
+                Saudi Arabia, Riyadh, Imam Abdullah Ibn Saud Ibn Abdulaziz Rd
+                13241
+              </p>
+              <div class="btnInfoContainer">
+                <button class="btnInfo">Get Directions</button>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
       <footer>
@@ -197,11 +365,11 @@
             </div>
 
             <ul>
-              <li><a href="#">HOME</a></li>
-              <li><a href="#">ABOUT US</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">BLOG</a></li>
-              <li><a href="#">CONTACT US</a></li>
+              <li><a href="home.html">HOME</a></li>
+              <li><a href="about.html">ABOUT US</a></li>
+              <li><a href="FAQs.html">FAQ</a></li>
+              <li><a href="Blog.html">BLOG</a></li>
+              <li><a href="contactUs.html" class="footerActive">CONTACT US</a></li>
             </ul>
             <div class="social-links">
               <a href="#"><img src="Facebook.svg" alt="Facebook" /></a>

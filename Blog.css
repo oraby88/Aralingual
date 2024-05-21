@@ -117,7 +117,7 @@ nav {
   align-items: center;
   /* max-width: 1440px; */
   right: 0;
-  gap: 120px;
+  gap: 135px;
   margin: 0 auto;
   /* padding: 0 30px; */
   z-index: 999999999999999;
@@ -1118,6 +1118,10 @@ hr {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+}
+.footerActive{
+  color: var(--color-blue-700) !important;
+  font-weight: var(--fw-700);
 }
 @media screen and (max-width: 992px) {
   .footer-left {
