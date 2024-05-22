@@ -53,14 +53,14 @@ body {
 }
 
 section {
-  margin: 90px 0;
+  margin: 30px 0;
   padding: 0 100px;
 }
 section:first-child {
   margin: 75px 0 0 0;
 }
 section:nth-child(2) {
-  margin: 0 0 90px 0;
+  margin: 0 0 30px 0;
 }
 header {
   /* position: fixed; */
@@ -267,7 +267,19 @@ nav ul li a:focus {
   align-items: center;
   gap: 5px;
 }
-
+.closeIcon{
+  display: none;
+  transform: rotate(135deg);
+  font-size: 58px;
+}
+@media screen and (min-width: 900px) {
+  .humbrger{
+    display: none !important;
+  }
+  .closeIcon{
+    display: none !important;
+  }
+}
 @media screen and (max-width: 900px) {
   .nav-list {
     display: none;
@@ -276,21 +288,10 @@ nav ul li a:focus {
     display: flex;
     z-index: 3;
   }
-  /* .navLinks {
-      display: none;
-      position: fixed;
-      margin-inline: auto;
-      inset: 6rem var(--size-400) auto;
-      background: var(--clr-nutural-100);
-      border-radius: var(--size-100);
-      padding: var(--size-700);
-      box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
-    } */
   .nav-list {
     text-align: center;
     padding-top: 100px;
   }
-
   .options {
     position: static;
   }
@@ -314,32 +315,30 @@ nav ul li a:focus {
   }
   .nav-list a,
   .select {
-    backdrop-filter: blur(150px);
-    background-color: rgba(0, 0, 0, 1);
-    /* transform-style: preserve-3d; */
     color: white;
-    /* position: relative; */
     width: 100%;
     height: 42px;
     clip-path: polygon(97% 0, 100% 34%, 100% 100%, 3% 100%, 0 66%, 0 0);
     z-index: 999;
     border: 0;
-    color: #fff;
     text-align: center;
-    /* margin: 5px; */
+    background-color: rgba(255, 255, 255, 0.07);
+
+    backdrop-filter: blur(22.5px);
     font-feature-settings: "clig" off, "liga" off;
-    font-family: Rajdhani;
     font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 100%; /* 16px */
+    font-weight: var(--fw-700);
     transition: all 0.7s ease-in-out;
     place-content: center;
+  }
+  nav ul li a:hover,
+  nav ul li a:focus {
+    color: var(--color-white) !important;
+    font-weight: var(--fw-700);
   }
   .nav-list li:hover {
     background: linear-gradient(270deg, #44cd77 -43.46%, #2871ff 100%);
   }
-
   .nav-display {
     display: grid;
     position: absolute;
@@ -380,6 +379,10 @@ nav ul li a:focus {
     display: flex;
     justify-content: center;
   }
+  .active{
+    background: linear-gradient(270deg, #44cd77 -43.46%, #2871ff 100%);
+    color: var(--color-white) !important;
+  }
 }
 @media screen and (max-width: 380px) {
   .dropDown {
@@ -388,13 +391,17 @@ nav ul li a:focus {
 }
 
 /* welcome section */
-
+/* .welcomeBG{
+  width: 700px;
+  height: 700px;
+} */
 .welcomeBG img {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: absolute; 
+  top: 0;
   inset: 0;
-  z-index: -3;
+  z-index: -1;
   object-fit: cover;
 }
 .welcome-section {
@@ -407,9 +414,44 @@ nav ul li a:focus {
   /* align-items: center; */
   justify-content: center;
   height: 100%;
-  gap: 24px;
+  gap: 20px;
 }
-.welcome-words h3 {
+.title-word {
+  border: 1px solid grey;
+  padding: 5px 15px;
+  border-radius: 20px;
+  width: fit-content;
+  border: 0;
+  border-radius: 9999px;
+  background: #10151f;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0),
+    0px 0px 0px 1px rgba(255, 255, 255, 0.1), 0px 0px 0px 0px #fff;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.title-word {
+  display: inline-block;
+  padding-bottom: 5px;
+  background: linear-gradient(
+    90deg,
+    rgba(40, 113, 255, 0) 0%,
+    rgba(40, 113, 255, 0.9) 50%,
+    rgba(40, 113, 255, 0) 100%
+  );
+  background-size: 100% 2px;
+  background-position: bottom 0 left 0, bottom 5px left 0;
+  background-repeat: no-repeat;
+}
+
+.title-word h3 {
+  font-size: 20px;
+  font-weight: 700;
+  background: var(--Heading, linear-gradient(135deg, #fff 0%, #71717a 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* .welcome-words h3 {
   font-size: 20px;
   font-weight: 700;
   border: 1px solid grey;
@@ -421,7 +463,7 @@ nav ul li a:focus {
   background: linear-gradient(80.7deg, white 10.1%, #71717a 63.2%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-}
+} */
 .welcome-words h1 {
   width: 50%;
   font-size: 70px;
@@ -448,7 +490,7 @@ nav ul li a:focus {
   .welcome-words h1 {
     width: 100%;
     font-size: 42px;
-    line-height: 50px;
+    line-height: 40px;
   }
   .welcome-words p {
     text-transform: none;
@@ -466,13 +508,19 @@ nav ul li a:focus {
   /* background-image: url("Aralingual - Update Assets 2024/Website/About Us/BG-About.png");
   background-size: cover; */
 }
+
 .aboutBG img{
   width: 100%;
   height: 100%;
   position: absolute;
   inset: 0;
   z-index: -3;
-  object-fit: cover;
+  /* object-fit: cover; */
+}
+@media screen and (max-width:1440px) {
+  .aboutBG img{
+    object-fit: cover;
+  }
 }
 .about-words h3 {
   font-size: 42px;
@@ -548,9 +596,6 @@ nav ul li a:focus {
 
 .aboutCard p {
   font-size: 20px;
-  /* line-height: 22px; 130% */
-  /* text-align: justify; */
-  /* word-spacing: -2px; */
   width: fit-content;
   background: var(--Heading, linear-gradient(135deg, #fff 0%, #71717a 100%));
   background-clip: text;
@@ -559,8 +604,6 @@ nav ul li a:focus {
   padding: 0 5px;
   transition: transform 300ms ease;
   z-index: 5;
-  /* color: var(--Neutral-6, #f4f4f4); */
-  /* font-size: 18px; */
   font-weight: var(--fw-500);
   line-height: 24px; /* 155.556% */
 }

@@ -132,6 +132,7 @@
           <div class="bar2"></div>
           <div class="bar"></div>
         </div>
+        <div class="closeIcon" onclick="hide()" id="closeIcon">+</div>
       </nav>
     </header>
     <article>
@@ -143,7 +144,7 @@
 
           <div class="welcome-section">
             <div class="welcome-words">
-              <h3>Welcome to Aralingual</h3>
+              <div class="title-word"><h3>Welcome to Aralingual</h3></div>
               <h1>YOUR GATEWAY TO LOCAL GAMING</h1>
               <p>
                 Unlock the full potential of your video game with professional
@@ -159,7 +160,10 @@
               </div>
 
               <div class="shape1Container">
-                <img src="shape-1.svg" alt="" class="shape-1" />
+                <picture>
+                  <source media="(max-width: 600px)" srcset="smallShape1.png" />
+                  <img src="shape-1.svg" alt="" class="shape-1" />
+                </picture>
               </div>
             </div>
             <div class="heroImgContainer">
@@ -226,7 +230,12 @@
 
             <div class="card">
               <div class="cardFrameContainer">
-                <img src="Card.svg" alt="" class="cardFrame" />
+                <img
+                  src="Card.svg"
+                  alt=""
+                  class="cardFrame"
+                  style="width: 100%"
+                />
               </div>
               <div class="glowContainer">
                 <img src="glow1.svg" alt="" class="cardGlow" />
@@ -332,7 +341,7 @@
               </p>
             </div>
             <div class="servicesCardsContainer">
-              <img src="glow1.svg" alt="" class="bigGlow" />
+              <img src="Home/GlowBG.png" alt="" class="bigGlow" />
               <div class="serviceCardContainer">
                 <div class="serviceCard">
                   <div class="serviceCardContent">
@@ -366,66 +375,66 @@
                 </div>
                 <img src="Frame.svg" alt="" class="frame1" />
               </div>
-            
-            <div class="serviceCardContainer">
-              <div class="serviceCard">
-                <div class="serviceCardContent">
-                  <div class="serviceCardImgContainer">
-                    <img src="Home/User-Guide.png" alt="" />
+
+              <div class="serviceCardContainer">
+                <div class="serviceCard">
+                  <div class="serviceCardContent">
+                    <div class="serviceCardImgContainer">
+                      <img src="Home/User-Guide.png" alt="" />
+                    </div>
+                    <h3>User Guide</h3>
+                    <p>
+                      We translate and adapt user guides and manuals, enabling
+                      players to understand game mechanics, controls, &
+                      objectives in their preferred language.
+                    </p>
+                    <img src="_Path_.svg" alt="" class="path" />
                   </div>
-                  <h3>User Guide</h3>
-                  <p>
-                    We translate and adapt user guides and manuals, enabling
-                    players to understand game mechanics, controls, & objectives
-                    in their preferred language.
-                  </p>
-                  <img src="_Path_.svg" alt="" class="path" />
                 </div>
+                <img src="Frame.svg" alt="" class="frame1" />
               </div>
-              <img src="Frame.svg" alt="" class="frame1" />
-            </div>
-            <div class="serviceCardContainer">
-              <div class="serviceCard">
-                <div class="serviceCardContent">
-                  <div class="serviceCardImgContainer">
-                    <img src="Home/Marketing Materials.png" alt="" />
-                  </div>
-                  <h3>Marketing Materials</h3>
-                  <p>
-                    We provide localization services for marketing materials
-                    such as trailers, websites, press release, and social media
-                    content, ensuring your game’s message resonates with
-                    international audiences.
-                    <span class="tooltiptext"
-                      >We provide localization services for marketing materials
+              <div class="serviceCardContainer">
+                <div class="serviceCard">
+                  <div class="serviceCardContent">
+                    <div class="serviceCardImgContainer">
+                      <img src="Home/Marketing Materials.png" alt="" />
+                    </div>
+                    <h3>Marketing Materials</h3>
+                    <p>
+                      We provide localization services for marketing materials
                       such as trailers, websites, press release, and social
                       media content, ensuring your game’s message resonates with
-                      international audiences.</span
-                    >
-                  </p>
-                  <img src="_Path_.svg" alt="" class="path" />
-                </div>
-              </div>
-              <img src="Frame.svg" alt="" class="frame1" />
-            </div>
-            <div class="serviceCardContainer">
-              <div class="serviceCard">
-                <div class="serviceCardContent">
-                  <div class="serviceCardImgContainer">
-                    <img src="Home/Legal Documents.png" alt="" />
+                      international audiences.
+                      <span class="tooltiptext"
+                        >We provide localization services for marketing
+                        materials such as trailers, websites, press release, and
+                        social media content, ensuring your game’s message
+                        resonates with international audiences.</span
+                      >
+                    </p>
+                    <img src="_Path_.svg" alt="" class="path" />
                   </div>
-                  <h3>Legal Documents</h3>
-                  <p>
-                    Our team ensures compliance with legal and regulatory
-                    requirements by translating end-user license agreements,
-                    terms of service, privacy policies, and other legal
-                    documents.
-                  </p>
-                  <img src="_Path_.svg" alt="" class="path" />
-                  <img src="Frame.svg" alt="" class="frame1" />
                 </div>
+                <img src="Frame.svg" alt="" class="frame1" />
               </div>
-            </div>
+              <div class="serviceCardContainer">
+                <div class="serviceCard">
+                  <div class="serviceCardContent">
+                    <div class="serviceCardImgContainer">
+                      <img src="Home/Legal Documents.png" alt="" />
+                    </div>
+                    <h3>Legal Documents</h3>
+                    <p>
+                      Our team ensures compliance with legal and regulatory
+                      requirements by translating end-user license agreements,
+                      terms of service, privacy policies, and other legal
+                      documents.
+                    </p>
+                    <img src="_Path_.svg" alt="" class="path" />
+                  </div>
+                </div>
+                <img src="Frame.svg" alt="" class="frame1" />
+              </div>
               <div class="serviceCardContainer">
                 <div class="serviceCard">
                   <div class="serviceCardContent">
@@ -443,79 +452,6 @@
                 </div>
                 <img src="Frame.svg" alt="" class="frame1" />
               </div>
-            </div>
-              <!-- <div class="serviceCard2">
-                <div class="serviceCard22">
-                  <div class="serviceCardImgContainer">
-                    <img src="Home/In Game TEXT.png" alt="" />
-                  </div>
-                  <h3>In Game TEXT</h3>
-                  <p>
-                    We translate and adapt all in-game texts, including
-                    dialogues, menus, subtitles, achievements, and more.
-                  </p>
-                </div>
-              </div>
-              <div class="serviceCard2">
-                <div class="serviceCard22">
-                  <div class="serviceCardImgContainer">
-                    <img src="Home/In Game TEXT.png" alt="" />
-                  </div>
-                  <h3>In Game TEXT</h3>
-                  <p>
-                    We translate and adapt all in-game texts, including
-                    dialogues, menus, subtitles, achievements, and more.
-                  </p>
-                </div>
-              </div>
-              <div class="serviceCard2">
-                <div class="serviceCard22">
-                  <div class="serviceCardImgContainer">
-                    <img src="Home/In Game TEXT.png" alt="" />
-                  </div>
-                  <h3>In Game TEXT</h3>
-                  <p>
-                    We translate and adapt all in-game texts, including
-                    dialogues, menus, subtitles, achievements, and more.
-                  </p>
-                </div>
-              </div>
-              <div class="serviceCard2">
-                <div class="serviceCard22">
-                  <div class="serviceCardImgContainer">
-                    <img src="Home/In Game TEXT.png" alt="" />
-                  </div>
-                  <h3>In Game TEXT</h3>
-                  <p>
-                    We translate and adapt all in-game texts, including
-                    dialogues, menus, subtitles, achievements, and more.
-                  </p>
-                </div>
-              </div>
-              <div class="serviceCard2">
-                <div class="serviceCard22">
-                  <div class="serviceCardImgContainer">
-                    <img src="Home/In Game TEXT.png" alt="" />
-                  </div>
-                  <h3>In Game TEXT</h3>
-                  <p>
-                    We translate and adapt all in-game texts, including
-                    dialogues, menus, subtitles, achievements, and more.
-                  </p>
-                </div>
-              </div>
-              <div class="serviceCard2">
-                <div class="serviceCard22">
-                  <div class="serviceCardImgContainer">
-                    <img src="Home/In Game TEXT.png" alt="" />
-                  </div>
-                  <h3>In Game TEXT</h3>
-                  <p>
-                    We translate and adapt all in-game texts, including
-                    dialogues, menus, subtitles, achievements, and more.
-                  </p>
-                </div>
-              </div> -->
             </div>
           </div>
         </section>
@@ -649,12 +585,11 @@
             </div>
           </div>
         </section>
-        <img src="homeRightGlow.png" alt="" class="homeRightGlow">
+        <img src="homeRightGlow.png" alt="" class="homeRightGlow" />
         <section>
           <div class="getInTouch">
             <img src="Home/CTA (1).png" alt="" class="getInTouchBg" />
 
-            
             <h3>
               <span class="hideInSmallSizes"
                 >Gotany more <span class="special-word">Questions</span> ?</span
@@ -687,10 +622,10 @@
 
             <ul>
               <li><a href="#" class="footerActive">HOME</a></li>
-          <li><a href="about.html">ABOUT US</a></li>
-          <li><a href="FAQs.html">FAQ</a></li>
-          <li><a href="Blog.html">BLOG</a></li>
-          <li><a href="contactUs.html">CONTACT US</a></li>
+              <li><a href="about.html">ABOUT US</a></li>
+              <li><a href="FAQs.html">FAQ</a></li>
+              <li><a href="Blog.html">BLOG</a></li>
+              <li><a href="contactUs.html">CONTACT US</a></li>
             </ul>
             <div class="social-links">
               <a href="#"><img src="Facebook.svg" alt="Facebook" /></a>

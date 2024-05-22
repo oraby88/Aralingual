@@ -131,6 +131,7 @@
           <div class="bar2"></div>
           <div class="bar"></div>
         </div>
+        <div class="closeIcon" onclick="hide()" id="closeIcon">+</div>
       </nav>
     </header>
     <article>
@@ -143,7 +144,7 @@
             />
           </div>
           <div class="welcome-words">
-            <h3>Welcome to Aralingual</h3>
+            <div class="title-word"><h3>Welcome to Aralingual</h3></div>
             <h1>Pioneering Arabic Game Localization</h1>
             <p>for Unparalleled Gaming Experiences!</p>
           </div>
@@ -249,7 +250,10 @@
               gaming industry, captivate a new audience, and unleash the
               untapped potential of the Arab world.
             </p>
-            <img src="shape-1.svg" alt="" class="sahpe1">
+            <picture>
+              <source media="(max-width: 600px)" srcset="smallShape1.png" />
+              <img src="shape-1.svg" alt="" class="shape-1" />
+            </picture>
           </div>
         </section>
         <section>

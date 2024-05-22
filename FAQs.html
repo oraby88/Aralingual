@@ -132,22 +132,27 @@
           <div class="bar2"></div>
           <div class="bar"></div>
         </div>
+        <div class="closeIcon" onclick="hide()" id="closeIcon">+</div>
       </nav>
     </header>
     <article>
       <main>
         <section class="welcome-section">
           <div class="welcomeBG">
-            <picture>
+            <img
+              src="Aralingual - Update Assets 2024/Website/FAQs/Images/FAQs-img.png"
+              alt=""
+            />
+            <!-- <picture>
               <source media="(max-width: 600px)" srcset="HeroSection.png" />
               <img
-                src="Aralingual - Update Assets 2024/Website/FAQs/Images/FAQs-img.png"
-                alt=""
-              />
-            </picture>
+              src="Aralingual - Update Assets 2024/Website/FAQs/Images/FAQs-img.png"
+              alt=""
+            />
+            </picture> -->
           </div>
           <div class="welcome-words">
-            <h3>Need Help !</h3>
+            <div class="title-word"><h3>Need Help !</h3></div>
             <h1>we're here to answer all your questions</h1>
             <p>
               Unlock the full potential of your video game with professional
@@ -179,10 +184,18 @@
           <div class="question-card" id="card1">
             <div class="card-content">
               <div class="questionAndNumberContainer">
-                <div class="question-number">
-                  <h2>01</h2>
+                <div class="questionAndNumber">
+                  <div class="question-number">
+                    <h2>01</h2>
+                  </div>
+                  <h4>What languages do we translate from and to?</h4>
                 </div>
-                <h4>What languages do we translate from and to?</h4>
+                <div class="open-button" onclick="newDisplay('card1')">
+                  <p>+</p>
+                </div>
+                <div class="close-button" onclick="newNonDisplay('card1')">
+                  <p>+</p>
+                </div>
               </div>
 
               <div class="display-hide-content">
@@ -210,24 +223,34 @@
                   needs.
                 </p>
               </div>
-            </div>
-            <div class="open-button" onclick="newDisplay('card1')">
-              <p>+</p>
-            </div>
-            <div class="close-button" onclick="newNonDisplay('card1')">
-              <p>+</p>
             </div>
           </div>
           <div class="hr"></div>
           <div class="question-card" id="card2">
             <div class="card-content">
               <div class="questionAndNumberContainer">
-                <div class="question-number">
-                  <h2>02</h2>
+                <div class="questionAndNumber">
+                  <div class="question-number">
+                    <h2>02</h2>
+                  </div>
+                  <h4>
+                    How long does it take to finish translating a video game?
+                  </h4>
                 </div>
-                <h4>
-                  How long does it take to finish translating a video game?
-                </h4>
+                <div
+                  class="open-button"
+                  id="open"
+                  onclick="newDisplay('card2')"
+                >
+                  <p>+</p>
+                </div>
+                <div
+                  class="close-button"
+                  id="close"
+                  onclick="newNonDisplay('card2')"
+                >
+                  <p>+</p>
+                </div>
               </div>
               <div class="display-hide-content">
                 <p>
@@ -254,27 +277,28 @@
                   needs.
                 </p>
               </div>
-            </div>
-
-            <div class="open-button" id="open" onclick="newDisplay('card2')">
-              <p>+</p>
-            </div>
-            <div
-              class="close-button"
-              id="close"
-              onclick="newNonDisplay('card2')"
-            >
-              <p>+</p>
             </div>
           </div>
           <div class="hr"></div>
           <div class="question-card" id="card3">
             <div class="card-content">
               <div class="questionAndNumberContainer">
-                <div class="question-number">
-                  <h2>03</h2>
+                <div class="questionAndNumber">
+                  <div class="question-number">
+                    <h2>03</h2>
+                  </div>
+                  <h4>What is the best way to communicate?</h4>
                 </div>
-                <h4>What is the best way to communicate?</h4>
+                <div class="open-button" onclick="newDisplay('card3')">
+                  <p>+</p>
+                </div>
+                <div
+                  class="close-button"
+                  id="close"
+                  onclick="newNonDisplay('card3')"
+                >
+                  <p>+</p>
+                </div>
               </div>
               <div class="display-hide-content">
                 <p>
@@ -301,30 +325,31 @@
                   needs.
                 </p>
               </div>
-            </div>
-
-            <div class="open-button" onclick="newDisplay('card3')">
-              <p>+</p>
-            </div>
-            <div
-              class="close-button"
-              id="close"
-              onclick="newNonDisplay('card3')"
-            >
-              <p>+</p>
             </div>
           </div>
           <div class="hr"></div>
           <div class="question-card" id="card4">
             <div class="card-content">
               <div class="questionAndNumberContainer">
-                <div class="question-number">
-                  <h2>04</h2>
+                <div class="questionAndNumber">
+                  <div class="question-number">
+                    <h2>04</h2>
+                  </div>
+                  <h4>
+                    What are you supposed to provide to start the translation
+                    process?
+                  </h4>
                 </div>
-                <h4>
-                  What are you supposed to provide to start the translation
-                  process?
-                </h4>
+                <div class="open-button" onclick="newDisplay('card4')">
+                  <p>+</p>
+                </div>
+                <div
+                  class="close-button"
+                  id="close"
+                  onclick="newNonDisplay('card4')"
+                >
+                  <p>+</p>
+                </div>
               </div>
               <div class="display-hide-content">
                 <p>
@@ -351,27 +376,30 @@
                   needs.
                 </p>
               </div>
-            </div>
-
-            <div class="open-button" onclick="newDisplay('card4')">
-              <p>+</p>
-            </div>
-            <div
-              class="close-button"
-              id="close"
-              onclick="newNonDisplay('card4')"
-            >
-              <p>+</p>
             </div>
           </div>
           <div class="hr"></div>
           <div class="question-card" id="card5">
             <div class="card-content">
               <div class="questionAndNumberContainer">
-                <div class="question-number">
-                  <h2>05</h2>
+                <div class="questionAndNumber">
+                  <div class="question-number">
+                    <h2>05</h2>
+                  </div>
+                  <h4>
+                    Are there special requirements in the Arabic language?
+                  </h4>
                 </div>
-                <h4>Are there special requirements in the Arabic language?</h4>
+                <div class="open-button" onclick="newDisplay('card5')">
+                  <p>+</p>
+                </div>
+                <div
+                  class="close-button"
+                  id="close"
+                  onclick="newNonDisplay('card5')"
+                >
+                  <p>+</p>
+                </div>
               </div>
               <div class="display-hide-content">
                 <p>
@@ -398,27 +426,28 @@
                   needs.
                 </p>
               </div>
-            </div>
-
-            <div class="open-button" onclick="newDisplay('card5')">
-              <p>+</p>
-            </div>
-            <div
-              class="close-button"
-              id="close"
-              onclick="newNonDisplay('card5')"
-            >
-              <p>+</p>
             </div>
           </div>
           <div class="hr"></div>
           <div class="question-card" id="card6">
             <div class="card-content">
               <div class="questionAndNumberContainer">
-                <div class="question-number">
-                  <h2>06</h2>
+                <div class="questionAndNumber">
+                  <div class="question-number">
+                    <h2>06</h2>
+                  </div>
+                  <h4>How many revisions do we provide?</h4>
                 </div>
-                <h4>How many revisions do we provide?</h4>
+                <div class="open-button" onclick="newDisplay('card6')">
+                  <p>+</p>
+                </div>
+                <div
+                  class="close-button"
+                  id="close"
+                  onclick="newNonDisplay('card6')"
+                >
+                  <p>+</p>
+                </div>
               </div>
               <div class="display-hide-content">
                 <p>
@@ -445,30 +474,31 @@
                   needs.
                 </p>
               </div>
-            </div>
-
-            <div class="open-button" onclick="newDisplay('card6')">
-              <p>+</p>
-            </div>
-            <div
-              class="close-button"
-              id="close"
-              onclick="newNonDisplay('card6')"
-            >
-              <p>+</p>
             </div>
           </div>
           <div class="hr"></div>
           <div class="question-card" id="card7">
             <div class="card-content">
               <div class="questionAndNumberContainer">
-                <div class="question-number">
-                  <h2>07</h2>
+                <div class="questionAndNumber">
+                  <div class="question-number">
+                    <h2>07</h2>
+                  </div>
+                  <h4>
+                    Do you have experience in translating and localizing
+                    specific game genres?
+                  </h4>
                 </div>
-                <h4>
-                  Do you have experience in translating and localizing specific
-                  game genres?
-                </h4>
+                <div class="open-button" onclick="newDisplay('card7')">
+                  <p>+</p>
+                </div>
+                <div
+                  class="close-button"
+                  id="close"
+                  onclick="newNonDisplay('card7')"
+                >
+                  <p>+</p>
+                </div>
               </div>
               <div class="display-hide-content">
                 <p>
@@ -495,30 +525,31 @@
                   needs.
                 </p>
               </div>
-            </div>
-
-            <div class="open-button" onclick="newDisplay('card7')">
-              <p>+</p>
-            </div>
-            <div
-              class="close-button"
-              id="close"
-              onclick="newNonDisplay('card7')"
-            >
-              <p>+</p>
             </div>
           </div>
           <div class="hr"></div>
           <div class="question-card" id="card8">
             <div class="card-content">
               <div class="questionAndNumberContainer">
-                <div class="question-number">
-                  <h2>08</h2>
+                <div class="questionAndNumber">
+                  <div class="question-number">
+                    <h2>08</h2>
+                  </div>
+                  <h4>
+                    Is localization limited to the text within the game, or can
+                    you assist with voice-overs and audio localization?
+                  </h4>
                 </div>
-                <h4>
-                  Is localization limited to the text within the game, or can
-                  you assist with voice-overs and audio localization?
-                </h4>
+                <div class="open-button" onclick="newDisplay('card8')">
+                  <p>+</p>
+                </div>
+                <div
+                  class="close-button"
+                  id="close"
+                  onclick="newNonDisplay('card8')"
+                >
+                  <p>+</p>
+                </div>
               </div>
               <div class="display-hide-content">
                 <p>
@@ -545,29 +576,30 @@
                   needs.
                 </p>
               </div>
-            </div>
-
-            <div class="open-button" onclick="newDisplay('card8')">
-              <p>+</p>
-            </div>
-            <div
-              class="close-button"
-              id="close"
-              onclick="newNonDisplay('card8')"
-            >
-              <p>+</p>
             </div>
           </div>
           <div class="hr"></div>
           <div class="question-card" id="card9">
             <div class="card-content">
               <div class="questionAndNumberContainer">
-                <div class="question-number">
-                  <h2>09</h2>
+                <div class="questionAndNumber">
+                  <div class="question-number">
+                    <h2>09</h2>
+                  </div>
+                  <h4>
+                    Can you help with ongoing updates and post-release content?
+                  </h4>
                 </div>
-                <h4>
-                  Can you help with ongoing updates and post-release content?
-                </h4>
+                <div class="open-button" onclick="newDisplay('card9')">
+                  <p>+</p>
+                </div>
+                <div
+                  class="close-button"
+                  id="close"
+                  onclick="newNonDisplay('card9')"
+                >
+                  <p>+</p>
+                </div>
               </div>
               <div class="display-hide-content">
                 <p>
@@ -596,28 +628,31 @@
               </div>
             </div>
 
-            <div class="open-button" onclick="newDisplay('card9')">
-              <p>+</p>
-            </div>
-            <div
-              class="close-button"
-              id="close"
-              onclick="newNonDisplay('card9')"
-            >
-              <p>+</p>
-            </div>
+            
           </div>
           <div class="hr"></div>
           <div class="question-card" id="card10">
             <div class="card-content">
               <div class="questionAndNumberContainer">
-                <div class="question-number">
-                  <h2>10</h2>
+                <div class="questionAndNumber">
+                  <div class="question-number">
+                    <h2>10</h2>
+                  </div>
+                  <h4>
+                    What measures do you take to ensure confidentiality and data
+                    security?
+                  </h4>
                 </div>
-                <h4>
-                  What measures do you take to ensure confidentiality and data
-                  security?
-                </h4>
+                <div class="open-button" onclick="newDisplay('card10')">
+                  <p>+</p>
+                </div>
+                <div
+                  class="close-button"
+                  id="close"
+                  onclick="newNonDisplay('card10')"
+                >
+                  <p>+</p>
+                </div>
               </div>
               <div class="display-hide-content">
                 <p>
@@ -644,30 +679,31 @@
                   needs.
                 </p>
               </div>
-            </div>
-
-            <div class="open-button" onclick="newDisplay('card10')">
-              <p>+</p>
-            </div>
-            <div
-              class="close-button"
-              id="close"
-              onclick="newNonDisplay('card10')"
-            >
-              <p>+</p>
             </div>
           </div>
           <div class="hr"></div>
           <div class="question-card" id="card11">
             <div class="card-content">
               <div class="questionAndNumberContainer">
-                <div class="question-number">
-                  <h2>11</h2>
+                <div class="questionAndNumber">
+                  <div class="question-number">
+                    <h2>11</h2>
+                  </div>
+                  <h4>
+                    Can you help with marketing and promotional materials for
+                    the localized game?
+                  </h4>
                 </div>
-                <h4>
-                  Can you help with marketing and promotional materials for the
-                  localized game?
-                </h4>
+                <div class="open-button" onclick="newDisplay('card11')">
+                  <p>+</p>
+                </div>
+                <div
+                  class="close-button"
+                  id="close"
+                  onclick="newNonDisplay('card11')"
+                >
+                  <p>+</p>
+                </div>
               </div>
               <div class="display-hide-content">
                 <p>
@@ -694,17 +730,6 @@
                   needs.
                 </p>
               </div>
-            </div>
-
-            <div class="open-button" onclick="newDisplay('card11')">
-              <p>+</p>
-            </div>
-            <div
-              class="close-button"
-              id="close"
-              onclick="newNonDisplay('card11')"
-            >
-              <p>+</p>
             </div>
           </div>
           <div class="hr"></div>

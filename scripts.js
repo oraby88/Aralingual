@@ -6,12 +6,22 @@ function mini_nav_dropDown() {
 }
 
 var humbrger = document.querySelector(".humbrger");
+var closeIcon = document.querySelector(".closeIcon");
 var navList = document.querySelector(".nav-list");
 
 function show() {
-  document.getElementById("nav-list").classList.toggle("nav-display");
-  document.getElementsByTagName("article")[0].classList.toggle("blurWindow");
+  document.getElementById("nav-list").classList.add("nav-display");
+  document.getElementsByTagName("article")[0].classList.add("blurWindow");
   console.log("aaaa");
+  document.getElementById("humbrger").style.display = "none";
+  document.getElementById("closeIcon").style.display = "block";
+}
+function hide() {
+  document.getElementById("nav-list").classList.remove("nav-display");
+  document.getElementsByTagName("article")[0].classList.remove("blurWindow");
+  console.log("aaaa");
+  document.getElementById("humbrger").style.display = "flex";
+  document.getElementById("closeIcon").style.display = "none";
 }
 
 /* FAQ Section */
