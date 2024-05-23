@@ -24,6 +24,84 @@ function hide() {
   document.getElementById("closeIcon").style.display = "none";
 }
 
+/* Home page */
+function arabic(direction) {
+  document.body.style.direction = direction;
+  console.log("aviooo");
+  document.querySelector(".processGlow").classList.add("processGlowArabic");
+  document.querySelector(".iframe").classList.add("iframeArabic");
+  document.querySelector(".processBG").classList.add("processBGArabic");
+
+  document
+    .querySelector(".showEnglishLanguageIcon")
+    .classList.add("nonDisplay");
+  document.querySelector(".showArabicLanguageIcon").classList.add("display");
+  document.querySelector(".englishIcone").classList.add("display");
+  document.querySelector(".arabicIcon").classList.add("nonDisplay");
+  document.querySelector(".whyAraBG").classList.add("whyAraBGArabic");
+  document.querySelector(".shape-1").classList.add("shape-1-arabic");
+
+  // document.querySelector(".dropDown").classList.add("display");
+  document.querySelector(".dropDown").classList.add("dropDownArabic");
+  document.querySelector(".processCard2").classList.add("rtl");
+}
+
+function english(direction) {
+  document.body.style.direction = direction;
+  console.log("aviooo");
+  document.querySelector(".processGlow").classList.remove("processGlowArabic");
+  document.querySelector(".iframe").classList.remove("iframeArabic");
+  document.querySelector(".processBG").classList.remove("processBGArabic");
+  document.querySelector(".dropDown").classList.remove("dropDownArabic");
+  document
+    .querySelector(".showEnglishLanguageIcon")
+    .classList.remove("nonDisplay");
+  document.querySelector(".showArabicLanguageIcon").classList.remove("display");
+  document.querySelector(".englishIcone").classList.remove("display");
+  document.querySelector(".arabicIcon").classList.remove("nonDisplay");
+  document.querySelector(".whyAraBG").classList.remove("whyAraBGArabic");
+  document.querySelector(".shape-1").classList.remove("shape-1-arabic");
+
+  document.querySelector(".dropDown").classList.toggle("display");
+}
+
+/* About Us Section */
+function aboutArabic(direction) {
+  document.body.style.direction = direction;
+  console.log("avio");
+  document
+    .querySelector(".showEnglishLanguageIcon")
+    .classList.add("nonDisplay");
+  document.querySelector(".showArabicLanguageIcon").classList.add("display");
+  document.querySelector(".englishIcone").classList.add("display");
+  document.querySelector(".arabicIcon").classList.add("nonDisplay");
+  document.querySelector(".dropDown").classList.add("dropDownArabic");
+  document.querySelector(".shape-1").classList.add("shape-1-arabic");
+  document.querySelector(".aboutCard").classList.add("aboutCardArabic");
+  document.getElementById("card2").classList.add("aboutCardArabic");
+  document.getElementById("card2").classList.add("aboutCardArabicLast-child");
+
+  document.querySelector(".dropDown").classList.toggle("display");
+}
+function aboutEnglish(direction) {
+  document.body.style.direction = direction;
+  console.log("avio");
+  document
+    .querySelector(".showEnglishLanguageIcon")
+    .classList.remove("nonDisplay");
+  document.querySelector(".showArabicLanguageIcon").classList.remove("display");
+  document.querySelector(".englishIcone").classList.remove("display");
+  document.querySelector(".arabicIcon").classList.remove("nonDisplay");
+  document.querySelector(".dropDown").classList.remove("dropDownArabic");
+  document.querySelector(".shape-1").classList.remove("shape-1-arabic");
+  document.querySelector(".aboutCard").classList.remove("aboutCardArabic");
+  document.getElementById("card2").classList.remove("aboutCardArabicLast-child");
+  document.getElementById("card2").classList.remove("aboutCardArabic");
+
+
+  document.querySelector(".dropDown").classList.toggle("display");
+}
+
 /* FAQ Section */
 
 // function display(id,section){

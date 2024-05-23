@@ -46,27 +46,54 @@
           <li><a href="contactUs.html">CONTACT US</a></li>
           <li class="options" onclick="appear()">
             <div class="select">
-              EN
-              <img
-                src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
-                alt=""
-              />&nbsp;
-              <i
-                class="fa-solid fa-chevron-down"
-                style="font-size: 12px; padding-top: 5px"
-              ></i>
+              <div class="showEnglishLanguageIcon">
+                EN
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
+                  alt=""
+                />&nbsp;
+                <i
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 12px; padding-top: 5px"
+                ></i>
+              </div>
+              <div
+                class="showArabicLanguageIcon"
+                onclick="arabic('rtl')"
+                
+              >
+                <a href="#" class="language"
+                  >AR
+                  <img
+                    src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
+                    alt=""
+                  />
+                  <i
+                    class="fa-solid fa-chevron-down"
+                    style="font-size: 12px; padding-top: 5px"
+                  ></i>
+                </a>
+              </div>
             </div>
           </li>
         </ul>
         <div class="dropDown">
           <ul>
-            <li onclick="changeLang('ltr')">
+            <li onclick="aboutArabic('rtl')" class="arabicIcon">
               <a href="#" class="language"
                 >AR
                 <img
                   src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
                   alt=""
               /></a>
+            </li>
+            <li onclick="aboutEnglish('ltr')" class="englishIcone">
+              <a href="#" class="language"
+                >EN
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
+                  alt=""
+                /></a>
             </li>
             <li onclick="changeLang('rtl')">
               <a href="#" class="language"
@@ -179,10 +206,11 @@
                 excellence enjoyed by players worldwide to Arabic-speaking
                 countries. We realized the true significance of this market,
                 particularly in the realm of mobile games, where the potential
-                for success is staggering. In fact, Saudi Arabia boasts <span class="specialSentance">the
-                highest average revenue per mobile paying user </span>(ARPPU) rate,
-                with an astounding $270 per person, surpassing even the figures
-                in China by 88%.
+                for success is staggering. In fact, Saudi Arabia boasts
+                <span class="specialSentance"
+                  >the highest average revenue per mobile paying user </span
+                >(ARPPU) rate, with an astounding $270 per person, surpassing
+                even the figures in China by 88%.
               </p>
             </div>
             <div style="width: 100%">
@@ -286,10 +314,17 @@
               </div>
             </div>
           </div>
-
         </section>
-        <img src="Aralingual - Update Assets 2024/Website/About Us/aboutRightGlow.png" alt="" class="aboutRightGlow">
-        <img src="Aralingual - Update Assets 2024/Website/About Us/aboutLeftGlow.png" alt="" class="aboutLeftGlow">
+        <img
+          src="Aralingual - Update Assets 2024/Website/About Us/aboutRightGlow.png"
+          alt=""
+          class="aboutRightGlow"
+        />
+        <img
+          src="Aralingual - Update Assets 2024/Website/About Us/aboutLeftGlow.png"
+          alt=""
+          class="aboutLeftGlow"
+        />
         <section>
           <div class="getInTouch">
             <img src="Home/CTA (1).png" alt="" class="getInTouchBg" />

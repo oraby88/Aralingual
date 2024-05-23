@@ -127,6 +127,7 @@ nav {
   margin: 0 auto;
   /* padding: 0 30px; */
   z-index: 999999999999999;
+  position: relative;
 }
 @media screen and (max-width: 992px) {
   nav {
@@ -211,6 +212,24 @@ nav ul li a:focus {
   gap: 5px;
 }
 
+.showEnglishLanguageIcon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.nonDisplay {
+  display: none;
+}
+.showArabicLanguageIcon {
+  display: none;
+  align-items: center;
+  gap: 5px;
+}
+
+.englishIcone {
+  display: none;
+}
+
 .dropDown ul {
   display: flex;
   flex-direction: column;
@@ -229,12 +248,16 @@ nav ul li a:focus {
   position: absolute;
   z-index: 3;
   top: 55%;
-  right: 8%;
+  right: 0%;
   background-color: black;
   border-radius: 10px;
-  width: 100px;
+  width: 90px;
   margin-top: 10px;
   transition: all 1s ease-in-out;
+}
+.dropDownArabic {
+  right: auto;
+  left: 0;
 }
 @media screen and (max-width: 992px) {
   .dropDown {
@@ -267,16 +290,16 @@ nav ul li a:focus {
   align-items: center;
   gap: 5px;
 }
-.closeIcon{
+.closeIcon {
   display: none;
   transform: rotate(135deg);
   font-size: 58px;
 }
 @media screen and (min-width: 900px) {
-  .humbrger{
+  .humbrger {
     display: none !important;
   }
-  .closeIcon{
+  .closeIcon {
     display: none !important;
   }
 }
@@ -370,7 +393,7 @@ nav ul li a:focus {
   }
   .dropDown {
     position: absolute;
-    top: 460%;
+    top: 655%;
     left: 16%;
     width: 70%;
     z-index: 100 !important;
@@ -379,7 +402,7 @@ nav ul li a:focus {
     display: flex;
     justify-content: center;
   }
-  .active{
+  .active {
     background: linear-gradient(270deg, #44cd77 -43.46%, #2871ff 100%);
     color: var(--color-white) !important;
   }
@@ -398,7 +421,7 @@ nav ul li a:focus {
 .welcomeBG img {
   width: 100%;
   height: 100%;
-  position: absolute; 
+  position: absolute;
   top: 0;
   inset: 0;
   z-index: -1;
@@ -500,8 +523,6 @@ nav ul li a:focus {
 
 /* about-section */
 
-
-
 .about-section {
   position: relative;
   /* height: 700px; */
@@ -509,7 +530,7 @@ nav ul li a:focus {
   background-size: cover; */
 }
 
-.aboutBG img{
+.aboutBG img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -517,8 +538,8 @@ nav ul li a:focus {
   z-index: -3;
   /* object-fit: cover; */
 }
-@media screen and (max-width:1440px) {
-  .aboutBG img{
+@media screen and (max-width: 1440px) {
+  .aboutBG img {
     object-fit: cover;
   }
 }
@@ -629,7 +650,7 @@ nav ul li a:focus {
     float: left;
   }
 }
-.aboutCard:after {
+.aboutCard::after {
   position: absolute;
   content: "";
   width: 0.25rem;
@@ -638,6 +659,12 @@ nav ul li a:focus {
   background-color: #18c8ff;
   transition: transform 300ms ease;
   z-index: 4;
+}
+.aboutCardArabic::after{
+  inset: 0.65rem 0.5rem 0.65rem auto;
+}
+.aboutCardArabicLast-child:last-child {
+  float: left;
 }
 .aboutCard:last-child:after {
   background-color: #eb4f4f;
@@ -764,6 +791,8 @@ nav ul li a:focus {
 
 .gameImg {
   width: 100%;
+  position: relative;
+  z-index: -1;
 }
 .gameImgComtainer {
   position: relative;
@@ -823,6 +852,13 @@ nav ul li a:focus {
   line-height: 20px; /* 125% */
   letter-spacing: -0.5px;
 }
+
+.shape-1 {
+  margin-top: 20px;
+}
+.shape-1-arabic {
+  transform: rotateY(180deg);
+}
 @media (max-width: 980px) {
   .gameImgCard1 {
     display: none;
@@ -837,6 +873,7 @@ nav ul li a:focus {
   right: 0;
   bottom: 0;
   z-index: -1;
+  width: 100%;
 }
 .aboutLeftGlow {
   position: absolute;
@@ -986,7 +1023,7 @@ hr {
   justify-content: center;
   border-radius: 50%;
 }
-.footerActive{
+.footerActive {
   color: var(--color-blue-700) !important;
   font-weight: var(--fw-700);
 }

@@ -47,25 +47,49 @@
           <li><a href="contactUs.html">CONTACT US</a></li>
           <li class="options" onclick="appear()">
             <div class="select">
-              EN
-              <img
-                src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
-                alt=""
-              />&nbsp;
-              <i
-                class="fa-solid fa-chevron-down"
-                style="font-size: 12px; padding-top: 5px"
-              ></i>
+              <div class="showEnglishLanguageIcon">
+                EN
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
+                  alt=""
+                />&nbsp;
+                <i
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 12px; padding-top: 5px"
+                ></i>
+              </div>
+
+              <div class="showArabicLanguageIcon" onclick="arabic('rtl')">
+                <a href="#" class="language"
+                  >AR
+                  <img
+                    src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
+                    alt=""
+                  />
+                  <i
+                    class="fa-solid fa-chevron-down"
+                    style="font-size: 12px; padding-top: 5px"
+                  ></i>
+                </a>
+              </div>
             </div>
           </li>
         </ul>
         <div class="dropDown">
           <ul>
-            <li onclick="changeLang('ltr')">
+            <li onclick="arabic('rtl')" class="arabicIcon">
               <a href="#" class="language"
                 >AR
                 <img
                   src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li onclick="english('ltr')" class="englishIcone">
+              <a href="#" class="language"
+                >EN
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
                   alt=""
               /></a>
             </li>
@@ -264,6 +288,71 @@
               </p></div>
             </div> -->
           </div>
+
+          <!-- <div class="cards">
+            <div class="card">
+              <div class="serviceCardContainer1">
+                <div class="serviceCard">
+                  <div class="serviceCardContent">
+                    <div class="glowContainer">
+                      <img src="glow1.svg" alt="" class="cardGlow" />
+                    </div>
+                    <div class="cardImgContainer">
+                      <img src="users-alt 1.png" alt="" />
+                    </div>
+                    <h3>Reach a wider audience</h3>
+                    <p>
+                      By localizing your game, you can tap into new markets and
+                      expand your player base exponentially.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="serviceCardContainer1">
+                <div class="serviceCard">
+                  <div class="serviceCardContent">
+                    <div class="glowContainer">
+                      <img src="glow1.svg" alt="" class="cardGlow" />
+                    </div>
+                    <div class="cardImgContainer">
+                      <img src="Increase player engagement.png" alt="" />
+                    </div>
+                    <h3>Increase player engagement</h3>
+                    <p>
+                      When players can understand & connect with the game in
+                      their native language, it enhances their gaming experience
+                      & keeps them coming back for more.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="serviceCardContainer1">
+                <div class="serviceCard">
+                  <div class="serviceCardContent">
+                    <div class="glowContainer">
+                      <img src="glow1.svg" alt="" class="cardGlow" />
+                    </div>
+                    <div class="cardImgContainer">
+                      <img src="revenue-alt 1.png" alt="" />
+                    </div>
+                    <h3>Boost revenue</h3>
+                    <p>
+                      Localizing your game increases its market potential,
+                      opening up opportunities for greater monetization and
+                      increasing revenue streams.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        
         </section>
         <section class="whyAralingual">
           <div class="BGImaContainer">
@@ -272,10 +361,15 @@
               alt=""
               class="whyAraBG"
             />
+            <img
+              src="Aralingual - Update Assets 2024/Website/Home/Images/rightGlow.png"
+              alt=""
+              class="rightGlow"
+            />
           </div>
 
           <div class="whyAraContainer">
-            <div>
+            <div class="whyAraWords">
               <h3>
                 WHY CHOOSE <span class="specialWord">ARALINGUAL</span> TO
                 TRANSLATE AND LOCALIZE YOUR VIDEO GAME?
@@ -499,7 +593,8 @@
               <img src="Home/6.svg" alt="" class="arrow-down6" />
               <img src="Home/7.svg" alt="" class="arrow-down7" />
               <img src="Home/8.svg" alt="" class="arrow-down8" />
-              <div class="processCard1">
+
+              <div class="processCard1 processCard">
                 <div class="processChar"><h2>A</h2></div>
                 <div>
                   <h4>Translation</h4>
@@ -509,7 +604,7 @@
                   </p>
                 </div>
               </div>
-              <div class="processCard2">
+              <div class="processCard2 processCard">
                 <div class="processChar"><h2>B</h2></div>
                 <div>
                   <h4>Editing</h4>
@@ -519,7 +614,7 @@
                   </p>
                 </div>
               </div>
-              <div class="processCard3">
+              <div class="processCard3 processCard">
                 <div class="processChar"><h2>C</h2></div>
                 <div>
                   <h4>Proofreading</h4>
@@ -530,7 +625,7 @@
                   </p>
                 </div>
               </div>
-              <div class="processCard4">
+              <div class="processCard4 processCard">
                 <div class="processChar"><h2>D</h2></div>
                 <div>
                   <h4>Quality Control</h4>
