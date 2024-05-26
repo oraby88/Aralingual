@@ -50,7 +50,7 @@ body {
   z-index: 99999;
 }
 section {
-  margin:  30px 0;
+  margin:  60px 0;
   padding: 0 100px;
 }
 section:first-child {
@@ -754,7 +754,12 @@ textarea {
   color: var(--Neutral-4, #c5c5c5);
   font-size: 14px;
   font-weight: 400;
-  line-height: 150%; /* 21px */
+  /* line-height: 150%; */
+}
+textarea{
+  min-height:10rem; 
+  resize:vertical;
+  width: 100%;
 }
 .contactForm form input,
 .phoneSelect {
@@ -951,6 +956,7 @@ button[type="submit"] {
   font-size: 16px;
   font-weight: 600;
   line-height: 100%; /* 16px */
+  cursor: pointer;
 }
 
 .emailAndPhone,

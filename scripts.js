@@ -37,7 +37,6 @@ function arabic(direction) {
     .querySelector(".showEnglishLanguageIcon")
     .classList.add("nonDisplay");
 
-
   document.querySelector(".processGlow").classList.add("processGlowArabic");
   document.querySelector(".iframe").classList.add("iframeArabic");
   document.querySelector(".processBG").classList.add("processBGArabic");
@@ -57,7 +56,6 @@ function english(direction) {
     .querySelector(".showEnglishLanguageIcon")
     .classList.remove("nonDisplay");
   document.querySelector(".dropDown").classList.toggle("display");
-
 
   document.querySelector(".processGlow").classList.remove("processGlowArabic");
   document.querySelector(".iframe").classList.remove("iframeArabic");
@@ -125,7 +123,6 @@ function aboutEnglish(direction) {
   document.querySelector(".dropDown").classList.remove("display");
 }
 
-
 /* FAQ Section */
 function FAQArabic(direction) {
   document.body.style.direction = direction;
@@ -149,13 +146,147 @@ function FAQEnglish(direction) {
   document
     .querySelector(".showEnglishLanguageIcon")
     .classList.remove("nonDisplay");
-  document.querySelector(".dropDown").classList.toggle("display");
 }
 
+/* Blog Section*/
 
+function blogArabic(direction) {
+  document.body.style.direction = direction;
+  document.querySelector(".showArabicLanguageIcon").classList.add("display");
+  document.querySelector(".englishIcone").classList.add("display");
+  document.querySelector(".arabicIcon").classList.add("nonDisplay");
+  document.querySelector(".dropDown").classList.add("dropDownArabic");
+  document
+    .querySelector(".showEnglishLanguageIcon")
+    .classList.add("nonDisplay");
+  document.querySelector(".dropDown").classList.remove("display");
 
+  var card = document.querySelector(".serviceCard");
+  if (card) {
+    document.querySelectorAll(".serviceCard").forEach((item) => {
+      item.classList.add("serviceCardArabic");
+    });
+  }
+  // const nodeList = document.querySelectorAll(".serviceCard");
+  var cardContent = document.querySelector(".serviceCardContent");
+  if (cardContent) {
+    document.querySelectorAll(".serviceCardContent").forEach((item) => {
+      item.classList.add("serviceCardContentArabic");
+    });
+  }
+  // document.querySelector(".serviceCardContent").classList.add("serviceCardContentArabic");
 
+  var image = document.querySelector(".img");
+  if (image) {
+    document.querySelectorAll(".img").forEach((item) => {
+      item.classList.add("imgArabic");
+    });
+  }
+  // document.querySelector(".img").classList.add("imgArabic");
 
+  document.querySelector(".mainCard").classList.add("mainCardArabic");
+
+  var cardBefore = document.querySelector(".cardContainer");
+  if (cardBefore) {
+    document.querySelectorAll(".cardContainer").forEach((item) => {
+      item.classList.add("cardContainerArabic");
+    });
+  }
+  // document.querySelector(".cardContainer").classList.add("cardContainerArabic");
+
+  document.querySelector(".frame1").classList.add("frame1Arabic");
+
+  var cardBefore = document.querySelector(".frame2");
+  if (cardBefore) {
+    document.querySelectorAll(".frame2").forEach((item) => {
+      item.classList.add("frame1Arabic");
+    });
+  }
+  // document.querySelector(".frame2").classList.add("frame2Arabic");
+}
+
+function blogEnglish(direction) {
+  document.body.style.direction = direction;
+  document.querySelector(".showArabicLanguageIcon").classList.remove("display");
+  document.querySelector(".englishIcone").classList.remove("display");
+  document.querySelector(".arabicIcon").classList.remove("nonDisplay");
+  document.querySelector(".dropDown").classList.remove("dropDownArabic");
+  document
+    .querySelector(".showEnglishLanguageIcon")
+    .classList.remove("nonDisplay");
+  document.querySelector(".dropDown").classList.remove("display");
+
+  var card = document.querySelector(".serviceCard");
+  if (card) {
+    document.querySelectorAll(".serviceCard").forEach((item) => {
+      item.classList.remove("serviceCardArabic");
+    });
+  }
+  // const nodeList = document.querySelectorAll(".serviceCard");
+  var cardContent = document.querySelector(".serviceCardContent");
+  if (cardContent) {
+    document.querySelectorAll(".serviceCardContent").forEach((item) => {
+      item.classList.remove("serviceCardContentArabic");
+    });
+  }
+  // document.querySelector(".serviceCardContent").classList.remove("serviceCardContentArabic");
+
+  var image = document.querySelector(".img");
+  if (image) {
+    document.querySelectorAll(".img").forEach((item) => {
+      item.classList.remove("imgArabic");
+    });
+  }
+  // document.querySelector(".img").classList.remove("imgArabic");
+
+  document.querySelector(".mainCard").classList.remove("mainCardArabic");
+
+  var cardBefore = document.querySelector(".cardContainer");
+  if (cardBefore) {
+    document.querySelectorAll(".cardContainer").forEach((item) => {
+      item.classList.remove("cardContainerArabic");
+    });
+  }
+  // document.querySelector(".cardContainer").classList.remove("cardContainerArabic");
+
+  document.querySelector(".frame1").classList.remove("frame1Arabic");
+
+  var cardBefore = document.querySelector(".frame2");
+  if (cardBefore) {
+    document.querySelectorAll(".frame2").forEach((item) => {
+      item.classList.remove("frame1Arabic");
+    });
+  }
+  // document.querySelector(".frame2").classList.remove("frame2Arabic");
+}
+
+/* blogDetails Section */
+
+function blogDetailsArabic(direction) {
+  document.body.style.direction = direction;
+  document.querySelector(".showArabicLanguageIcon").classList.add("display");
+  document.querySelector(".englishIcone").classList.add("display");
+  document.querySelector(".arabicIcon").classList.add("nonDisplay");
+  document.querySelector(".dropDown").classList.add("dropDownArabic");
+  document
+    .querySelector(".showEnglishLanguageIcon")
+    .classList.add("nonDisplay");
+  document.querySelector(".dropDown").classList.remove("display");
+  
+}
+
+function blogDetailsEnglish(direction) {
+  document.body.style.direction = direction;
+  document.querySelector(".showArabicLanguageIcon").classList.remove("display");
+  document.querySelector(".englishIcone").classList.remove("display");
+  document.querySelector(".arabicIcon").classList.remove("nonDisplay");
+  document.querySelector(".dropDown").classList.remove("dropDownArabic");
+  document
+    .querySelector(".showEnglishLanguageIcon")
+    .classList.remove("nonDisplay");
+  document.querySelector(".dropDown").classList.remove("display");
+
+}
 
 /* FAQ Section */
 
@@ -174,7 +305,6 @@ function FAQEnglish(direction) {
 //   document.querySelector(".question-number").classList.remove("number-color");
 //   document.querySelector(section).classList.remove("before");
 // }
-
 
 function newDisplay(parentId) {
   const parent = document.getElementById(parentId);

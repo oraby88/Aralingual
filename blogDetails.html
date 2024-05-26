@@ -24,7 +24,7 @@
       referrerpolicy="no-referrer"
     />
     <script src="scripts.js"></script>
-    <title>Blog</title>
+    <title>Aralingual - Blog-Details</title>
   </head>
   <body>
     <!-- <div class="glowContainer">
@@ -36,7 +36,7 @@
       <!-- <img src="glow.svg" alt="" class="lightImg" /> -->
       <nav>
         <div class="logoContainer">
-          <img src="Group.png" alt="logo" />
+          <a href="home.html"><img src="Group.png" alt="logo" /></a>
         </div>
 
         <ul class="nav-list" id="nav-list">
@@ -47,21 +47,36 @@
           <li><a href="contactUs.html">CONTACT US</a></li>
           <li class="options" onclick="appear()">
             <div class="select">
-              EN
-              <img
-                src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
-                alt=""
-              />&nbsp;
-              <i
-                class="fa-solid fa-chevron-down"
-                style="font-size: 12px; padding-top: 5px"
-              ></i>
+              <div class="showEnglishLanguageIcon">
+                EN
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
+                  alt=""
+                />&nbsp;
+                <i
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 12px; padding-top: 5px"
+                ></i>
+              </div>
+              <div class="showArabicLanguageIcon" onclick="blogDetailsArabic('rtl')">
+                <a href="#" class="language"
+                  >AR
+                  <img
+                    src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
+                    alt=""
+                  />
+                  <i
+                    class="fa-solid fa-chevron-down"
+                    style="font-size: 12px; padding-top: 5px"
+                  ></i>
+                </a>
+              </div>
             </div>
           </li>
         </ul>
         <div class="dropDown">
           <ul>
-            <li onclick="changeLang('ltr')">
+            <li onclick="blogDetailsArabic('rtl')" class="arabicIcon">
               <a href="#" class="language"
                 >AR
                 <img
@@ -69,11 +84,11 @@
                   alt=""
               /></a>
             </li>
-            <li onclick="changeLang('rtl')">
+            <li onclick="blogDetailsEnglish('ltr')" class="englishIcone">
               <a href="#" class="language"
-                >CN
+                >EN
                 <img
-                  src="Aralingual - Update Assets 2024/Assets/Icon language/CN.svg"
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
                   alt=""
               /></a>
             </li>
@@ -698,7 +713,7 @@
             <!-- <div class="getInTouchGlowR"></div> -->
             <h3>
               <span class="hideInSmallSizes"
-                >Gotany more <span class="special-word">Questions</span> ?</span
+                >Got any more <span class="special-word">Questions</span> ?</span
               >
               <span class="showInSmallSizes"
                 >Get in<span class="special-word"> Touch</span></span
@@ -712,7 +727,7 @@
               assistance you need for a successful game localization journey.
             </p>
             <div class="getInTouchBtn">
-              <button class="TouchBtn" href="#">Get in touch now!</button>
+              <a href="contactUs.html"><button class="TouchBtn" href="#">Get in touch now!</button></a>
             </div>
           </div>
         </section>

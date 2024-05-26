@@ -53,7 +53,7 @@ body {
 }
 
 section {
-  margin: 30px 0;
+  margin: 60px 0;
   padding: 0 100px;
 }
 header {
@@ -136,7 +136,6 @@ nav {
   width: 50%;
   justify-content: space-between;
   align-items: center;
-  
 }
 /* .nav-list li{
       background-color: #ffffff33;
@@ -248,7 +247,7 @@ nav ul li a:focus {
   margin-top: 10px;
   transition: all 1s ease-in-out;
 }
-.dropDownArabic{
+.dropDownArabic {
   right: auto;
   left: 0;
 }
@@ -420,6 +419,8 @@ nav ul li a:focus {
   position: absolute;
   right: 0;
   z-index: -1;
+  width: 100%;
+  height: 100%;
 }
 .welcome-words {
   display: flex;
@@ -562,6 +563,10 @@ nav ul li a:focus {
   width: 40%;
   position: relative;
 }
+.mainCardArabic {
+  width: 40%;
+  position: relative;
+}
 
 .serviceCard {
   background: linear-gradient(
@@ -582,6 +587,10 @@ nav ul li a:focus {
     0% 20%
   ); /* Clipping the top left corner */
   z-index: -1;
+}
+.serviceCardArabic {
+  background: linear-gradient(270deg, #2871ff -23.46%, #44cd77 100%);
+  clip-path: polygon(0 0, 88% 0, 100% 12%, 100% 100%, 0 100%, 0% 50%);
 }
 .serviceCardContent {
   background-color: #000; /* Dark card background */
@@ -614,6 +623,9 @@ nav ul li a:focus {
   gap: 10px;
   position: relative;
 }
+.serviceCardContentArabic {
+  clip-path: polygon(0 0, 88% 0, 100% 12%, 100% 100%, 0 100%, 0% 50%);
+}
 .mainCard::before,
 .mainCard::after {
   content: "";
@@ -633,6 +645,28 @@ nav ul li a:focus {
 .frame1 {
   position: absolute;
   left: -4px;
+  top: 30%;
+}
+.mainCardArabic::before,
+.mainCardArabic::after {
+  content: "";
+  position: absolute;
+}
+.mainCardArabic::before {
+  background-color: #44cd77;
+  content: "";
+  display: block;
+  width: 10px;
+  height: 40px;
+  right: auto;
+  left: -4px;
+  top: 20%;
+  z-index: 999;
+}
+.frame1Arabic {
+  position: absolute;
+  left: auto;
+  right: -4px;
   top: 30%;
 }
 
@@ -659,6 +693,16 @@ nav ul li a:focus {
   height: 100%;
   padding: 2px 2px 0px 2px;
   clip-path: polygon(13% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
+}
+.imgArabic {
+  -webkit-mask-image: url(maskArabic.png);
+  mask-image: url(maskArabic.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  mask-position: left;
+  mask-size: 100% 100%;
+  z-index: 1;
+  clip-path: polygon(0 0, 88% 0, 100% 12%, 100% 100%, 0 100%, 0% 50%);
 }
 @media screen and (max-width: 450px) {
   .img {
@@ -811,11 +855,10 @@ nav ul li a:focus {
 .CardsContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-gap: 80px;
   margin-top: 40px;
 }
-.Card {
-}
+
 .cardContainer {
   position: relative;
 }
@@ -830,10 +873,32 @@ nav ul li a:focus {
   top: 10%;
   z-index: 999;
 }
+.cardContainerArabic {
+  position: relative;
+}
+.cardContainerArabic::before {
+  content: "";
+  position: absolute;
+  background-color: #44cd77;
+  display: block;
+  width: 10px;
+  height: 40px;
+  right: auto;
+  left: -4px;
+  top: 10%;
+  z-index: 999;
+}
 .frame2 {
   position: absolute;
   top: 17%;
   left: -4px;
+  z-index: -1;
+}
+.frame2Arabic {
+  position: absolute;
+  top: 17%;
+  left: auto;
+  right: -4px;
   z-index: -1;
 }
 .CardsImge-holder {
@@ -861,13 +926,17 @@ nav ul li a:focus {
   line-height: 150%; /* 27px */
   letter-spacing: -0.54px;
 }
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1440px) {
+  .CardsContainer{
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 1280px) {
   .CardsContainer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 760px) {
   .CardsContainer {
     grid-template-columns: 1fr;
   }
@@ -963,7 +1032,7 @@ nav ul li a:focus {
   align-items: center;
   justify-content: center;
   position: relative;
-  gap: 5px;
+  gap: 10px;
 }
 
 .FAQRightBotomGlow {
@@ -996,6 +1065,7 @@ nav ul li a:focus {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
 }
 .getInTouchBg {
   position: absolute;
