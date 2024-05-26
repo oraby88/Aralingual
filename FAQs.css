@@ -260,11 +260,7 @@ backdrop-filter: blur(22.5px);
   right: auto;
   left: 0;
 }
-@media screen and (max-width: 992px) {
-  .dropDown {
-    right: 2%;
-  }
-}
+
 
 .mini-nav-dropDown {
   display: none;
