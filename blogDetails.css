@@ -51,22 +51,15 @@ body {
 }
 section {
   margin: 60px 0;
-  padding: 0 100px;
+  padding: 0 200px;
 }
 /* section:first-child {
   margin: 50px 0;
 } */
-
-@media screen and (max-width: 600px) {
-  section {
-    /* margin: 30px 0; */
-  }
-}
-
 header {
   /* position: fixed; */
   position: fixed;
-  padding: 30px 100px;
+  padding: 30px 200px;
   /* width: 100%; */
   width: 100%;
   /* -webkit-transform: translateZ(0); */
@@ -78,6 +71,18 @@ header {
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
+
+@media screen and (max-width: 1440px) {
+  header{
+    padding: 30px 100px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  section {
+    padding: 0 100px;
+  }
+}
+
 h3 {
   font-size: 42px;
 }
@@ -195,6 +200,24 @@ nav ul li a:focus {
   top: 12px;
   right: 0;
 }
+.bar2Arabic{
+  right: auto;
+  left: 0;
+}
+@media screen and (max-width: 600px) {
+  .humbrger{
+    gap: 15px;
+  }
+  .bar {
+    width: 30px;
+    height: 2px;
+  }
+  .bar2 {
+    width: 20px;
+    height: 2px;
+    top: 9px;
+  }
+}
 
 .options {
   /* position: relative; */
@@ -211,6 +234,7 @@ nav ul li a:focus {
 .showEnglishLanguageIcon {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 5px;
 }
 .nonDisplay {
@@ -219,11 +243,14 @@ nav ul li a:focus {
 .showArabicLanguageIcon {
   display: none;
   align-items: center;
+  justify-content: center;
   gap: 5px;
+  z-index: -1;
 }
 
 .englishIcone {
   display: none;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1100px) {
@@ -238,6 +265,7 @@ nav ul li a:focus {
 .dropDown ul {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin: 0;
   padding: 10px;
 }
@@ -257,6 +285,8 @@ nav ul li a:focus {
   width: 100px;
   margin-top: 10px;
   transition: all 1s ease-in-out;
+  justify-content: center;
+
 }
 .dropDownArabic {
   right: auto;
@@ -269,7 +299,7 @@ nav ul li a:focus {
   margin-left: 100px;
 }
 .display {
-  display: block;
+  display: flex;
 }
 .mini-nav-dropDown ul {
   margin: 0 !important;
@@ -392,7 +422,7 @@ nav ul li a:focus {
   }
   .dropDown {
     position: absolute;
-    top: 460%;
+    top: 500px;
     left: 16%;
     width: 70%;
     z-index: 100 !important;
@@ -404,11 +434,6 @@ nav ul li a:focus {
   .active{
     background: linear-gradient(270deg, #44cd77 -43.46%, #2871ff 100%);
     color: var(--color-white) !important;
-  }
-}
-@media screen and (max-width: 380px) {
-  .dropDown {
-    top: 550%;
   }
 }
 
@@ -432,6 +457,7 @@ nav ul li a:focus {
   position: absolute;
   right: 0;
   z-index: -1;
+  width: 100%;
 }
 @media screen and (max-width:600px) {
   .welcomeGlow{
@@ -581,12 +607,14 @@ nav ul li a:focus {
   right: 0;
   top: 30%;
   z-index: -1;
+  width: 100%;
 }
 .rightGlow2 {
   position: absolute;
   right: 0;
   bottom: 0;
   z-index: -1;
+  width: 100%;
 }
 
 /* Where Arabic Section */

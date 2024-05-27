@@ -45,21 +45,37 @@
           <li><a href="contactUs.html" class="active">CONTACT US</a></li>
           <li class="options" onclick="appear()">
             <div class="select">
-              EN
-              <img
-                src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
-                alt=""
-              />&nbsp;
-              <i
-                class="fa-solid fa-chevron-down"
-                style="font-size: 12px; padding-top: 5px"
-              ></i>
+              <div class="showEnglishLanguageIcon">
+                EN
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
+                  alt=""
+                />&nbsp;
+                <i
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 12px; padding-top: 5px"
+                ></i>
+              </div>
+              <div
+                class="showArabicLanguageIcon"
+                onclick="contactArabic('rtl')"
+              >
+                AR
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
+                  alt=""
+                />
+                <i
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 12px; padding-top: 5px"
+                ></i>
+              </div>
             </div>
           </li>
         </ul>
         <div class="dropDown">
           <ul>
-            <li onclick="changeLang('ltr')">
+            <li onclick="contactArabic('rtl')" class="arabicIcon">
               <a href="#" class="language"
                 >AR
                 <img
@@ -67,11 +83,11 @@
                   alt=""
               /></a>
             </li>
-            <li onclick="changeLang('rtl')">
+            <li onclick="contactEnglish('ltr')" class="englishIcone">
               <a href="#" class="language"
-                >CN
+                >EN
                 <img
-                  src="Aralingual - Update Assets 2024/Assets/Icon language/CN.svg"
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
                   alt=""
               /></a>
             </li>
@@ -140,12 +156,12 @@
           alt=""
           class="contactUsLeftGlow"
         />
+        <img
+          src="Aralingual - Update Assets 2024/Website/Contact us/Images/contactUsRightGlow.png"
+          alt=""
+          class="welcomeGlow"
+        />
         <section class="welcome-section">
-          <img
-            src="Aralingual - Update Assets 2024/Website/Contact us/Images/contactUsRightGlow.png"
-            alt=""
-            class="welcomeGlow"
-          />
           <div></div>
           <div class="welcomeBG">
             <img
@@ -302,18 +318,18 @@
                   id="message"
                   placeholder="Enter your Message"
                   rows="7"
-                  cols="70" 
+                  cols="70"
                   minlength="7"
                 ></textarea>
               </div>
               <div class="checkAgreeContainer">
-                <div class="container">
-                  <input type="checkbox" class="checkAgree" id="check" />
-                  <span class="checkmark"></span>
+                <div class="checkbox-wrapper-13">
+                  <input id="c1-13" type="checkbox" />
+                  <label for="c1-13"
+                    >I agree with <a href="#">Terms</a> of Use and
+                    <a href="#">Privacy</a> Policy</label
+                  >
                 </div>
-                <label for="check"
-                  >I agree with Terms of Use and Privacy Policy</label
-                >
               </div>
               <div class="btnContainer">
                 <button type="submit" id="btn">Send Now</button>
@@ -339,7 +355,9 @@
             <h3>Email & Pohne Number</h3>
             <div class="btnsInfoContainer">
               <div class="btnInfoContainer">
-                <a href="mailto:someone@example.com"><button class="btnInfo">go-global@aralingual.com</button></a>
+                <a href="mailto:someone@example.com"
+                  ><button class="btnInfo">go-global@aralingual.com</button></a
+                >
               </div>
             </div>
           </div>
@@ -371,7 +389,9 @@
               <li><a href="about.html">ABOUT US</a></li>
               <li><a href="FAQs.html">FAQ</a></li>
               <li><a href="Blog.html">BLOG</a></li>
-              <li><a href="contactUs.html" class="footerActive">CONTACT US</a></li>
+              <li>
+                <a href="contactUs.html" class="footerActive">CONTACT US</a>
+              </li>
             </ul>
             <div class="social-links">
               <a href="#"><img src="Facebook.svg" alt="Facebook" /></a>

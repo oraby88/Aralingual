@@ -1,5 +1,6 @@
 function appear() {
   document.querySelector(".dropDown").classList.toggle("display");
+  console.log("appear");
 }
 function mini_nav_dropDown() {
   document.querySelector(".mini-nav-dropDown").classList.toggle("display");
@@ -22,13 +23,14 @@ function hide() {
   console.log("aaaa");
   document.getElementById("humbrger").style.display = "flex";
   document.getElementById("closeIcon").style.display = "none";
+  document.querySelector(".dropDown").classList.remove("display");
 }
 
 /* Home page */
 function arabic(direction) {
   document.body.style.direction = direction;
   // console.log("aviooo");
-  document.querySelector(".dropDown").classList.remove("display");
+  document.querySelector(".dropDown").classList.toggle("display");
   document.querySelector(".dropDown").classList.add("dropDownArabic");
   document.querySelector(".showArabicLanguageIcon").classList.add("display");
   document.querySelector(".englishIcone").classList.add("display");
@@ -44,6 +46,7 @@ function arabic(direction) {
   document.querySelector(".shape-1").classList.add("shape-1-arabic");
   document.querySelector(".processCard2").classList.add("rtl");
   console.log("aviooo");
+  hide();
 }
 
 function english(direction) {
@@ -63,6 +66,7 @@ function english(direction) {
   document.querySelector(".whyAraBG").classList.remove("whyAraBGArabic");
   document.querySelector(".shape-1").classList.remove("shape-1-arabic");
   document.querySelector(".processCard2").classList.remove("rtl");
+  hide();
 }
 
 /* Home Section */
@@ -102,6 +106,7 @@ function aboutArabic(direction) {
   console.log("Before remove");
   document.querySelector(".dropDown").classList.remove("display");
   console.log("After remove");
+  hide();
 }
 function aboutEnglish(direction) {
   document.body.style.direction = direction;
@@ -121,6 +126,7 @@ function aboutEnglish(direction) {
   document.getElementById("card2").classList.remove("aboutCardArabic");
 
   document.querySelector(".dropDown").classList.remove("display");
+  hide();
 }
 
 /* FAQ Section */
@@ -135,6 +141,7 @@ function FAQArabic(direction) {
   document
     .querySelector(".showEnglishLanguageIcon")
     .classList.add("nonDisplay");
+    hide();
 }
 
 function FAQEnglish(direction) {
@@ -146,6 +153,8 @@ function FAQEnglish(direction) {
   document
     .querySelector(".showEnglishLanguageIcon")
     .classList.remove("nonDisplay");
+  document.querySelector(".dropDown").classList.remove("display");
+  hide();
 }
 
 /* Blog Section*/
@@ -203,6 +212,7 @@ function blogArabic(direction) {
     });
   }
   // document.querySelector(".frame2").classList.add("frame2Arabic");
+  hide();
 }
 
 function blogEnglish(direction) {
@@ -258,6 +268,7 @@ function blogEnglish(direction) {
     });
   }
   // document.querySelector(".frame2").classList.remove("frame2Arabic");
+  hide();
 }
 
 /* blogDetails Section */
@@ -272,6 +283,8 @@ function blogDetailsArabic(direction) {
     .querySelector(".showEnglishLanguageIcon")
     .classList.add("nonDisplay");
   document.querySelector(".dropDown").classList.remove("display");
+  document.querySelector(".bar2").classList.add("bar2Arabic");
+  hide();
   
 }
 
@@ -285,6 +298,42 @@ function blogDetailsEnglish(direction) {
     .querySelector(".showEnglishLanguageIcon")
     .classList.remove("nonDisplay");
   document.querySelector(".dropDown").classList.remove("display");
+  document.querySelector(".bar2").classList.remove("bar2Arabic");
+  hide();
+}
+
+/* contactUs Section */
+
+function contactArabic(direction) {
+  document.body.style.direction = direction;
+  document.querySelector(".showArabicLanguageIcon").classList.add("display");
+  document.querySelector(".englishIcone").classList.add("display");
+  document.querySelector(".arabicIcon").classList.add("nonDisplay");
+  document.querySelector(".dropDown").classList.add("dropDownArabic");
+  document
+    .querySelector(".showEnglishLanguageIcon")
+    .classList.add("nonDisplay");
+  document.querySelector(".dropDown").classList.remove("display");
+  document.getElementById("btn").style.float = "left";
+  document.querySelector(".emailAndPhone").classList.add("emailAndPhoneArabic");
+  document.querySelector(".ourOffice").classList.add("ourOfficeArabic");
+  hide();
+}
+
+function contactEnglish(direction) {
+  document.body.style.direction = direction;
+  document.querySelector(".showArabicLanguageIcon").classList.remove("display");
+  document.querySelector(".englishIcone").classList.remove("display");
+  document.querySelector(".arabicIcon").classList.remove("nonDisplay");
+  document.querySelector(".dropDown").classList.remove("dropDownArabic");
+  document
+    .querySelector(".showEnglishLanguageIcon")
+    .classList.remove("nonDisplay");
+  document.querySelector(".dropDown").classList.remove("display");
+  document.getElementById("btn").style.float = "right";
+  document.querySelector(".emailAndPhone").classList.remove("emailAndPhoneArabic");
+  document.querySelector(".ourOffice").classList.remove("ourOfficeArabic");
+  hide();
 
 }
 

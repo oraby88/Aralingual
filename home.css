@@ -53,7 +53,7 @@ body {
 
 section {
   margin: 60px 0;
-  padding: 0 100px;
+  padding: 0 200px;
 }
 section:first-child {
   margin: 120px 0 30px 0;
@@ -61,7 +61,7 @@ section:first-child {
 header {
   /* position: fixed; */
   position: fixed;
-  padding: 30px 100px;
+  padding: 30px 200px;
   /* width: 100%; */
   width: 100%;
   /* -webkit-transform: translateZ(0); */
@@ -73,6 +73,17 @@ header {
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
+@media screen and (max-width: 1440px) {
+  header{
+    padding: 30px 100px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  section {
+    padding: 0 100px;
+  }
+}
+
 h3 {
   font-size: 42px;
 }
@@ -194,17 +205,32 @@ nav ul li a:focus {
   top: 12px;
   right: 0;
 }
-
+@media screen and (max-width: 600px) {
+  .humbrger{
+    gap: 15px;
+  }
+  .bar{
+    width: 30px;
+    height: 2px;
+  }
+  .bar2{
+    top: 9px;
+    width: 20px;
+    height: 2px;
+  }
+}
 .options {
   /* position: relative; */
   color: var(--color-gray-100);
   transition: all 0.5s ease-in-out;
+  z-index: 150;
 }
 .select {
   width: 78.63px;
   display: flex;
   align-items: center;
   gap: 5px;
+  z-index: 999;
 }
 .showEnglishLanguageIcon{
   display: flex;
@@ -218,6 +244,8 @@ nav ul li a:focus {
   display: none;
   align-items: center;
   gap: 5px;
+  justify-content: center;
+  z-index: -1;
 }
 
 .englishIcone{
@@ -236,7 +264,7 @@ nav ul li a:focus {
 .dropDown {
   display: none;
   position: absolute;
-  z-index: 3;
+  z-index: 1;
   top: 55%;
   right: 0;
   background-color: black;
@@ -244,15 +272,12 @@ nav ul li a:focus {
   width: 90px;
   margin-top: 10px;
   transition: all 1s ease-in-out;
+  justify-content: center;
 }
 .dropDownArabic{
+  display: none;
   right: auto;
   left: 0;
-}
-@media screen and (max-width: 992px) {
-  .dropDown {
-    right: 2%;
-  }
 }
 
 .mini-nav-dropDown {
@@ -260,7 +285,7 @@ nav ul li a:focus {
   margin-left: 100px;
 }
 .display {
-  display: block;
+  display: flex;
 }
 .mini-nav-dropDown ul {
   margin: 0 !important;
@@ -383,7 +408,7 @@ nav ul li a:focus {
   }
   .dropDown {
     position: absolute;
-    top: 460%;
+    top: 500px;
     left: 16%;
     width: 70%;
     z-index: 100 !important;
@@ -395,11 +420,6 @@ nav ul li a:focus {
   .active {
     background: linear-gradient(270deg, #44cd77 -43.46%, #2871ff 100%);
     color: var(--color-white) !important;
-  }
-}
-@media screen and (max-width: 380px) {
-  .dropDown {
-    top: 550%;
   }
 }
 
@@ -873,7 +893,7 @@ nav ul li a:focus {
   bottom: 0;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 100%;
   height: 100%;
 }
 .whyAraBGArabic{

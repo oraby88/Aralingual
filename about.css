@@ -54,7 +54,7 @@ body {
 
 section {
   margin: 60px 0;
-  padding: 0 100px;
+  padding: 0 200px;
 }
 section:first-child {
   margin: 75px 0 0 0;
@@ -65,7 +65,7 @@ section:nth-child(2) {
 header {
   /* position: fixed; */
   position: fixed;
-  padding: 30px 100px;
+  padding: 30px 200px;
   /* width: 100%; */
   width: 100%;
   /* -webkit-transform: translateZ(0); */
@@ -76,6 +76,16 @@ header {
 
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
+}
+@media screen and (max-width: 1440px) {
+  header{
+    padding: 30px 100px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  section {
+    padding: 0 100px;
+  }
 }
 h3 {
   font-size: 42px;
@@ -199,6 +209,20 @@ nav ul li a:focus {
   top: 12px;
   right: 0;
 }
+@media screen and (max-width: 600px) {
+  .humbrger{
+    gap: 15px;
+  }
+  .bar{
+    width: 30px;
+    height: 2px;
+  }
+  .bar2{
+    top: 9px;
+    width: 20px;
+    height: 2px;
+  }
+}
 
 .options {
   /* position: relative; */
@@ -224,7 +248,11 @@ nav ul li a:focus {
   display: none;
   align-items: center;
   gap: 5px;
+  justify-content: center;
+  z-index: -1;
 }
+
+
 
 .englishIcone {
   display: none;
@@ -240,9 +268,6 @@ nav ul li a:focus {
   width: 100%;
   list-style-type: none;
 }
-.dropDown ul li a {
-  /* background: linear-gradient(-45deg, #2871ff, #62e875); */
-}
 .dropDown {
   display: none;
   position: absolute;
@@ -254,23 +279,20 @@ nav ul li a:focus {
   width: 90px;
   margin-top: 10px;
   transition: all 1s ease-in-out;
+  justify-content: center;
 }
 .dropDownArabic {
   right: auto;
   left: 0;
 }
-@media screen and (max-width: 992px) {
-  .dropDown {
-    right: 2%;
-  }
-}
+
 
 .mini-nav-dropDown {
   display: none;
   margin-left: 100px;
 }
 .display {
-  display: block;
+  display: flex;
 }
 .mini-nav-dropDown ul {
   margin: 0 !important;
@@ -393,7 +415,7 @@ nav ul li a:focus {
   }
   .dropDown {
     position: absolute;
-    top: 655%;
+    top: 500px;
     left: 16%;
     width: 70%;
     z-index: 100 !important;
@@ -407,17 +429,11 @@ nav ul li a:focus {
     color: var(--color-white) !important;
   }
 }
-@media screen and (max-width: 380px) {
-  .dropDown {
-    top: 550%;
-  }
-}
+
 
 /* welcome section */
-/* .welcomeBG{
-  width: 700px;
-  height: 700px;
-} */
+
+
 .welcomeBG img {
   width: 100%;
   height: 100%;
@@ -474,19 +490,7 @@ nav ul li a:focus {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* .welcome-words h3 {
-  font-size: 20px;
-  font-weight: 700;
-  border: 1px solid grey;
-  padding: 5px 15px;
-  border-radius: 20px;
-  border-bottom: 1px solid #18c8ff;
-  width: fit-content;
 
-  background: linear-gradient(80.7deg, white 10.1%, #71717a 63.2%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-} */
 .welcome-words h1 {
   width: 50%;
   font-size: 70px;

@@ -47,21 +47,35 @@
           <li><a href="contactUs.html">CONTACT US</a></li>
           <li class="options" onclick="appear()">
             <div class="select">
-              EN
-              <img
-                src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
-                alt=""
-              />&nbsp;
-              <i
-                class="fa-solid fa-chevron-down"
-                style="font-size: 12px; padding-top: 5px"
-              ></i>
+              <div class="showEnglishLanguageIcon">
+                EN
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
+                  alt=""
+                />&nbsp;
+                <i
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 12px; padding-top: 5px"
+                ></i>
+              </div>
+              <div class="showArabicLanguageIcon" onclick="blogDetailsArabic('rtl')">
+                AR
+                  <img
+                    src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
+                    alt=""
+                  />
+                  <i
+                    class="fa-solid fa-chevron-down"
+                    style="font-size: 12px; padding-top: 5px"
+                  ></i>
+                
+              </div>
             </div>
           </li>
         </ul>
         <div class="dropDown">
           <ul>
-            <li onclick="changeLang('ltr')">
+            <li onclick="blogDetailsArabic('rtl')" class="arabicIcon">
               <a href="#" class="language"
                 >AR
                 <img
@@ -69,11 +83,11 @@
                   alt=""
               /></a>
             </li>
-            <li onclick="changeLang('rtl')">
+            <li onclick="blogDetailsEnglish('ltr')" class="englishIcone">
               <a href="#" class="language"
-                >CN
+                >EN
                 <img
-                  src="Aralingual - Update Assets 2024/Assets/Icon language/CN.svg"
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
                   alt=""
               /></a>
             </li>
