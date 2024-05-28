@@ -588,6 +588,7 @@ nav ul li a:focus {
   font-weight: var(--fw-500);
   line-height: 100%; /* 16px */
   transition: all 0.7s ease-in-out;
+  cursor: pointer;
 }
 
 .btn:hover {

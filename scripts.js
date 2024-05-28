@@ -26,17 +26,37 @@ function hide() {
   document.querySelector(".dropDown").classList.remove("display");
 }
 
-
 var x = window.matchMedia("(max-width: 900px)");
 
 function myFunction(x) {
-  if (x.matches) { // If media query matches
+  if (x.matches) {
+    // If media query matches
     document.querySelector(".dropDown").classList.remove("display");
   }
 }
-x.addEventListener("change", function() {
+x.addEventListener("change", function () {
   myFunction(x);
 });
+
+// window.localStorage.setItem("language", "EN");
+// window.location.reload();
+let lang = localStorage.getItem("language") || '';
+onload = function () {
+  if (lang == "ar") {
+    arabic();
+  }else if (lang == "en"){
+    english();
+  }else{
+    lang = "en";
+    localStorage.setItem("language", lang);
+  }
+};
+
+// var language =document.getElementsByTagName("html")[0].getAttribute("lang");
+// window.localStorage.setItem("lang", language);
+// console.log(language);
+
+
 /* Home page */
 function arabic(direction) {
   document.body.style.direction = direction;
@@ -58,6 +78,13 @@ function arabic(direction) {
   // document.querySelector(".processCard2").classList.add("rtl");
   document.querySelector(".bar2").classList.add("bar2Arabic");
   console.log("aviooo");
+
+  document.getElementsByTagName("html")[0].setAttribute("lang", "ar");
+  // navigator.language = "ar";
+  localStorage.setItem("language", "ar");
+  lang = 'ar';
+
+  // window.localStorage.setItem('Language', 'JavaScript');
 
   var card = document.querySelector(".serviceCard");
   if (card) {
@@ -82,7 +109,7 @@ function arabic(direction) {
   }
   // document.querySelector(".img").classList.add("imgArabic");
 
-  // document.querySelector(".serviceCardContainer").classList.add("serviceCardContainerArabic"); 
+  // document.querySelector(".serviceCardContainer").classList.add("serviceCardContainerArabic");
 
   var cardBefore = document.querySelector(".serviceCardContainer");
   if (cardBefore) {
@@ -102,17 +129,27 @@ function arabic(direction) {
   }
   // document.querySelector(".frame2").classList.add("frame2Arabic");
 
-
-
   var Card = document.querySelector(".processCard");
   if (Card) {
     document.querySelectorAll(".processCard").forEach((item) => {
       item.classList.add("rtl");
     });
   }
+  // window.localStorage.setItem("language", "ar");
+  // console.log(window.localStorage.getItem("language"));
 
   hide();
 }
+//  function changeLang() {
+//     // var langCheck = localStorage.getItem("lang");
+    
+//     if (language == "ar") {
+//       arabic();
+//     } else {
+//       english();
+//     }
+//     location.reload();
+//   }
 
 function english(direction) {
   document.body.style.direction = direction;
@@ -140,6 +177,13 @@ function english(direction) {
   }
 
 
+  localStorage.setItem("language", "en");
+  lang = 'en';
+
+
+ 
+  console.log(navigator.language);
+
   var card = document.querySelector(".serviceCard");
   if (card) {
     document.querySelectorAll(".serviceCard").forEach((item) => {
@@ -163,7 +207,7 @@ function english(direction) {
   }
   // document.querySelector(".img").classList.remove("imgArabic");
 
-  // document.querySelector(".serviceCardContainer").classList.remove("serviceCardContainerArabic"); 
+  // document.querySelector(".serviceCardContainer").classList.remove("serviceCardContainerArabic");
 
   var cardBefore = document.querySelector(".serviceCardContainer");
   if (cardBefore) {
@@ -185,6 +229,10 @@ function english(direction) {
 
   hide();
 }
+
+
+  
+
 
 /* Home Section */
 // function homeArabic() {
@@ -260,8 +308,8 @@ function FAQArabic(direction) {
   document
     .querySelector(".showEnglishLanguageIcon")
     .classList.add("nonDisplay");
-    document.querySelector(".bar2").classList.add("bar2Arabic");
-    hide();
+  document.querySelector(".bar2").classList.add("bar2Arabic");
+  hide();
 }
 
 function FAQEnglish(direction) {
@@ -408,7 +456,6 @@ function blogDetailsArabic(direction) {
   document.querySelector(".dropDown").classList.remove("display");
   document.querySelector(".bar2").classList.add("bar2Arabic");
   hide();
-  
 }
 
 function blogDetailsEnglish(direction) {
@@ -455,11 +502,12 @@ function contactEnglish(direction) {
     .classList.remove("nonDisplay");
   document.querySelector(".dropDown").classList.remove("display");
   document.getElementById("btn").style.float = "right";
-  document.querySelector(".emailAndPhone").classList.remove("emailAndPhoneArabic");
+  document
+    .querySelector(".emailAndPhone")
+    .classList.remove("emailAndPhoneArabic");
   document.querySelector(".ourOffice").classList.remove("ourOfficeArabic");
   document.querySelector(".bar2").classList.remove("bar2Arabic");
   hide();
-
 }
 
 /* FAQ Section */
