@@ -26,6 +26,17 @@ function hide() {
   document.querySelector(".dropDown").classList.remove("display");
 }
 
+
+var x = window.matchMedia("(max-width: 900px)");
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    document.querySelector(".dropDown").classList.remove("display");
+  }
+}
+x.addEventListener("change", function() {
+  myFunction(x);
+});
 /* Home page */
 function arabic(direction) {
   document.body.style.direction = direction;
