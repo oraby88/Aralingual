@@ -1105,13 +1105,36 @@ ul li p {
   /* opacity: 0.3; */
   z-index: -3;
 }
+.TouchBtnContainer {
+  width: 223px;
+  background: linear-gradient(270deg, #44cd77 -43.46%, #2871ff 100%);
+  text-align: center;
+  place-content: center;
+  clip-path: polygon(92% 0, 100% 30%, 100% 100%, 8% 100%, 0 70%, 0 0);
+  padding: 1px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  text-decoration: none;
+}
 .TouchBtn {
   width: 223px;
   height: 42px;
-  clip-path: polygon(92% 0, 100% 32%, 100% 100%, 10% 100%, 0 70%, 0 0);
-  background: linear-gradient(270deg, #44cd77 -43.46%, #2871ff 100%);
+  clip-path: polygon(92% 0, 100% 30%, 100% 100%, 8% 100%, 0 70%, 0 0);
+  background-color: #000;
+  z-index: 999;
   border: 0;
-  color: var(--color-white);
+  color: #fff;
+  font-size: 16px;
+  color: #fff;
+  font-weight: var(--fw-500);
+  line-height: 100%; /* 16px */
+}
+.TouchBtn:hover {
+  background: none;
+  color: white;
 }
 .getInTouchGlowL {
   position: absolute;

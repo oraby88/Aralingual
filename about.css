@@ -57,7 +57,7 @@ section {
   padding: 0 200px;
 }
 section:first-child {
-  margin: 75px 0 0 0;
+  margin: 30px 0 0 0;
 }
 section:nth-child(2) {
   margin: 0 0 30px 0;
@@ -78,7 +78,7 @@ header {
   backdrop-filter: blur(8px);
 }
 @media screen and (max-width: 1440px) {
-  header{
+  header {
     padding: 30px 100px;
   }
 }
@@ -210,14 +210,14 @@ nav ul li a:focus {
   right: 0;
 }
 @media screen and (max-width: 600px) {
-  .humbrger{
+  .humbrger {
     gap: 15px;
   }
-  .bar{
+  .bar {
     width: 30px;
     height: 2px;
   }
-  .bar2{
+  .bar2 {
     top: 9px;
     width: 20px;
     height: 2px;
@@ -252,8 +252,6 @@ nav ul li a:focus {
   z-index: -1;
 }
 
-
-
 .englishIcone {
   display: none;
 }
@@ -285,7 +283,6 @@ nav ul li a:focus {
   right: auto;
   left: 0;
 }
-
 
 .mini-nav-dropDown {
   display: none;
@@ -430,9 +427,7 @@ nav ul li a:focus {
   }
 }
 
-
 /* welcome section */
-
 
 .welcomeBG img {
   width: 100%;
@@ -664,7 +659,7 @@ nav ul li a:focus {
   transition: transform 300ms ease;
   z-index: 4;
 }
-.aboutCardArabic::after{
+.aboutCardArabic::after {
   inset: 0.65rem 0.5rem 0.65rem auto;
 }
 .aboutCardArabicLast-child:last-child {
@@ -754,7 +749,7 @@ nav ul li a:focus {
 .teamFooter p {
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--fw-600);
   line-height: 24px; /* 120% */
   margin-bottom: 15px;
   background: var(--Heading, linear-gradient(135deg, #fff 0%, #71717a 100%));
@@ -792,6 +787,10 @@ nav ul li a:focus {
 }
 
 /* game Img Section */
+
+.gameImgSection {
+  margin: 0;
+}
 
 .gameImg {
   width: 100%;
@@ -877,14 +876,15 @@ nav ul li a:focus {
   right: 0;
   bottom: 0;
   z-index: -1;
-  width: 100%;
+  width: 50%;
 }
 .aboutLeftGlow {
   position: absolute;
   left: 0;
   bottom: 0;
   z-index: -1;
-  width: 100%;
+  width: 65%;
+  height: 55%;
 }
 
 /* Get In Touch Section*/
@@ -928,13 +928,36 @@ nav ul li a:focus {
   /* opacity: 0.3; */
   z-index: -3;
 }
+.TouchBtnContainer {
+  width: 223px;
+  background: linear-gradient(270deg, #44cd77 -43.46%, #2871ff 100%);
+  text-align: center;
+  place-content: center;
+  clip-path: polygon(92% 0, 100% 30%, 100% 100%, 8% 100%, 0 70%, 0 0);
+  padding: 1px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  text-decoration: none;
+}
 .TouchBtn {
   width: 223px;
   height: 42px;
-  clip-path: polygon(92% 0, 100% 32%, 100% 100%, 10% 100%, 0 70%, 0 0);
-  background: linear-gradient(270deg, #44cd77 -43.46%, #2871ff 100%);
+  clip-path: polygon(92% 0, 100% 30%, 100% 100%, 8% 100%, 0 70%, 0 0);
+  background-color: #000;
+  z-index: 999;
   border: 0;
-  color: var(--color-white);
+  color: #fff;
+  font-size: 16px;
+  color: #fff;
+  font-weight: var(--fw-500);
+  line-height: 100%; /* 16px */
+}
+.TouchBtn:hover {
+  background: none;
+  color: white;
 }
 .getInTouchGlowL {
   position: absolute;
