@@ -50,11 +50,8 @@ body {
   z-index: 99999;
 }
 section {
-  margin: 60px 0;
+  margin: 90px 0;
   padding: 0 200px;
-}
-section:first-child {
-  margin: 50px 0;
 }
 header {
   position: fixed;
@@ -220,6 +217,7 @@ nav ul li a:focus {
   width: 78.63px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 5px;
   font-size: 18px;
 }
@@ -468,6 +466,7 @@ nav ul li a:focus {
   /* overflow-x: hidden; */
   position: relative;
   height: 700px;
+  margin: 0;
 }
 .welcomeGlow {
   position: absolute;
@@ -621,6 +620,7 @@ nav ul li a:focus {
   display: flex;
   gap: 40px;
   align-items: center;
+  margin: 0 0 60px 0;
 }
 
 .serviceCard {
@@ -814,11 +814,20 @@ textarea {
 .btnContainer {
   grid-area: h;
 }
+.submitContainer{
+  clip-path: polygon(0 0, 88% 0, 100% 30%, 100% 100%, 12% 100%, 0 70%);
+  width: fit-content;
+  height: 44px;
+  padding: 1px;
+  background: linear-gradient(270deg, #44cd77 -23.46%, #2871ff 100%);
+
+  float: right;
+}
 button[type="submit"] {
   clip-path: polygon(0 0, 88% 0, 100% 30%, 100% 100%, 12% 100%, 0 70%);
   width: 130px;
   height: 42px;
-  background: linear-gradient(270deg, #44cd77 -23.46%, #2871ff 100%);
+  background: #000;
   color: #fff;
 
   text-align: center;
@@ -826,7 +835,10 @@ button[type="submit"] {
   font-weight: var(--fw-500);
   line-height: 100%; /* 16px */
   border: 0;
-  float: right;
+    
+}
+button[type="submit"]:hover {
+  background: transparent;
 }
 
 @media screen and (max-width: 1024px) {
@@ -919,7 +931,9 @@ button[type="submit"] {
   line-height: 100%; /* 16px */
   cursor: pointer;
 }
-
+.btnInfo:hover{
+  background: transparent;
+}
 .emailAndPhone,
 .ourOffice {
   border-left: 1px solid #262626;

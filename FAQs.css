@@ -53,8 +53,15 @@ body {
 }
 
 section {
-  margin: 60px 0;
+  margin: 90px 0;
   padding: 0 200px;
+}
+
+section:first-child {
+  margin: 0;
+}
+section:nth-child(2) {
+  margin: 0 0 60px 0;
 }
 header {
   /* position: fixed; */
@@ -614,6 +621,7 @@ backdrop-filter: blur(22.5px);
 .questions-sectionWords {
   text-align: center;
   margin-bottom: 40px;
+  transition: all 0.5s ease-in-out;
 }
 .question-card ul {
   display: flex;
@@ -644,15 +652,19 @@ backdrop-filter: blur(22.5px);
   gap: 10px;
   align-items: flex-start;
   justify-content: space-between;
-  width: 10 0%;
-  /* height: 82px; */
+  width: 100%;
+  /* height: 100%; */
   gap: 25px;
   padding: 40px;
   backdrop-filter: blur(8px);
   /* margin-top: 50px; */
   background: rgba(0, 0, 0, 0.1);
-
+  /* margin-bottom: 20px; */
   backdrop-filter: blur(22.5px);
+
+  transition: all 0.5s ;
+  animation: display 1s;
+  /* transition: width 2s, height 2s, transform 2s;   */
 }
 .question-card::before {
   content: none;
@@ -660,13 +672,26 @@ backdrop-filter: blur(22.5px);
   inset: 0;
   border-radius: 20px;
   padding: 1px;
+  /* height: 400px; */
+  /* margin-bottom: 300px; */
   background: var(--border-color);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
+  animation: display 2s;
+  /* transition: all 0.5s ease-in-out;
+  transition: all 2s; */
 }
 .before::before {
   content: "";
+}
+@keyframes display {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .question-card p {
@@ -730,12 +755,16 @@ backdrop-filter: blur(22.5px);
   display: none;
   flex-direction: column;
   gap: 25px;
+  transition: all 0.5s ease-in-out;
+  transition: width 2s, height 2s, transform 2s;
+  animation: display 1s;
 }
 .card-content {
   display: flex;
   flex-direction: column;
   gap: 25px;
   /* align-items: flex-start; */
+  transition: all 2s;
 }
 .open-button {
   display: flex;
@@ -743,6 +772,15 @@ backdrop-filter: blur(22.5px);
   justify-content: center;
   z-index: 9999;
   float: right;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  outline: 2px solid transparent;
+  cursor: pointer;
+}
+.open-button:hover{
+  border: 2px solid transparent;
+  border-radius: 50%;
+  outline: 2px solid #44cd77;
 }
 .open-button p {
   display: flex;
@@ -766,6 +804,7 @@ backdrop-filter: blur(22.5px);
   font-weight: var(--fw-700);
   z-index: 9999;
   transform: rotate(135deg);
+  cursor: pointer;
 }
 .close-button p {
   display: flex;
