@@ -205,6 +205,10 @@ nav ul li a:focus {
   top: 12px;
   right: 0;
 }
+.bar2Arabic{
+  right: auto;
+  left: 0;
+}
 @media screen and (max-width: 600px) {
   .humbrger{
     gap: 15px;
@@ -1150,6 +1154,12 @@ nav ul li a:focus {
   clip-path: polygon(13% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20% );
   z-index: -1;
 }
+
+.serviceCardArabic {
+  background: linear-gradient(270deg, #2871ff -23.46%, #44cd77 100%);
+  clip-path: polygon(0 0, 88% 0, 100% 12%, 100% 100%, 0 100%, 0% 50%);
+}
+
 .serviceCardContent {
   background-color: #000; /* Dark card background */
   padding: 34px;
@@ -1167,6 +1177,11 @@ nav ul li a:focus {
   gap: 10px;
   position: relative;
 }
+
+.serviceCardContentArabic {
+  clip-path: polygon(0 0, 88% 0, 100% 12%, 100% 100%, 0 100%, 0% 50%);
+}
+
 .serviceCard h3 {
   background: var(--Heading, linear-gradient(135deg, #fff 0%, #71717a 100%));
   background-clip: text;
@@ -1198,46 +1213,6 @@ nav ul li a:focus {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: var(--max-lines);
 }
-/* .serviceCardImgContainer img{
-  margin-bottom: 5px;
-} */
-
-/* .serviceCardContent p .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-
- 
-  position: absolute;
-  z-index: 9999;
-}
-
-.serviceCardContent p:hover .tooltiptext {
-  visibility: visible;
-} */
-/* .tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: red;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  top: 10px;
-  left: 0;
-} */
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
@@ -1271,6 +1246,17 @@ nav ul li a:focus {
   height: 32px;
   right: -3px;
   top: 50px;
+  z-index: 999;
+}
+.serviceCardContainerArabic::before {
+  background-color: #44cd77;
+  content: "";
+  display: block;
+  width: 10px;
+  height: 40px;
+  right: auto;
+  left: -4px;
+  top: 20%;
   z-index: 999;
 }
 
@@ -1310,6 +1296,13 @@ nav ul li a:focus {
   left: -3px;
   top: 70px;
 }
+.frame1Arabic {
+  position: absolute;
+  left: auto;
+  right: -4px;
+  top: 30%;
+}
+
 
 .serviceCard2 {
   position: relative;

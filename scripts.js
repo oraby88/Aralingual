@@ -44,8 +44,62 @@ function arabic(direction) {
   document.querySelector(".processBG").classList.add("processBGArabic");
   document.querySelector(".whyAraBG").classList.add("whyAraBGArabic");
   document.querySelector(".shape-1").classList.add("shape-1-arabic");
-  document.querySelector(".processCard2").classList.add("rtl");
+  // document.querySelector(".processCard2").classList.add("rtl");
+  document.querySelector(".bar2").classList.add("bar2Arabic");
   console.log("aviooo");
+
+  var card = document.querySelector(".serviceCard");
+  if (card) {
+    document.querySelectorAll(".serviceCard").forEach((item) => {
+      item.classList.add("serviceCardArabic");
+    });
+  }
+  // const nodeList = document.querySelectorAll(".serviceCard");
+  var cardContent = document.querySelector(".serviceCardContent");
+  if (cardContent) {
+    document.querySelectorAll(".serviceCardContent").forEach((item) => {
+      item.classList.add("serviceCardContentArabic");
+    });
+  }
+  // document.querySelector(".serviceCardContent").classList.add("serviceCardContentArabic");
+
+  var image = document.querySelector(".img");
+  if (image) {
+    document.querySelectorAll(".img").forEach((item) => {
+      item.classList.add("imgArabic");
+    });
+  }
+  // document.querySelector(".img").classList.add("imgArabic");
+
+  // document.querySelector(".serviceCardContainer").classList.add("serviceCardContainerArabic"); 
+
+  var cardBefore = document.querySelector(".serviceCardContainer");
+  if (cardBefore) {
+    document.querySelectorAll(".serviceCardContainer").forEach((item) => {
+      item.classList.add("serviceCardContainerArabic");
+    });
+  }
+  // document.querySelector(".cardContainer").classList.add("cardContainerArabic");
+
+  // document.querySelector(".frame1").classList.add("frame1Arabic");
+
+  var cardBefore = document.querySelector(".frame1");
+  if (cardBefore) {
+    document.querySelectorAll(".frame1").forEach((item) => {
+      item.classList.add("frame1Arabic");
+    });
+  }
+  // document.querySelector(".frame2").classList.add("frame2Arabic");
+
+
+
+  var Card = document.querySelector(".processCard");
+  if (Card) {
+    document.querySelectorAll(".processCard").forEach((item) => {
+      item.classList.add("rtl");
+    });
+  }
+
   hide();
 }
 
@@ -65,7 +119,59 @@ function english(direction) {
   document.querySelector(".processBG").classList.remove("processBGArabic");
   document.querySelector(".whyAraBG").classList.remove("whyAraBGArabic");
   document.querySelector(".shape-1").classList.remove("shape-1-arabic");
-  document.querySelector(".processCard2").classList.remove("rtl");
+  // document.querySelector(".processCard2").classList.remove("rtl");
+  document.querySelector(".bar2").classList.remove("bar2Arabic");
+  var Card = document.querySelector(".processCard");
+  if (Card) {
+    document.querySelectorAll(".processCard").forEach((item) => {
+      item.classList.remove("rtl");
+    });
+  }
+
+
+  var card = document.querySelector(".serviceCard");
+  if (card) {
+    document.querySelectorAll(".serviceCard").forEach((item) => {
+      item.classList.remove("serviceCardArabic");
+    });
+  }
+  // const nodeList = document.querySelectorAll(".serviceCard");
+  var cardContent = document.querySelector(".serviceCardContent");
+  if (cardContent) {
+    document.querySelectorAll(".serviceCardContent").forEach((item) => {
+      item.classList.remove("serviceCardContentArabic");
+    });
+  }
+  // document.querySelector(".serviceCardContent").classList.remove("serviceCardContentArabic");
+
+  var image = document.querySelector(".img");
+  if (image) {
+    document.querySelectorAll(".img").forEach((item) => {
+      item.classList.remove("imgArabic");
+    });
+  }
+  // document.querySelector(".img").classList.remove("imgArabic");
+
+  // document.querySelector(".serviceCardContainer").classList.remove("serviceCardContainerArabic"); 
+
+  var cardBefore = document.querySelector(".serviceCardContainer");
+  if (cardBefore) {
+    document.querySelectorAll(".serviceCardContainer").forEach((item) => {
+      item.classList.remove("serviceCardContainerArabic");
+    });
+  }
+  // document.querySelector(".cardContainer").classList.remove("cardContainerArabic");
+
+  // document.querySelector(".frame1").classList.remove("frame1Arabic");
+
+  var cardBefore = document.querySelector(".frame1");
+  if (cardBefore) {
+    document.querySelectorAll(".frame1").forEach((item) => {
+      item.classList.remove("frame1Arabic");
+    });
+  }
+  // document.querySelector(".frame2").classList.remove("frame2Arabic");
+
   hide();
 }
 
@@ -105,7 +211,8 @@ function aboutArabic(direction) {
   document.getElementById("card2").classList.add("aboutCardArabicLast-child");
   console.log("Before remove");
   document.querySelector(".dropDown").classList.remove("display");
-  console.log("After remove");
+  // console.log("After remove");
+  document.querySelector(".bar2").classList.add("bar2Arabic");
   hide();
 }
 function aboutEnglish(direction) {
@@ -126,6 +233,7 @@ function aboutEnglish(direction) {
   document.getElementById("card2").classList.remove("aboutCardArabic");
 
   document.querySelector(".dropDown").classList.remove("display");
+  document.querySelector(".bar2").classList.remove("bar2Arabic");
   hide();
 }
 
@@ -141,6 +249,7 @@ function FAQArabic(direction) {
   document
     .querySelector(".showEnglishLanguageIcon")
     .classList.add("nonDisplay");
+    document.querySelector(".bar2").classList.add("bar2Arabic");
     hide();
 }
 
@@ -154,6 +263,7 @@ function FAQEnglish(direction) {
     .querySelector(".showEnglishLanguageIcon")
     .classList.remove("nonDisplay");
   document.querySelector(".dropDown").classList.remove("display");
+  document.querySelector(".bar2").classList.remove("bar2Arabic");
   hide();
 }
 
@@ -165,6 +275,7 @@ function blogArabic(direction) {
   document.querySelector(".englishIcone").classList.add("display");
   document.querySelector(".arabicIcon").classList.add("nonDisplay");
   document.querySelector(".dropDown").classList.add("dropDownArabic");
+  document.querySelector(".bar2").classList.add("bar2Arabic");
   document
     .querySelector(".showEnglishLanguageIcon")
     .classList.add("nonDisplay");
@@ -221,6 +332,7 @@ function blogEnglish(direction) {
   document.querySelector(".englishIcone").classList.remove("display");
   document.querySelector(".arabicIcon").classList.remove("nonDisplay");
   document.querySelector(".dropDown").classList.remove("dropDownArabic");
+  document.querySelector(".bar2").classList.remove("bar2Arabic");
   document
     .querySelector(".showEnglishLanguageIcon")
     .classList.remove("nonDisplay");
@@ -317,6 +429,7 @@ function contactArabic(direction) {
   document.getElementById("btn").style.float = "left";
   document.querySelector(".emailAndPhone").classList.add("emailAndPhoneArabic");
   document.querySelector(".ourOffice").classList.add("ourOfficeArabic");
+  document.querySelector(".bar2").classList.add("bar2Arabic");
   hide();
 }
 
@@ -333,6 +446,7 @@ function contactEnglish(direction) {
   document.getElementById("btn").style.float = "right";
   document.querySelector(".emailAndPhone").classList.remove("emailAndPhoneArabic");
   document.querySelector(".ourOffice").classList.remove("ourOfficeArabic");
+  document.querySelector(".bar2").classList.remove("bar2Arabic");
   hide();
 
 }

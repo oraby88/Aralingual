@@ -209,6 +209,10 @@ nav ul li a:focus {
   top: 12px;
   right: 0;
 }
+.bar2Arabic{
+  right: auto;
+  left: 0;
+}
 @media screen and (max-width: 600px) {
   .humbrger {
     gap: 15px;
@@ -616,16 +620,13 @@ nav ul li a:focus {
 
 .aboutCard p {
   font-size: 20px;
-  width: fit-content;
+  font-weight: var(--fw-500);
+  line-height: 24px; /* 120% */
+  margin-bottom: 15px;
   background: var(--Heading, linear-gradient(135deg, #fff 0%, #71717a 100%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 0 5px;
-  transition: transform 300ms ease;
-  z-index: 5;
-  font-weight: var(--fw-500);
-  line-height: 24px; /* 155.556% */
 }
 
 .aboutCard:before {
@@ -736,11 +737,103 @@ nav ul li a:focus {
   background-color: black;
 }
 
-.teamCard {
+.teamCardBigContainer {
   width: 35%;
 }
+
+.teamCardContainer {
+  background: linear-gradient(270deg, #44cd77 -23.46%, #2871ff 100%);
+  padding: 2px;
+  /* width: 300px; */
+  box-shadow: 0 0 10px #08f;
+  position: relative;
+  clip-path: polygon(13% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20% );
+  z-index: -1;
+}
+
+.teamCardContainerArabic {
+  background: linear-gradient(270deg, #2871ff -23.46%, #44cd77 100%);
+  clip-path: polygon(0 0, 88% 0, 100% 12%, 100% 100%, 0 100%, 0% 50%);
+}
+
+.teamCard {
+  background-color: #000; /* Dark card background */
+  padding: 5px;
+  position: relative;
+  clip-path: polygon(13% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
+  /* height: 220px; */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: visible;
+  text-overflow: ellipsis;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.teamCardArabic {
+  clip-path: polygon(0 0, 88% 0, 100% 12%, 100% 100%, 0 100%, 0% 50%);
+}
+.teamCardBigContainer{
+  position: relative;
+}
+.teamCardBigContainer::before,
+.teamCardBigContainer::after {
+  content: "";
+  position: absolute;
+  /* inset: 0; */
+}
+.teamCardBigContainer::before {
+  background-color: #44cd77;
+  content: "";
+  display: block;
+  width: 10px;
+  height: 32px;
+  right: -3px;
+  top: 50px;
+  z-index: 999;
+}
+.teamCardBigContainerArabic::before {
+  background-color: #44cd77;
+  content: "";
+  display: block;
+  width: 10px;
+  height: 40px;
+  right: auto;
+  left: -4px;
+  top: 20%;
+  z-index: 999;
+}
+
 .teamImg {
   width: 100%;
+  clip-path: polygon(13% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
+  -webkit-mask-image: url(mask.png);
+  mask-image: url(mask.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  mask-position: left;
+  mask-size: 100% 100%;
+  z-index: 1;
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+  height: 100%;
+  padding: 2px 2px 0px 2px;
+}
+.frame1 {
+  position: absolute;
+  left: -4px;
+  top: 30%;
+}
+.frame1Arabic {
+  position: absolute;
+  left: auto;
+  right: -4px;
+  top: 30%;
 }
 .teamWords {
   width: 55%;
@@ -775,7 +868,7 @@ nav ul li a:focus {
   .teamSectionContainer {
     flex-direction: column;
   }
-  .teamCard {
+  .teamCardBigContainer {
     width: 100%;
   }
   .teamImg {

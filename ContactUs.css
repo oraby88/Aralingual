@@ -190,6 +190,10 @@ nav ul li a:focus {
   top: 12px;
   right: 0;
 }
+.bar2Arabic{
+  right: auto;
+  left: 0;
+}
 @media screen and (max-width: 600px) {
   .humbrger {
     gap: 15px;
