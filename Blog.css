@@ -461,6 +461,7 @@ nav ul li a:focus {
   /* align-items: center; */
   justify-content: center;
   height: 100%;
+  gap: 10px;
 }
 .title-word {
   border: 1px solid grey;
@@ -498,15 +499,23 @@ nav ul li a:focus {
   -webkit-text-fill-color: transparent;
 }
 .welcome-words h1 {
-  width: 50%;
-  font-size: 70px;
+  width: 60%;
+  font-size: 78px;
   font-style: normal;
-  font-weight: 700;
-  line-height: 84px; /* 107.692% */
+  font-weight: var(--fw-700);
+  line-height: 70px; /* 107.692% */
   background: var(--Heading, linear-gradient(135deg, #fff 0%, #71717a 100%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 1024px) {
+  .welcome-words h1 {
+    font-size: 60px;
+    line-height: 50px;
+    width: 70%;
+  }
 }
 .welcome-words p {
   color: #dadada;
@@ -591,6 +600,7 @@ nav ul li a:focus {
   align-items: center;
   justify-content: space-between;
   margin-top: 50px;
+  cursor: pointer;
 }
 .mainCard {
   width: 40%;
@@ -868,7 +878,7 @@ nav ul li a:focus {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
   .mainCardContainer {
     flex-direction: column;
   }
@@ -888,7 +898,7 @@ nav ul li a:focus {
 .CardsContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 80px;
+  grid-gap: 60px;
   margin-top: 55px;
 }
 
@@ -1125,7 +1135,7 @@ nav ul li a:focus {
   width: 223px;
   height: 42px;
   clip-path: polygon(92% 0, 100% 30%, 100% 100%, 8% 100%, 0 70%, 0 0);
-  background-color: #000;
+  background-color: transparent;
   z-index: 999;
   border: 0;
   color: #fff;
@@ -1135,7 +1145,7 @@ nav ul li a:focus {
   line-height: 100%; /* 16px */
 }
 .TouchBtn:hover {
-  background: none;
+  background: #000;
   color: white;
 }
 .getInTouchGlowL {
@@ -1210,7 +1220,13 @@ footer {
   );
 }
 .footer-content {
-  padding: 0 100px;
+  padding: 0 200px;
+}
+
+@media screen and (max-width: 1440px){
+  .footer-content {
+    padding: 0 100px;
+  }
 }
 @media screen and (max-width: 992px) {
   .footer-content {

@@ -79,7 +79,7 @@ header {
   backdrop-filter: blur(8px);
 }
 @media screen and (max-width: 1440px) {
-  header{
+  header {
     padding: 30px 100px;
   }
 }
@@ -220,19 +220,19 @@ backdrop-filter: blur(22.5px);
   top: 12px;
   right: 0;
 }
-.bar2Arabic{
+.bar2Arabic {
   right: auto;
   left: 0;
 }
 @media screen and (max-width: 600px) {
-  .humbrger{
+  .humbrger {
     gap: 15px;
   }
-  .bar{
+  .bar {
     width: 30px;
     height: 2px;
   }
-  .bar2{
+  .bar2 {
     top: 9px;
     width: 20px;
     height: 2px;
@@ -294,11 +294,10 @@ backdrop-filter: blur(22.5px);
   margin-top: 10px;
   transition: all 1s ease-in-out;
 }
-.dropDownArabic{
+.dropDownArabic {
   right: auto;
   left: 0;
 }
-
 
 .mini-nav-dropDown {
   display: none;
@@ -325,16 +324,16 @@ backdrop-filter: blur(22.5px);
   align-items: center;
   gap: 5px;
 }
-.closeIcon{
+.closeIcon {
   display: none;
   transform: rotate(135deg);
   font-size: 58px;
 }
 @media screen and (min-width: 900px) {
-  .humbrger{
+  .humbrger {
     display: none !important;
   }
-  .closeIcon{
+  .closeIcon {
     display: none !important;
   }
 }
@@ -437,12 +436,11 @@ backdrop-filter: blur(22.5px);
     display: flex;
     justify-content: center;
   }
-  .active{
+  .active {
     background: linear-gradient(270deg, #44cd77 -43.46%, #2871ff 100%);
     color: var(--color-white) !important;
   }
 }
-
 
 /* welcome section */
 
@@ -470,7 +468,7 @@ backdrop-filter: blur(22.5px);
   /* align-items: center; */
   justify-content: center;
   height: 100%;
-  gap: 24px;
+  gap: 10px;
 }
 .title-word {
   border: 1px solid grey;
@@ -510,14 +508,22 @@ backdrop-filter: blur(22.5px);
 
 .welcome-words h1 {
   width: 50%;
-  font-size: 70px;
+  font-size: 78px;
   font-style: normal;
   font-weight: 700;
-  line-height: 84px; /* 107.692% */
+  line-height: 70px; /* 107.692% */
   background: var(--Heading, linear-gradient(135deg, #fff 0%, #71717a 100%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 1024px) {
+  .welcome-words h1 {
+    font-size: 60px;
+    line-height: 50px;
+    width: 70%;
+  }
 }
 .welcome-words p {
   color: #dadada;
@@ -527,6 +533,12 @@ backdrop-filter: blur(22.5px);
   font-weight: var(--fw-500);
   line-height: 28px; /* 140% */
   text-transform: uppercase;
+  width: 40%;
+}
+@media screen and (max-width: 1024px) {
+  .welcome-words p {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 786px) {
   .welcome-section {
@@ -628,20 +640,69 @@ backdrop-filter: blur(22.5px);
   text-align: center;
   margin-bottom: 40px;
   transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .question-card ul {
   display: flex;
   flex-flow: column wrap;
-  max-height: 7em;
+  max-height: 9em;
   /* height: 10vh; */
   padding-left: 20px;
+  width: 60%;
 }
-@media screen and (max-width: 600px) {
+.question-card ul li {
+  color: var(--Neutral-6, #f4f4f4);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: var(--fw-500);
+  line-height: 28px; /* 140% */
+}
+@media screen and (max-width: 900px) {
   .question-card ul {
     flex-direction: column;
     max-height: 100%;
   }
 }
+.questions-sectionWords h3 {
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px; /* 123.81% */
+  text-transform: capitalize;
+
+  background: linear-gradient(135deg, #fff 0%, #71717a 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+}
+
+.questions-sectionWords p {
+  color: var(--Neutral-4, #c5c5c5);
+  font-size: 18px;
+  font-weight: var(--fw-500);
+  line-height: 20px; /* 111.111% */
+
+  color: var(--Neutral-6, #f4f4f4);
+  font-family: Rajdhani;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 140% */
+}
+
+@media (max-width: 600px) {
+  .questions-sectionWords h3 {
+    font-size: 36px;
+  }
+  .questions-sectionWords p {
+    font-size: 16px;
+  }
+}
+
 .question-card h4 {
   font-size: 28px;
   font-weight: var(--fw-600);
@@ -668,7 +729,7 @@ backdrop-filter: blur(22.5px);
   /* margin-bottom: 20px; */
   backdrop-filter: blur(22.5px);
 
-  transition: all 0.5s ;
+  transition: all 0.5s;
   animation: display 1s;
   /* transition: width 2s, height 2s, transform 2s;   */
 }
@@ -680,7 +741,11 @@ backdrop-filter: blur(22.5px);
   padding: 1px;
   /* height: 400px; */
   /* margin-bottom: 300px; */
-  background: var(--border-color);
+  /* background: var(--border-color); */
+  border-radius: 8px;
+  /* border: 1px solid var(--style, #44cd77); */
+  background: linear-gradient(270deg, #44CD77 -43.46%, #2871FF 100%);
+  backdrop-filter: blur(22.5px);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -702,9 +767,8 @@ backdrop-filter: blur(22.5px);
 
 .question-card p {
   color: var(--Neutral-6, #f4f4f4);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: var(--fw-500);
+  font-size: 20px;
+  font-weight: 500;
   line-height: 28px; /* 140% */
 }
 .questionAndNumberContainer {
@@ -713,10 +777,20 @@ backdrop-filter: blur(22.5px);
   justify-content: space-between;
   align-items: center;
 }
-.questionAndNumber{
+.questionAndNumber {
   display: flex;
   gap: 25px;
   align-items: center;
+}
+.questionAndNumber h4 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 120%; /* 33.6px */
+
+  background: var(--Heading, linear-gradient(135deg, #fff 0%, #71717a 190%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .question-number {
   display: flex;
@@ -772,6 +846,12 @@ backdrop-filter: blur(22.5px);
   /* align-items: flex-start; */
   transition: all 2s;
 }
+.display-hide-content p {
+  color: var(--Neutral-6, #f4f4f4);
+  font-size: 20px;
+  font-weight: var(--fw-500);
+  line-height: 28px; /* 140% */
+}
 .open-button {
   display: flex;
   /* align-items: center; */
@@ -783,7 +863,7 @@ backdrop-filter: blur(22.5px);
   outline: 2px solid transparent;
   cursor: pointer;
 }
-.open-button:hover{
+.open-button:hover {
   border: 2px solid transparent;
   border-radius: 50%;
   outline: 2px solid #44cd77;
@@ -910,7 +990,7 @@ backdrop-filter: blur(22.5px);
   width: 223px;
   height: 42px;
   clip-path: polygon(92% 0, 100% 30%, 100% 100%, 8% 100%, 0 70%, 0 0);
-  background-color: #000;
+  background-color: transparent;
   z-index: 999;
   border: 0;
   color: #fff;
@@ -920,7 +1000,7 @@ backdrop-filter: blur(22.5px);
   line-height: 100%; /* 16px */
 }
 .TouchBtn:hover {
-  background: none;
+  background: #000;
   color: white;
 }
 .getInTouchGlowL {
@@ -994,7 +1074,13 @@ footer {
   );
 }
 .footer-content {
-  padding: 0 100px;
+  padding: 0 200px;
+}
+
+@media screen and (max-width: 1440px){
+  .footer-content {
+    padding: 0 100px;
+  }
 }
 @media screen and (max-width: 992px) {
   .footer-content {
@@ -1053,7 +1139,7 @@ hr {
   justify-content: center;
   border-radius: 50%;
 }
-.footerActive{
+.footerActive {
   color: var(--color-blue-700) !important;
   font-weight: var(--fw-700);
 }

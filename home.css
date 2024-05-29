@@ -74,7 +74,7 @@ header {
   backdrop-filter: blur(8px);
 }
 @media screen and (max-width: 1440px) {
-  header{
+  header {
     padding: 30px 100px;
   }
 }
@@ -107,9 +107,9 @@ article {
   width: 900px;
   height: 900px;
   position: absolute;
-  top: -11%;
+  top: 0;
   left: 0;
-  right: 0;
+  right: 0;   
   z-index: -1;
 }
 @media screen and (max-width: 786px) {
@@ -174,6 +174,17 @@ nav ul li a:focus {
 .active {
   color: var(--color-blue-700) !important;
   font-weight: var(--fw-700);
+  /* border-bottom: 2px solid var(--color-blue-700); */
+}
+.active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  width: 15px;
+  left: 0;
+  border-bottom: 2px solid var(--color-blue-700);
+  transition: all 1s;
 }
 .nav-list a:where(:hover, :focus)::before {
   content: "";
@@ -205,19 +216,19 @@ nav ul li a:focus {
   top: 12px;
   right: 0;
 }
-.bar2Arabic{
+.bar2Arabic {
   right: auto;
   left: 0;
 }
 @media screen and (max-width: 600px) {
-  .humbrger{
+  .humbrger {
     gap: 15px;
   }
-  .bar{
+  .bar {
     width: 30px;
     height: 2px;
   }
-  .bar2{
+  .bar2 {
     top: 9px;
     width: 20px;
     height: 2px;
@@ -236,15 +247,15 @@ nav ul li a:focus {
   gap: 5px;
   z-index: 999;
 }
-.showEnglishLanguageIcon{
+.showEnglishLanguageIcon {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.nonDisplay{
+.nonDisplay {
   display: none;
 }
-.showArabicLanguageIcon{
+.showArabicLanguageIcon {
   display: none;
   align-items: center;
   gap: 5px;
@@ -252,7 +263,7 @@ nav ul li a:focus {
   z-index: -1;
 }
 
-.englishIcone{
+.englishIcone {
   display: none;
 }
 .dropDown ul {
@@ -278,7 +289,7 @@ nav ul li a:focus {
   transition: all 1s ease-in-out;
   justify-content: center;
 }
-.dropDownArabic{
+.dropDownArabic {
   display: none;
   right: auto;
   left: 0;
@@ -445,6 +456,7 @@ nav ul li a:focus {
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
   color: var(--color-gray-500);
   justify-content: space-between;
 }
@@ -484,7 +496,7 @@ nav ul li a:focus {
 
 .title-word h3 {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: var(--fw-700);
   background: var(--Heading, linear-gradient(135deg, #fff 0%, #71717a 100%));
   background-clip: text;
   -webkit-background-clip: text;
@@ -503,11 +515,17 @@ nav ul li a:focus {
   -webkit-background-clip: text;
 } */
 .welcome-section h1 {
-  font-size: 75px;
+  font-size: 78px;
   line-height: 70px;
   background: linear-gradient(80.7deg, white 12.1%, #71717a 63.2%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+}
+@media screen and (max-width: 1024px) {
+  .welcome-words h1 {
+    font-size: 60px;
+    line-height: 50px;
+  }
 }
 .welcome-words p {
   font-size: 18px;
@@ -614,7 +632,7 @@ nav ul li a:focus {
 .shape-1 {
   margin-top: 20px;
 }
-.shape-1-arabic{
+.shape-1-arabic {
   transform: rotateY(180deg);
 }
 .learnMore {
@@ -622,25 +640,50 @@ nav ul li a:focus {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   color: var(--color-white);
 }
 
 /* Why Translate? */
+
+#whyTranslateSection {
+  margin: 30px 0 90px 0;
+  position: relative;
+}
+
+.whyCardsGlow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  /* height: 100%; */
+  z-index: 0;
+  /* bottom: -127%; */
+  top: -149%;
+}
 
 .whyTranslate {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 12px;
   color: var(--color-white);
 }
 .whyTranslate h3 {
   font-size: 42px;
-  background: linear-gradient(80.7deg, white 10.1%, #71717a 63.2%);
+  /* background: linear-gradient(80.7deg, white 10.1%, #71717a 63.2%);
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; */
+
+  background: linear-gradient(135deg, #fff 0%, #71717a 100%);
+  background-clip: text;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* width: fit-content; */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px; /* 123.81% */
 }
 .specialWord {
   background: var(
@@ -660,7 +703,7 @@ nav ul li a:focus {
   font-size: 18px;
   font-weight: var(--fw-500);
   line-height: 20px; /* 111.111% */
-  width: 50%;
+  width: 60%;
 }
 
 .cards {
@@ -871,6 +914,7 @@ nav ul li a:focus {
     #101010 85.08%
   );
   margin-bottom: 50px;
+  position: relative;
 }
 .BGImgContainer {
   background: linear-gradient(
@@ -883,7 +927,7 @@ nav ul li a:focus {
 .BGImgContainer img {
   width: fit-content;
 }
-.rightGlow{
+.rightGlow {
   position: absolute;
   top: 0;
   right: 0;
@@ -901,7 +945,7 @@ nav ul li a:focus {
   width: 100%;
   height: 100%;
 }
-.whyAraBGArabic{
+.whyAraBGArabic {
   right: 0;
 }
 
@@ -914,7 +958,7 @@ nav ul li a:focus {
 .whyAraContainer h3 {
   font-size: 38px;
 }
-.whyAraWords h3{
+.whyAraWords h3 {
   margin-top: 90px;
 }
 .whyAraCardsContainer {
@@ -1048,10 +1092,10 @@ nav ul li a:focus {
   left: 0px;
 }
 .specialCharB::before {
-  background-color: #18c8ff;
+  background-color: #eb4f4f;
 }
 .specialCharC::before {
-  background-color: #eb4f4f;
+  background-color: #18c8ff;
 }
 .specialCharD::before {
   background-color: #efda6c;
@@ -1092,21 +1136,31 @@ nav ul li a:focus {
   font-style: normal;
   font-weight: var(--fw-500);
   line-height: 20px; /* 111.111% */
+  width: 65%;
+}
+@media (max-width: 768px) {
+  .servicesWords p {
+    width: 100%;
+  }
 }
 
 .servicesCardsContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 60px;
-  row-gap: 80px;
+  column-gap: 50px;
+  row-gap: 70px;
   position: relative;
   /* background-color: transparent; */
+}
+@media (max-width: 1440px) {
+  .servicesCardsContainer {
+    column-gap: 40px;
+    row-gap: 60px;
+  }
 }
 @media (max-width: 1200px) {
   .servicesCardsContainer {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 40px;
-    row-gap: 60px;
   }
 }
 
@@ -1152,7 +1206,7 @@ nav ul li a:focus {
   /* width: 300px; */
   box-shadow: 0 0 10px #08f;
   position: relative;
-  clip-path: polygon(13% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20% );
+  clip-path: polygon(13% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
   z-index: -1;
 }
 
@@ -1304,7 +1358,6 @@ nav ul li a:focus {
   top: 30%;
 }
 
-
 .serviceCard2 {
   position: relative;
   padding: 2px;
@@ -1397,7 +1450,7 @@ nav ul li a:focus {
   height: 75%;
   border: none;
 }
-.iframeArabic{
+.iframeArabic {
   left: 0;
   right: 8%;
 }
@@ -1432,11 +1485,17 @@ nav ul li a:focus {
   background-size: contain;
   background: rgb(transparent, transparent, transparent, 0.3); */
 }
-.processCard1, .processCard3 , .processCard5 , .processCard7{
+.processCard1,
+.processCard3,
+.processCard5,
+.processCard7 {
   /* margin-right: 20px; */
   width: 100%;
 }
-.processCard2, .processCard4 , .processCard6 , .processCard8{
+.processCard2,
+.processCard4,
+.processCard6,
+.processCard8 {
   /* margin-left: 20px; */
   width: 100%;
   float: left;
@@ -1448,7 +1507,7 @@ nav ul li a:focus {
   width: 100%;
   z-index: -1;
 }
-.processBGArabic{
+.processBGArabic {
   left: 0;
   right: -10%;
 }
@@ -1459,7 +1518,7 @@ nav ul li a:focus {
   width: 100%;
   z-index: -1;
 }
-.processGlowArabic{
+.processGlowArabic {
   left: 0;
   right: -68%;
   top: -90%;
@@ -1542,7 +1601,7 @@ nav ul li a:focus {
     font-size: var(--fz-7);
   }
 }
-.rtl{
+.rtl {
   direction: rtl !important;
 }
 .processWords h3 {
@@ -1716,6 +1775,15 @@ nav ul li a:focus {
   width: 70%;
   text-align: center;
   margin-bottom: 10px;
+  text-align: center;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 127.273% */
+  background: var(--Heading, linear-gradient(135deg, #fff 0%, #71717a 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .getInTouchBg {
   position: absolute;
@@ -1742,7 +1810,7 @@ nav ul li a:focus {
   width: 223px;
   height: 42px;
   clip-path: polygon(92% 0, 100% 30%, 100% 100%, 8% 100%, 0 70%, 0 0);
-  background-color: #000;
+  background-color: transparent;
   z-index: 999;
   border: 0;
   color: #fff;
@@ -1750,9 +1818,10 @@ nav ul li a:focus {
   color: #fff;
   font-weight: var(--fw-500);
   line-height: 100%; /* 16px */
+  cursor: pointer;
 }
 .TouchBtn:hover {
-  background: none;
+  background: #000;
   color: white;
 }
 .getInTouchGlowL {
@@ -1850,7 +1919,13 @@ nav ul li a:focus {
 
 /* footer */
 .footer-content {
-  padding: 0 100px;
+  padding: 0 200px;
+}
+
+@media screen and (max-width: 1440px){
+  .footer-content {
+    padding: 0 100px;
+  }
 }
 @media screen and (max-width: 992px) {
   .footer-content {

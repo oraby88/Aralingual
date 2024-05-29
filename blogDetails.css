@@ -476,7 +476,7 @@ nav ul li a:focus {
   /* align-items: center; */
   justify-content: center;
   height: 100%;
-  gap: 24px;
+  gap: 10px;
 }
 .welcome-words div {
   border: 1px solid grey;
@@ -530,15 +530,22 @@ nav ul li a:focus {
   -webkit-text-fill-color: transparent;
 }
 .welcome-words h1 {
-  width: 50%;
-  font-size: 70px;
+  width: 60%;
+  font-size: 78px;
   font-style: normal;
   font-weight: 700;
-  line-height: 84px; /* 107.692% */
+  line-height: 70px; /* 107.692% */
   background: var(--Heading, linear-gradient(135deg, #fff 0%, #71717a 100%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 1024px) {
+  .welcome-words h1 {
+    font-size: 60px;
+    line-height: 50px;
+    width: 70%;
+  }
 }
 .welcome-words p {
   color: #dadada;
@@ -626,11 +633,13 @@ nav ul li a:focus {
 /* Where Arabic Section */
 .whereArabicSectionContainer {
   overflow-x: hidden;
+  position: relative;
 }
 .whereArabicSection {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 30px;
+  position: relative;
 }
 @media screen and (max-width: 1024px) {
   .whereArabicSection {
@@ -736,6 +745,16 @@ ul li p {
 }
 .btnLink:hover {
   background: none;
+}
+
+
+.tableOfContent{
+  position: sticky;
+  right: 0;top: 700px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+
 }
 
 .tableContentDiv {
@@ -1094,15 +1113,16 @@ ul li p {
 .getInTouch p {
   width: 70%;
   text-align: center;
+  margin-bottom: 10px;
+  text-align: center;
   font-size: 22px;
   font-style: normal;
-  font-weight: var(--fw-600);
+  font-weight: 600;
   line-height: 28px; /* 127.273% */
   background: var(--Heading, linear-gradient(135deg, #fff 0%, #71717a 100%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 10px;
 }
 .getInTouchBg {
   position: absolute;
@@ -1129,7 +1149,7 @@ ul li p {
   width: 223px;
   height: 42px;
   clip-path: polygon(92% 0, 100% 30%, 100% 100%, 8% 100%, 0 70%, 0 0);
-  background-color: #000;
+  background-color: transparent;
   z-index: 999;
   border: 0;
   color: #fff;
@@ -1139,7 +1159,7 @@ ul li p {
   line-height: 100%; /* 16px */
 }
 .TouchBtn:hover {
-  background: none;
+  background: #000;
   color: white;
 }
 .getInTouchGlowL {
@@ -1221,7 +1241,13 @@ footer {
   );
 }
 .footer-content {
-  padding: 0 100px;
+  padding: 0 200px;
+}
+
+@media screen and (max-width: 1440px){
+  .footer-content {
+    padding: 0 100px;
+  }
 }
 @media screen and (max-width: 992px) {
   .footer-content {

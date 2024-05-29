@@ -40,36 +40,39 @@ x.addEventListener("change", function () {
 
 // window.localStorage.setItem("language", "EN");
 // window.location.reload();
-let lang = localStorage.getItem("language") || '';
-onload = function () {
-  if (lang == "ar") {
-    arabic();
-  }else if (lang == "en"){
-    english();
-  }else{
-    lang = "en";
-    localStorage.setItem("language", lang);
-  }
-};
+
+
 
 // var language =document.getElementsByTagName("html")[0].getAttribute("lang");
 // window.localStorage.setItem("lang", language);
 // console.log(language);
 
 
+let lang = localStorage.getItem("language") || "";
+console.log("from outside: " + lang);
+onload = function () {
+  if (lang == 'ar') {
+    arabic('rtl');
+    console.log("choose arabic " + lang);
+  } else {
+    english('ltr');
+    console.log("choose english " + lang);
+  }
+};
+
 /* Home page */
 function arabic(direction) {
   document.body.style.direction = direction;
   // console.log("aviooo");
-  document.querySelector(".dropDown").classList.toggle("display");
+  document.querySelector(".dropDown").classList.remove("display");
   document.querySelector(".dropDown").classList.add("dropDownArabic");
   document.querySelector(".showArabicLanguageIcon").classList.add("display");
   document.querySelector(".englishIcone").classList.add("display");
   document.querySelector(".arabicIcon").classList.add("nonDisplay");
   document
-    .querySelector(".showEnglishLanguageIcon")
-    .classList.add("nonDisplay");
-
+  .querySelector(".showEnglishLanguageIcon")
+  .classList.add("nonDisplay");
+  
   document.querySelector(".processGlow").classList.add("processGlowArabic");
   document.querySelector(".iframe").classList.add("iframeArabic");
   document.querySelector(".processBG").classList.add("processBGArabic");
@@ -78,14 +81,14 @@ function arabic(direction) {
   // document.querySelector(".processCard2").classList.add("rtl");
   document.querySelector(".bar2").classList.add("bar2Arabic");
   console.log("aviooo");
-
+  
   document.getElementsByTagName("html")[0].setAttribute("lang", "ar");
   // navigator.language = "ar";
   localStorage.setItem("language", "ar");
-  lang = 'ar';
-
+  lang = "ar";
+  
   // window.localStorage.setItem('Language', 'JavaScript');
-
+  
   var card = document.querySelector(".serviceCard");
   if (card) {
     document.querySelectorAll(".serviceCard").forEach((item) => {
@@ -100,7 +103,7 @@ function arabic(direction) {
     });
   }
   // document.querySelector(".serviceCardContent").classList.add("serviceCardContentArabic");
-
+  
   var image = document.querySelector(".img");
   if (image) {
     document.querySelectorAll(".img").forEach((item) => {
@@ -108,9 +111,9 @@ function arabic(direction) {
     });
   }
   // document.querySelector(".img").classList.add("imgArabic");
-
+  
   // document.querySelector(".serviceCardContainer").classList.add("serviceCardContainerArabic");
-
+  
   var cardBefore = document.querySelector(".serviceCardContainer");
   if (cardBefore) {
     document.querySelectorAll(".serviceCardContainer").forEach((item) => {
@@ -118,9 +121,9 @@ function arabic(direction) {
     });
   }
   // document.querySelector(".cardContainer").classList.add("cardContainerArabic");
-
+  
   // document.querySelector(".frame1").classList.add("frame1Arabic");
-
+  
   var cardBefore = document.querySelector(".frame1");
   if (cardBefore) {
     document.querySelectorAll(".frame1").forEach((item) => {
@@ -128,7 +131,7 @@ function arabic(direction) {
     });
   }
   // document.querySelector(".frame2").classList.add("frame2Arabic");
-
+  
   var Card = document.querySelector(".processCard");
   if (Card) {
     document.querySelectorAll(".processCard").forEach((item) => {
@@ -137,21 +140,24 @@ function arabic(direction) {
   }
   // window.localStorage.setItem("language", "ar");
   // console.log(window.localStorage.getItem("language"));
-
+  
   hide();
+  console.log('in arabic');
 }
 //  function changeLang() {
-//     // var langCheck = localStorage.getItem("lang");
-    
-//     if (language == "ar") {
-//       arabic();
-//     } else {
-//       english();
-//     }
-//     location.reload();
-//   }
-
+  //     // var langCheck = localStorage.getItem("lang");
+  
+  //     if (language == "ar") {
+    //       arabic();
+    //     } else {
+      //       english();
+      //     }
+      //     location.reload();
+      //   }
+      
 function english(direction) {
+  console.log('in english');
+
   document.body.style.direction = direction;
   document.querySelector(".showArabicLanguageIcon").classList.remove("display");
   document.querySelector(".englishIcone").classList.remove("display");
@@ -160,7 +166,7 @@ function english(direction) {
   document
     .querySelector(".showEnglishLanguageIcon")
     .classList.remove("nonDisplay");
-  document.querySelector(".dropDown").classList.toggle("display");
+  document.querySelector(".dropDown").classList.remove("display");
 
   document.querySelector(".processGlow").classList.remove("processGlowArabic");
   document.querySelector(".iframe").classList.remove("iframeArabic");
@@ -176,13 +182,10 @@ function english(direction) {
     });
   }
 
-
   localStorage.setItem("language", "en");
-  lang = 'en';
+  lang = "en";
 
-
- 
-  console.log(navigator.language);
+  // console.log(navigator.language);
 
   var card = document.querySelector(".serviceCard");
   if (card) {
@@ -231,27 +234,43 @@ function english(direction) {
 }
 
 
-  
 
 
-/* Home Section */
-// function homeArabic() {
-//   document.querySelector(".processGlow").classList.add("processGlowArabic");
-//   document.querySelector(".iframe").classList.add("iframeArabic");
-//   document.querySelector(".processBG").classList.add("processBGArabic");
-//   document.querySelector(".whyAraBG").classList.add("whyAraBGArabic");
-//   document.querySelector(".shape-1").classList.add("shape-1-arabic");
-//   document.querySelector(".processCard2").classList.add("rtl");
-//   console.log("aviooo");
+// function loadLang() {
+//   let language;
+//   const localStorageLang = localStorage.getItem("lang");
+//   if (localStorageLang) { // if the local storage have a value, put it in language variable
+//     language = localStorageLang;
+//   } else {
+//     var userLang = navigator.language || navigator.userLanguage;
+//     var browserLang = userLang.split("-")[0];
+//     language = browserLang; // get the language from browser language and put it in language variable
+//     localStorage.setItem("lang", browserLang); // put the browser lang in local storage
+//   }
+//   if (language == "ar") {
+//     arabic();
+//   } else {
+//     english();
+//   }
 // }
-// function homeEnglish() {
-//   document.querySelector(".processGlow").classList.remove("processGlowArabic");
-//   document.querySelector(".iframe").classList.remove("iframeArabic");
-//   document.querySelector(".processBG").classList.remove("processBGArabic");
-//   document.querySelector(".whyAraBG").classList.remove("whyAraBGArabic");
-//   document.querySelector(".shape-1").classList.remove("shape-1-arabic");
-//   document.querySelector(".processCard2").classList.remove("rtl");
+
+// function changeLanguage(lang) {
+//   let localStorageData = localStorage.getItem("lang");
+//   if (lang === localStorageData) {
+//     return;
+//   }
+ 
+//   if (lang == "en") {
+//     localStorage.setItem("lang", "en");
+//     english();
+//   } else {
+//     console.log("arabic langauge has been chosen");
+//     localStorage.setItem("lang", "ar");
+//     console.log(localStorageData);
+//     arabic();
+//   }
 // }
+
 
 /* About Us Section */
 function aboutArabic(direction) {
