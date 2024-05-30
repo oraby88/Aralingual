@@ -474,6 +474,7 @@ function blogDetailsArabic(direction) {
     .classList.add("nonDisplay");
   document.querySelector(".dropDown").classList.remove("display");
   document.querySelector(".bar2").classList.add("bar2Arabic");
+  document.querySelector(".tableOfContentList").classList.add("tableOfContentListArabic");
   hide();
 }
 
@@ -488,6 +489,7 @@ function blogDetailsEnglish(direction) {
     .classList.remove("nonDisplay");
   document.querySelector(".dropDown").classList.remove("display");
   document.querySelector(".bar2").classList.remove("bar2Arabic");
+  document.querySelector(".tableOfContentList").classList.remove("tableOfContentListArabic");
   hide();
 }
 
