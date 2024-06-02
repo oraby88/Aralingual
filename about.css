@@ -179,6 +179,15 @@ nav ul li a:focus {
   color: var(--color-blue-700) !important;
   font-weight: var(--fw-700);
 }
+.active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  width: 15px;
+  left: 0;
+  border-bottom: 2px solid var(--color-blue-700);
+}
 .nav-list a:where(:hover, :focus)::before {
   content: "";
   display: block;
