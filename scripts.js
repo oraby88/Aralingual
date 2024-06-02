@@ -624,3 +624,27 @@ function newNonDisplay(parentId) {
 function NumberLanguageAppear() {
   document.querySelector(".phoneDropdown").classList.toggle("display");
 }
+
+
+
+
+/* i18Next */
+ 
+function generateJSON() {
+  const elements = document.body.querySelectorAll("*");
+  const translation = {};
+ 
+  elements.forEach((element) => {
+    const key = element.getAttribute("data-i18n-key");
+    if (key) {
+      translation[key] = element.textContent.trim();
+    }
+  });
+ 
+  // Output the generated JSON to console
+  console.log(JSON.stringify(translation, null, 2));
+}
+ 
+// Call the function to generate JSON
+document.addEventListener("DOMContentLoaded", generateJSON);
+

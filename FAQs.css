@@ -1037,6 +1037,11 @@ backdrop-filter: blur(22.5px);
 .showInSmallSizes {
   display: none;
 }
+
+/* #ss::after{
+  content: attr(data-key);
+} */
+
 @media screen and (max-width: 600px) {
   .getInTouch h3 {
     font-size: 36px;
