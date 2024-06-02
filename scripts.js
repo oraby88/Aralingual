@@ -39,26 +39,39 @@ x.addEventListener("change", function () {
 });
 
 // window.localStorage.setItem("language", "EN");
-// window.location.reload();
 
-
-
-// var language =document.getElementsByTagName("html")[0].getAttribute("lang");
-// window.localStorage.setItem("lang", language);
-// console.log(language);
-
-
-let lang = localStorage.getItem("language") || "";
-console.log("from outside: " + lang);
+let lang = localStorage.getItem("language");
+console.log("Current Langugae from storage: " + lang);
+console.log(lang);
 onload = function () {
-  if (lang == 'ar') {
-    arabic('rtl');
-    console.log("choose arabic " + lang);
+  if (!lang) {
+    browserLanguage();
   } else {
-    english('ltr');
-    console.log("choose english " + lang);
+    if (lang == "ar") {
+      arabic("rtl");
+      // aboutArabic("rtl");
+      console.log("choose arabic " + lang);
+    } else {
+      english("ltr");
+      // aboutEnglish("ltr");
+      console.log("choose english " + lang);
+    }
   }
 };
+
+function browserLanguage() {
+  let browserLang = navigator.language;
+  console.log("Browser lang " + browserLang);
+  if (browserLang == "en-US") {
+    english("ltr");
+    // aboutEnglish("ltr");
+    console.log("choose enlish " + browserLang);
+  } else if (browserLang == "ar") {
+    arabic("rtl");
+    // aboutArabic("rtl");
+    console.log("choose arabic " + browserLang);
+  }
+}
 
 /* Home page */
 function arabic(direction) {
@@ -70,9 +83,9 @@ function arabic(direction) {
   document.querySelector(".englishIcone").classList.add("display");
   document.querySelector(".arabicIcon").classList.add("nonDisplay");
   document
-  .querySelector(".showEnglishLanguageIcon")
-  .classList.add("nonDisplay");
-  
+    .querySelector(".showEnglishLanguageIcon")
+    .classList.add("nonDisplay");
+
   document.querySelector(".processGlow").classList.add("processGlowArabic");
   document.querySelector(".iframe").classList.add("iframeArabic");
   document.querySelector(".processBG").classList.add("processBGArabic");
@@ -80,15 +93,30 @@ function arabic(direction) {
   document.querySelector(".shape-1").classList.add("shape-1-arabic");
   // document.querySelector(".processCard2").classList.add("rtl");
   document.querySelector(".bar2").classList.add("bar2Arabic");
+  var roundedCard = document.querySelector(".rounded-box");
+  if (roundedCard) {
+    document.querySelectorAll(".rounded-box").forEach((item) => {
+      item.classList.add("rounded-box-arabic");
+    });
+  }
+  // document.querySelector(".rounded-box").classList.add("rounded-box-arabic");
+  var roundedCard1 = document.querySelector(".rounded-box1");
+  if (roundedCard1) {
+    document.querySelectorAll(".rounded-box1").forEach((item) => {
+      item.classList.add("rounded-box-arabic");
+    });
+  }
+
   console.log("aviooo");
-  
+
   document.getElementsByTagName("html")[0].setAttribute("lang", "ar");
-  // navigator.language = "ar";
+  localStorage.clear();
+
   localStorage.setItem("language", "ar");
-  lang = "ar";
-  
+  console.log("herrrrrrrrrrrrrrrr");
+
   // window.localStorage.setItem('Language', 'JavaScript');
-  
+
   var card = document.querySelector(".serviceCard");
   if (card) {
     document.querySelectorAll(".serviceCard").forEach((item) => {
@@ -103,7 +131,7 @@ function arabic(direction) {
     });
   }
   // document.querySelector(".serviceCardContent").classList.add("serviceCardContentArabic");
-  
+
   var image = document.querySelector(".img");
   if (image) {
     document.querySelectorAll(".img").forEach((item) => {
@@ -111,9 +139,9 @@ function arabic(direction) {
     });
   }
   // document.querySelector(".img").classList.add("imgArabic");
-  
+
   // document.querySelector(".serviceCardContainer").classList.add("serviceCardContainerArabic");
-  
+
   var cardBefore = document.querySelector(".serviceCardContainer");
   if (cardBefore) {
     document.querySelectorAll(".serviceCardContainer").forEach((item) => {
@@ -121,9 +149,9 @@ function arabic(direction) {
     });
   }
   // document.querySelector(".cardContainer").classList.add("cardContainerArabic");
-  
+
   // document.querySelector(".frame1").classList.add("frame1Arabic");
-  
+
   var cardBefore = document.querySelector(".frame1");
   if (cardBefore) {
     document.querySelectorAll(".frame1").forEach((item) => {
@@ -131,7 +159,7 @@ function arabic(direction) {
     });
   }
   // document.querySelector(".frame2").classList.add("frame2Arabic");
-  
+
   var Card = document.querySelector(".processCard");
   if (Card) {
     document.querySelectorAll(".processCard").forEach((item) => {
@@ -140,23 +168,23 @@ function arabic(direction) {
   }
   // window.localStorage.setItem("language", "ar");
   // console.log(window.localStorage.getItem("language"));
-  
+
   hide();
-  console.log('in arabic');
+  console.log("in arabic");
 }
 //  function changeLang() {
-  //     // var langCheck = localStorage.getItem("lang");
-  
-  //     if (language == "ar") {
-    //       arabic();
-    //     } else {
-      //       english();
-      //     }
-      //     location.reload();
-      //   }
-      
+//     // var langCheck = localStorage.getItem("lang");
+
+//     if (language == "ar") {
+//       arabic();
+//     } else {
+//       english();
+//     }
+//     location.reload();
+//   }
+
 function english(direction) {
-  console.log('in english');
+  console.log("in english");
 
   document.body.style.direction = direction;
   document.querySelector(".showArabicLanguageIcon").classList.remove("display");
@@ -175,15 +203,29 @@ function english(direction) {
   document.querySelector(".shape-1").classList.remove("shape-1-arabic");
   // document.querySelector(".processCard2").classList.remove("rtl");
   document.querySelector(".bar2").classList.remove("bar2Arabic");
+
+  var roundedCard = document.querySelector(".rounded-box");
+  if (roundedCard) {
+    document.querySelectorAll(".rounded-box").forEach((item) => {
+      item.classList.remove("rounded-box-arabic");
+    });
+  }
+  // document.querySelector(".rounded-box").classList.remove("rounded-box-arabic");
+  var roundedCard1 = document.querySelector(".rounded-box1");
+  if (roundedCard1) {
+    document.querySelectorAll(".rounded-box1").forEach((item) => {
+      item.classList.remove("rounded-box-arabic");
+    });
+  }
+
   var Card = document.querySelector(".processCard");
   if (Card) {
     document.querySelectorAll(".processCard").forEach((item) => {
       item.classList.remove("rtl");
     });
   }
-
+  localStorage.clear();
   localStorage.setItem("language", "en");
-  lang = "en";
 
   // console.log(navigator.language);
 
@@ -233,9 +275,6 @@ function english(direction) {
   hide();
 }
 
-
-
-
 // function loadLang() {
 //   let language;
 //   const localStorageLang = localStorage.getItem("lang");
@@ -259,7 +298,7 @@ function english(direction) {
 //   if (lang === localStorageData) {
 //     return;
 //   }
- 
+
 //   if (lang == "en") {
 //     localStorage.setItem("lang", "en");
 //     english();
@@ -270,7 +309,6 @@ function english(direction) {
 //     arabic();
 //   }
 // }
-
 
 /* About Us Section */
 function aboutArabic(direction) {
@@ -292,6 +330,10 @@ function aboutArabic(direction) {
   // console.log("After remove");
   document.querySelector(".bar2").classList.add("bar2Arabic");
   hide();
+
+  localStorage.clear();
+  localStorage.setItem("language", "ar");
+  console.log("about arabic");
 }
 function aboutEnglish(direction) {
   document.body.style.direction = direction;
@@ -313,6 +355,9 @@ function aboutEnglish(direction) {
   document.querySelector(".dropDown").classList.remove("display");
   document.querySelector(".bar2").classList.remove("bar2Arabic");
   hide();
+  localStorage.clear();
+  localStorage.setItem("language", "en");
+  console.log("about english");
 }
 
 /* FAQ Section */
@@ -328,6 +373,7 @@ function FAQArabic(direction) {
     .querySelector(".showEnglishLanguageIcon")
     .classList.add("nonDisplay");
   document.querySelector(".bar2").classList.add("bar2Arabic");
+  console.log("FAQ arabic");
   hide();
 }
 
@@ -474,7 +520,9 @@ function blogDetailsArabic(direction) {
     .classList.add("nonDisplay");
   document.querySelector(".dropDown").classList.remove("display");
   document.querySelector(".bar2").classList.add("bar2Arabic");
-  document.querySelector(".tableOfContentList").classList.add("tableOfContentListArabic");
+  document
+    .querySelector(".tableOfContentList")
+    .classList.add("tableOfContentListArabic");
   hide();
 }
 
@@ -489,7 +537,9 @@ function blogDetailsEnglish(direction) {
     .classList.remove("nonDisplay");
   document.querySelector(".dropDown").classList.remove("display");
   document.querySelector(".bar2").classList.remove("bar2Arabic");
-  document.querySelector(".tableOfContentList").classList.remove("tableOfContentListArabic");
+  document
+    .querySelector(".tableOfContentList")
+    .classList.remove("tableOfContentListArabic");
   hide();
 }
 

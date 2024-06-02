@@ -109,7 +109,7 @@ article {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;   
+  right: 0;
   z-index: -1;
 }
 @media screen and (max-width: 786px) {
@@ -729,6 +729,57 @@ nav ul li a:focus {
     justify-content: center;
   }
 }
+
+.parent {
+  filter: url("#goo");
+  overflow: hidden;
+  position: relative;
+  /* right: -50px; */
+  z-index: 1;
+  /* margin-top: 10vw; */
+  width: 100%;
+  height: 290px;
+}
+@media screen and (max-width:1600px) {
+  .parent {
+    height: 270px;
+  }
+}
+.rounded-box {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, #2871ff -23.46%, #44cd77 100%);
+  padding: 2px;
+  color: white;
+  clip-path: polygon(0% 0%, 83% 0, 100% 17%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, 83% 0, 100% 17%, 100% 100%, 0% 100%);
+  border-radius: 15px; /* Adjust the value to change the roundness of the corners */
+  position: relative;
+}
+.parent .parent {
+  width: 100%;
+  height: 100%;
+}
+.rounded-box1 {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: white;
+  clip-path: polygon(0% 0%, 83% 0, 100% 17%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, 83% 0, 100% 17%, 100% 100%, 0% 100%);
+  border-radius: 15px; /* Adjust the value to change the roundness of the corners */
+  position: relative;
+  padding: 30px;
+  /* border: 2px solid #ff4; */
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.rounded-box-arabic{
+  clip-path: polygon(0 17%, 17% 0, 100% 0, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 17%, 17% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
 .card {
   color: var(--color-white);
   cursor: pointer;
@@ -769,10 +820,8 @@ nav ul li a:focus {
   max-height: 266px;
   max-width: 376px;
 }
-.card img {
-  /* margin-bottom: 10px; */
-}
-.card h3 {
+
+.parent h3 {
   font-size: 24px;
   /* font-weight: var(--fw-700); */
   background: linear-gradient(80.7deg, white 10.1%, #71717a 63.2%);
@@ -781,7 +830,7 @@ nav ul li a:focus {
   /* width: 50%; */
   line-height: 26px;
 }
-.card p {
+.parent p {
   overflow: hidden;
   color: var(--Primary-3, #c8deff);
   text-overflow: ellipsis;
@@ -802,14 +851,19 @@ nav ul li a:focus {
 .cardGlow {
   /* z-index: -1; */
   position: absolute;
-  top: -35%;
+  top: 0;
   opacity: 0.8;
   right: 0;
+  left: 10%;
   z-index: -2;
+  object-position: center;
+  width: 120%;
+  height: 120%;
 }
 .cardImgContainer img {
   max-width: 100%;
 }
+
 @media (max-width: 600px) {
   .whyTranslate h3 {
     font-size: 22px !important;
@@ -1220,7 +1274,7 @@ nav ul li a:focus {
   padding: 34px;
   position: relative;
   clip-path: polygon(13% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
-  height: 220px;
+  height: 255px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
@@ -1231,6 +1285,7 @@ nav ul li a:focus {
   flex-direction: column;
   gap: 10px;
   position: relative;
+  overflow: hidden;
 }
 
 .serviceCardContentArabic {
@@ -1243,7 +1298,7 @@ nav ul li a:focus {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: fit-content;
-  font-size: 28px;
+  font-size: 30px;
   font-style: normal;
   font-weight: var(--fw-700);
   line-height: 28px; /* 116.667% */
@@ -1255,7 +1310,7 @@ nav ul li a:focus {
   text-overflow: ellipsis;
   /* white-space: nowrap; */
   font-family: Rajdhani;
-  font-size: 15px;
+  font-size: 17px;
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 25.2px */
@@ -1267,6 +1322,17 @@ nav ul li a:focus {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: var(--max-lines);
+}
+@media screen and (max-width: 1600px) {
+  .serviceCardContent {
+    height: 220px;
+  }
+  .serviceCard h3 {
+    font-size: 28px;
+  }
+  .serviceCardContent p {
+    font-size: 15px;
+  }
 }
 
 .tooltip:hover .tooltiptext {
@@ -1922,7 +1988,7 @@ nav ul li a:focus {
   padding: 0 200px;
 }
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1440px) {
   .footer-content {
     padding: 0 100px;
   }

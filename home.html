@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,11 +26,15 @@
     <script src="scripts.js"></script>
     <title>Aralingual - Home</title>
   </head>
-  <body >
+  <body>
     <!-- <img src="glow1.svg" alt="" class="getInTouchGlowR">
     <img src="glow1.svg" alt="" class="getInTouchGlowL"> -->
     <div class="glowContainer">
-      <img src="Aralingual - Update Assets 2024/Website/Home/Images/BG.png" alt="" class="lightImg" />
+      <img
+        src="Aralingual - Update Assets 2024/Website/Home/Images/BG.png"
+        alt=""
+        class="lightImg"
+      />
     </div>
     <header>
       <!-- <img src="glow.svg" alt="" class="lightImg" /> -->
@@ -45,7 +49,7 @@
           <li><a href="FAQs.html">FAQ</a></li>
           <li><a href="Blog.html">BLOG</a></li>
           <li><a href="contactUs.html">CONTACT US</a></li>
-          <li class="options" >
+          <li class="options">
             <div class="select" onclick="appear()">
               <div class="showEnglishLanguageIcon">
                 EN
@@ -61,15 +65,14 @@
 
               <div class="showArabicLanguageIcon">
                 AR
-                  <img
-                    src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
-                    alt=""
-                  />
-                  <i
-                    class="fa-solid fa-chevron-down"
-                    style="font-size: 12px; padding-top: 5px"
-                  ></i>
-                
+                <img
+                  src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
+                  alt=""
+                />
+                <i
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 12px; padding-top: 5px"
+                ></i>
               </div>
             </div>
           </li>
@@ -202,7 +205,6 @@
           </div>
         </section>
         <section id="whyTranslateSection">
-          
           <div class="whyTranslate">
             <h3>
               WHY LOCALIZE & <span class="specialWord">TRANSLATE</span> YOUR
@@ -216,7 +218,90 @@
             </p>
           </div>
           <div class="cards">
-            <div class="card">
+            <div class="parent">
+              <div class="rounded-box">
+                <div class="parent">
+                  <div class="rounded-box1">
+                    <div class="glowContainer">
+                      <img src="glow1.svg" alt="" class="cardGlow" />
+                    </div>
+                    <div class="cardImgContainer">
+                      <img src="users-alt 1.png" alt="" />
+                    </div>
+                    <h3>Reach a wider audience</h3>
+                    <p>
+                      By localizing your game, you can tap into new markets and
+                      expand your player base exponentially.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="parent">
+              <div class="rounded-box">
+                <div class="parent">
+                  <div class="rounded-box1">
+                    <div class="glowContainer">
+                      <img src="glow1.svg" alt="" class="cardGlow" />
+                    </div>
+                    <div class="cardImgContainer">
+                      <img src="Increase player engagement.png" alt="" />
+                    </div>
+                    <h3>Increase player engagement</h3>
+                    <p>
+                      When players can understand & connect with the game in
+                      their native language, it enhances their gaming experience
+                      & keeps them coming back for more.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="parent">
+              <div class="rounded-box">
+                <div class="parent">
+                  <div class="rounded-box1">
+                    <div class="glowContainer">
+                      <img src="glow1.svg" alt="" class="cardGlow" />
+                    </div>
+                    <div class="cardImgContainer">
+                      <img src="revenue-alt 1.png" alt="" />
+                    </div>
+                    <h3>Boost revenue</h3>
+                    <p>
+                      Localizing your game increases its market potential,
+                      opening up opportunities for greater monetization and
+                      increasing revenue streams.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <svg
+              style="visibility: hidden; position: absolute"
+              width="0"
+              height="0"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+            >
+              <defs>
+                <filter id="goo">
+                  <feGaussianBlur
+                    in="SourceGraphic"
+                    stdDeviation="8"
+                    result="blur"
+                  />
+                  <feColorMatrix
+                    in="blur"
+                    mode="matrix"
+                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 15 -9"
+                    result="goo"
+                  />
+                  <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+                </filter>
+              </defs>
+            </svg>
+            <!-- <div class="card">
               <div class="cardFrameContainer">
                 <img src="Card.svg" alt="" class="cardFrame" />
               </div>
@@ -232,7 +317,6 @@
                 your player base exponentially.
               </p>
             </div>
-
             <div class="card">
               <div class="cardFrameContainer">
                 <img src="Card.svg" alt="" class="cardFrame" />
@@ -251,7 +335,6 @@
                 them coming back for more.
               </p>
             </div>
-
             <div class="card">
               <div class="cardFrameContainer">
                 <img
@@ -273,89 +356,11 @@
                 opportunities for greater monetization and increasing revenue
                 streams.
               </p>
-            </div>
-            <!-- <div class="card2">
-              <div class="card2Inside">
-              <div class="glowContainer">
-                <img src="glow1.svg" alt="" class="cardGlow" />
-              </div>
-              <img src="revenue-alt 1.png" alt="" />
-              <h3>Boost revenue</h3>
-              <p>
-                Localizing your game increases its market potential, opening up
-                opportunities for greater monetization and increasing revenue
-                streams.
-              </p></div>
             </div> -->
           </div>
-
-          <!-- <div class="cards">
-            <div class="card">
-              <div class="serviceCardContainer1">
-                <div class="serviceCard">
-                  <div class="serviceCardContent">
-                    <div class="glowContainer">
-                      <img src="glow1.svg" alt="" class="cardGlow" />
-                    </div>
-                    <div class="cardImgContainer">
-                      <img src="users-alt 1.png" alt="" />
-                    </div>
-                    <h3>Reach a wider audience</h3>
-                    <p>
-                      By localizing your game, you can tap into new markets and
-                      expand your player base exponentially.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="serviceCardContainer1">
-                <div class="serviceCard">
-                  <div class="serviceCardContent">
-                    <div class="glowContainer">
-                      <img src="glow1.svg" alt="" class="cardGlow" />
-                    </div>
-                    <div class="cardImgContainer">
-                      <img src="Increase player engagement.png" alt="" />
-                    </div>
-                    <h3>Increase player engagement</h3>
-                    <p>
-                      When players can understand & connect with the game in
-                      their native language, it enhances their gaming experience
-                      & keeps them coming back for more.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="serviceCardContainer1">
-                <div class="serviceCard">
-                  <div class="serviceCardContent">
-                    <div class="glowContainer">
-                      <img src="glow1.svg" alt="" class="cardGlow" />
-                    </div>
-                    <div class="cardImgContainer">
-                      <img src="revenue-alt 1.png" alt="" />
-                    </div>
-                    <h3>Boost revenue</h3>
-                    <p>
-                      Localizing your game increases its market potential,
-                      opening up opportunities for greater monetization and
-                      increasing revenue streams.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-        
         </section>
         <section class="whyAralingual">
-          <img src="Home/whytranslateGlow.png" alt="" class="whyCardsGlow">
+          <img src="Home/whyCardsGlow.png" alt="" class="whyCardsGlow" />
           <div class="BGImaContainer">
             <img
               src="Aralingual - Update Assets 2024/Website/Home/Images/BG-img.png"
@@ -424,6 +429,7 @@
             </div>
           </div>
         </section>
+
         <section>
           <div class="servicesContainer">
             <div class="servicesWords">
@@ -454,6 +460,7 @@
                 </div>
                 <img src="Frame.svg" alt="" class="frame1" />
               </div>
+
               <div class="serviceCardContainer">
                 <div class="serviceCard">
                   <div class="serviceCardContent">
@@ -702,7 +709,9 @@
               tailored localization solution.
             </p>
             <div class="getInTouchBtn">
-              <a href="contactUs.html" class="TouchBtnContainer"><button class="TouchBtn" href="#">Get in touch now!</button></a>
+              <a href="contactUs.html" class="TouchBtnContainer"
+                ><button class="TouchBtn" href="#">Get in touch now!</button></a
+              >
             </div>
           </div>
         </section>
@@ -726,7 +735,11 @@
             <div class="social-links">
               <a href="#"><img src="Facebook.svg" alt="Facebook" /></a>
               <a href="#"><img src="Twitter.svg" alt="Twitter" /></a>
-              <a href="#"><img src="Aralingual - Update Assets 2024/Website/Home/Icons/Linkedin.svg" alt="Linkedin" /></a>
+              <a href="#"
+                ><img
+                  src="Aralingual - Update Assets 2024/Website/Home/Icons/Linkedin.svg"
+                  alt="Linkedin"
+              /></a>
               <a href="#"><img src="Instagram.svg" alt="Instagram" /></a>
               <a href="#"><img src="new-twitter.svg" alt="new-twitter" /></a>
             </div>

@@ -525,6 +525,11 @@ nav ul li a:focus {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media screen and (max-width: 600px) {
+  .welcome-words h1 {
+    font-size: 120px;
+  }
+}
 .welcome-words p {
     color: var(--Neutral-5, #DADADA);
     text-align: center;
