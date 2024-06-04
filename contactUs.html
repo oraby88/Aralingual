@@ -31,7 +31,6 @@
       <img src="glow1.svg" alt="" class="lightImg" />
     </div> -->
     <header>
-      <!-- <img src="glow.svg" alt="" class="lightImg" /> -->
       <nav>
         <div class="logoContainer">
           <a href="home.html"><img src="Group.png" alt="logo" /></a>
@@ -175,12 +174,13 @@
                   href="Blog.html"
                   style="text-decoration: none"
                   class="title-word"
+                  data-i18n-key="welcome-title"
                   >Contact Us</a
                 >
               </h3>
             </div>
-            <h1>Get in Touch with Aralingual</h1>
-            <p>
+            <h1 data-i18n-key="welcome-heading">Get in Touch with Aralingual</h1>
+            <p data-i18n-key="welcome-paragraph">
               Unlock the full potential of your video game with professional
               translation and localization services.
             </p>
@@ -205,12 +205,12 @@
             </div>
           </dv>
           <div class="contactForm">
-            <h3>
+            <h3 data-i18n-key="contactForm-heading">
               Get in Touch with <span class="special-word">Aralingual</span>
             </h3>
             <form action="post">
               <div class="firstNameContainer">
-                <label for="firstName">First Name</label>
+                <label for="firstName" data-i18n-key="fName">First Name</label>
                 <input
                   type="text"
                   placeholder="Enter First Name"
@@ -218,7 +218,7 @@
                 />
               </div>
               <div class="lastNameContainer">
-                <label for="lastName">Last Name</label>
+                <label for="lastName" data-i18n-key="lName">Last Name</label>
                 <input
                   type="text"
                   placeholder="Enter Last Name"
@@ -226,17 +226,18 @@
                 />
               </div>
               <div class="emailContainer">
-                <label for="email" id="email">Email</label>
+                <label for="email" data-i18n-key="email">Email</label>
                 <input type="email" placeholder="Enter your Email" id="email" />
               </div>
               <div class="phoneContainer">
-                <label for="phone">Phone</label>
+                <label for="phone" data-i18n-key="phone">Phone</label>
                 <div class="languageDropdown">
                   <div class="options2" onclick="NumberLanguageAppear()">
-                    <div class="phoneSelect">
+                    <div class="phoneSelect" data-i18n-key="phoneEN-code">
                       <img
                         src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
                         alt=""
+                        
                       />+1
                       <i
                         class="fa-solid fa-chevron-down"
@@ -246,56 +247,56 @@
                     <div class="phoneDropdown">
                       <ul>
                         <li onclick="changeLang('ltr')">
-                          <a href="#" class="language">
+                          <a href="#" class="language" data-i18n-key="phoneAR-code">
                             <img
                               src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
                               alt=""
                           />+966</a>
                         </li>
                         <li onclick="changeLang('rtl')">
-                          <a href="#" class="language">
+                          <a href="#" class="language" data-i18n-key="phoneCN-code">
                             <img
                               src="Aralingual - Update Assets 2024/Assets/Icon language/CN.svg"
                               alt=""
                           />+86</a>
                         </li>
                         <li onclick="changeLang('rtl')">
-                          <a href="#" class="language">
+                          <a href="#" class="language" data-i18n-key="phoneJA-code">
                             <img
                               src="Aralingual - Update Assets 2024/Assets/Icon language/JA.svg"
                               alt=""
                           />+82</a>
                         </li>
                         <li onclick="changeLang('rtl')">
-                          <a href="#" class="language">
+                          <a href="#" class="language" data-i18n-key="phoneKO-code">
                             <img
                               src="Aralingual - Update Assets 2024/Assets/Icon language/KO.svg"
                               alt=""
                           />+81</a>
                         </li>
                         <li onclick="changeLang('rtl')">
-                          <a href="#" class="language">
+                          <a href="#" class="language" data-i18n-key="phoneDE-code">
                             <img
                               src="Aralingual - Update Assets 2024/Assets/Icon language/DE.svg"
                               alt=""
                           />+49</a>
                         </li>
                         <li onclick="changeLang('rtl')">
-                          <a href="#" class="language">
+                          <a href="#" class="language" data-i18n-key="phoneFR-code">
                             <img
                               src="Aralingual - Update Assets 2024/Assets/Icon language/FR.svg"
                               alt=""
                           />+33</a>
                         </li>
                         <li onclick="changeLang('rtl')">
-                          <a href="#" class="language">
+                          <a href="#" class="language" data-i18n-key="phonePO-code">
                             <img
                               src="Aralingual - Update Assets 2024/Assets/Icon language/PO.svg"
                               alt=""
                           />+48</a>
                         </li>
                         <li onclick="changeLang('rtl')">
-                          <a href="#" class="language">
+                          <a href="#" class="language" data-i18n-key="phoneSE-code">
                             <img
                               src="Aralingual - Update Assets 2024/Assets/Icon language/SE.svg"
                               alt=""
@@ -312,7 +313,7 @@
                 </div>
               </div>
               <div class="MessageContainer">
-                <label for="message">Message</label>
+                <label for="message" data-i18n-key="message">Message</label>
                 <textarea
                   id="message"
                   placeholder="Enter your Message"
@@ -324,51 +325,51 @@
               <div class="checkAgreeContainer">
                 <div class="checkbox-wrapper-13">
                   <input id="c1-13" type="checkbox" />
-                  <label for="c1-13"
+                  <label for="c1-13" data-i18n-key="agree-terms-check"
                     >I agree with <a href="#" style="color: white;">Terms</a> of Use and
                     <a href="#" style="color: white;">Privacy</a> Policy</label
                   >
                 </div>
               </div>
               <div class="btnContainer">
-                <div class="submitContainer"><button type="submit" id="btn">Send Now</button></div>
+                <div class="submitContainer"><button type="submit" id="btn" data-i18n-key="send-form-button">Send Now</button></div>
               </div>
             </form>
           </div>
         </section>
         <section class="information">
           <div class="workingHours">
-            <h3>Working Hours</h3>
+            <h3 data-i18n-key="work-hours-heading">Working Hours</h3>
             <div class="btnsInfoContainer">
               <div class="btnInfoContainer">
-                <button class="btnInfo">
+                <button class="btnInfo" data-i18n-key="work-hours-info">
                   Monday - Friday: 8:30am - 5:00pm
                 </button>
               </div>
               <div class="btnInfoContainer">
-                <button class="btnInfo">Saturday: 8:30am – 2:00pm</button>
+                <button class="btnInfo" data-i18n-key="saturday-hours-info">Saturday: 8:30am – 2:00pm</button>
               </div>
             </div>
           </div>
           <div class="emailAndPhone">
-            <h3>Email & Pohne Number</h3>
+            <h3 data-i18n-key="emailAndPhone-heading">Email & Pohne Number</h3>
             <div class="btnsInfoContainer">
               <div class="btnInfoContainer">
                 <a href="mailto:someone@example.com" style="text-decoration: none;"
-                  ><button class="btnInfo">go-global@aralingual.com <img src="Aralingual - Update Assets 2024/Website/Contact us/Images/Icon.svg" alt=""></button></a
+                  ><button class="btnInfo" data-i18n-key="ourMail">go-global@aralingual.com <img src="Aralingual - Update Assets 2024/Website/Contact us/Images/Icon.svg" alt=""></button></a
                 >
               </div>
             </div>
           </div>
           <div class="ourOffice">
-            <h3>Our Office</h3>
+            <h3 data-i18n-key="ourOffice-heading">Our Office</h3>
             <div class="btnsInfoContainer">
-              <p>
+              <p data-i18n-key="ourOffice-address">
                 Saudi Arabia, Riyadh, Imam Abdullah Ibn Saud Ibn Abdulaziz Rd
                 13241
               </p>
               <div class="btnInfoContainer">
-                <button class="btnInfo">Get Directions <img src="Aralingual - Update Assets 2024/Website/Contact us/Images/Icon.svg" alt=""></button>
+                <button class="btnInfo" data-i18n-key="directions-words">Get Directions <img src="Aralingual - Update Assets 2024/Website/Contact us/Images/Icon.svg" alt=""></button>
               </div>
             </div>
           </div>

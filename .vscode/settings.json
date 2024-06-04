@@ -1,3 +1,10 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "diffEditor.experimental.showEmptyDecorations": false,
+    "editor.minimap.autohide": false,
+    "editor.minimap.showMarkSectionHeaders": true,
+    "editor.minimap.enabled": true,
+    "workbench.list.horizontalScrolling": false,
+    "workbench.editor.wrapTabs": true,
+    "editor.wordWrap": "on"
 }
