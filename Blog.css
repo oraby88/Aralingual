@@ -56,10 +56,10 @@ section {
   margin: 90px 0;
   padding: 0 200px;
 }
-section:first-child{
+section:first-child {
   margin: 0;
 }
-section:nth-child(2){
+section:nth-child(2) {
   margin: 0 0 60px 0;
 }
 header {
@@ -78,7 +78,7 @@ header {
   backdrop-filter: blur(8px);
 }
 @media screen and (max-width: 1440px) {
-  header{
+  header {
     padding: 30px 100px;
   }
 }
@@ -218,19 +218,19 @@ nav ul li a:focus {
   top: 12px;
   right: 0;
 }
-.bar2Arabic{
+.bar2Arabic {
   right: auto;
   left: 0;
 }
 @media screen and (max-width: 600px) {
-  .humbrger{
+  .humbrger {
     gap: 15px;
   }
-  .bar{
+  .bar {
     width: 30px;
     height: 2px;
   }
-  .bar2{
+  .bar2 {
     top: 9px;
     width: 20px;
     height: 2px;
@@ -440,7 +440,6 @@ nav ul li a:focus {
     color: var(--color-white) !important;
   }
 }
-
 
 /* welcome section */
 
@@ -840,24 +839,34 @@ nav ul li a:focus {
   align-items: center;
   border: 0;
 }
-.btn {
-  background-color: black;
-  color: white;
-  /* position: relative; */
+.blogDetailsLink {
+  text-decoration: none;
+  z-index: 999;
+  
   width: 130px;
   height: 42px;
   clip-path: polygon(88% 0, 100% 32%, 100% 100%, 12% 100%, 0 68%, 0 0);
   z-index: 999;
   border: 0;
   color: #fff;
-
+  cursor: pointer;
+  border: 0;
+}
+.btn {
   text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;color: white;
+  height: 100%;
+  background-color: black;
+  text-align: center;
   font-size: 16px;
   font-style: normal;
   font-weight: var(--fw-500);
   line-height: 100%; /* 16px */
   transition: all 0.7s ease-in-out;
+  border: 0;
 }
 
 .btn:hover {
@@ -909,7 +918,7 @@ nav ul li a:focus {
     width: 450px;
   }
 }
-@media screen and (max-width:500px) {
+@media screen and (max-width: 500px) {
   .mainCardContainer {
     width: 100%;
   }
@@ -990,7 +999,7 @@ nav ul li a:focus {
   letter-spacing: -0.54px;
 }
 @media screen and (max-width: 1440px) {
-  .CardsContainer{
+  .CardsContainer {
     gap: 40px;
   }
 }
@@ -1169,6 +1178,7 @@ nav ul li a:focus {
   color: #fff;
   font-weight: var(--fw-500);
   line-height: 100%; /* 16px */
+  cursor: pointer;
 }
 .TouchBtn:hover {
   background: #000;
@@ -1249,7 +1259,7 @@ footer {
   padding: 0 200px;
 }
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1440px) {
   .footer-content {
     padding: 0 100px;
   }
