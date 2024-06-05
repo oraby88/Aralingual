@@ -189,24 +189,41 @@ function blogEnglish(direction) {
 }
 
 
-/* i18Next */
+// /* i18Next */
  
-function generateJSON() {
-  const elements = document.body.querySelectorAll("*");
-  const translation = {};
+// function generateJSON() {
+//   const elements = document.body.querySelectorAll("*");
+//   const translation = {};
  
-  elements.forEach((element) => {
-    const key = element.getAttribute("data-i18n-key");
-    if (key) {
-      translation[key] = element.textContent.trim();
-    }
-  });
+//   elements.forEach((element) => {
+//     const key = element.getAttribute("data-i18n-key");
+//     if (key) {
+//       translation[key] = element.textContent.trim();
+//     }
+//   });
  
-  // Output the generated JSON to console
-  console.log(JSON.stringify(translation, null, 2));
-}
+//   // Output the generated JSON to console
+//   console.log(JSON.stringify(translation, null, 2));
+// }
  
-// Call the function to generate JSON
-document.addEventListener("DOMContentLoaded", generateJSON);
+// // Call the function to generate JSON
+// document.addEventListener("DOMContentLoaded", generateJSON);
 
+async function blogs() {
+const response = await fetch("http://localhost:1337/api/blogs/1");
+const movies = await response.text();
+console.log(movies);
+// document.querySelector("mainCard-heading").innerHTML = movies.data.attributes.title;
+
+}
+blogs();
+
+
+// fetch('http://localhost:1337/api/blogs/1')
+//     .then(function (response) {
+//       return response.text();
+//     })
+//     .then(function (body) {
+//       console.log(body);
+//     });
 

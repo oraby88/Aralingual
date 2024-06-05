@@ -111,6 +111,11 @@ function contactEnglish(direction) {
   console.log("Contact Us english");
 }
 
+
+function NumberLanguageAppear() {
+  document.querySelector(".phoneDropdown").classList.toggle("display");
+}
+
 /* i18Next */
  
 function generateJSON() {
