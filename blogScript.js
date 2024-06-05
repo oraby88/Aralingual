@@ -209,14 +209,14 @@ function blogEnglish(direction) {
 // // Call the function to generate JSON
 // document.addEventListener("DOMContentLoaded", generateJSON);
 
-async function blogs() {
-const response = await fetch("http://localhost:1337/api/blogs/1");
-const movies = await response.text();
-console.log(movies);
+// async function blogs() {
+// const response = await fetch("http://localhost:1337/api/blogs/1");
+// const movies = await response.text();
+// console.log(movies);
 // document.querySelector("mainCard-heading").innerHTML = movies.data.attributes.title;
 
-}
-blogs();
+// }
+// blogs();
 
 
 // fetch('http://localhost:1337/api/blogs/1')
@@ -226,4 +226,24 @@ blogs();
 //     .then(function (body) {
 //       console.log(body);
 //     });
+
+
+fetch('http://localhost:1337/api/blogs/1/?populate[0]=blogimage').then(function (response) {
+	// The API call was successful!
+	return response.json();
+}).then(function (data) {
+	// This is the JSON from our response
+  let res = data;
+  title = res.data.attributes.title
+
+	console.log(res);
+  document.getElementById("mainCard-heading").innerHTML = `${title}`;
+  document.getElementById("mainCard-Category-type").innerHTML = `${res.data.attributes.Category}`;
+  document.getElementById("mainCard-paragraph").innerHTML = `${res.data.attributes.description}`;
+  document.getElementById("mainCard-date").innerHTML = `${res.data.attributes.PublicationDate}`
+  document.getElementById("mainCard-author").innerHTML = `${res.data.attributes.author}`
+}).catch(function (err) {
+	// There was an error
+	console.warn('Something went wrong.', err);
+});
 

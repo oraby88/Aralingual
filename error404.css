@@ -91,7 +91,7 @@ article {
     padding: 0 20px;
   }
   header {
-    padding: 20px 0;
+    padding: 20px;
   }
 }
 
@@ -131,11 +131,7 @@ nav {
   z-index: 999999999999999;
   position: relative;
 }
-@media screen and (max-width: 1024px) {
-  nav {
-    padding: 0 20px;
-  }
-}
+
 
 .nav-list {
   display: flex;
@@ -619,7 +615,7 @@ footer {
     padding: 0 100px;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   .footer-content {
     padding: 0 20px;
   }
@@ -682,7 +678,7 @@ hr {
   color: var(--color-blue-700) !important;
   font-weight: var(--fw-700);
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   .footer-left {
     flex-direction: column;
     justify-content: center;

@@ -91,12 +91,12 @@ article {
   padding-top: 30px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   section {
     padding: 0 20px;
   }
   header {
-    padding: 20px 0;
+    padding: 20px;
   }
 }
 
@@ -136,11 +136,7 @@ nav {
   z-index: 999999999999999;
   position: relative;
 }
-@media screen and (max-width: 992px) {
-  nav {
-    padding: 0 20px;
-  }
-}
+
 .nav-list {
   display: flex;
   flex-direction: row;
@@ -220,6 +216,7 @@ nav ul li a:focus {
   right: auto;
   left: 0;
 }
+
 @media screen and (max-width: 600px) {
   .humbrger {
     gap: 15px;
@@ -660,6 +657,7 @@ nav ul li a:focus {
   z-index: 0;
   /* bottom: -127%; */
   top: -149%;
+  z-index: -1;
 }
 
 .whyTranslate {
@@ -708,7 +706,7 @@ nav ul li a:focus {
 
 .cards {
   display: grid;
-  gap: 20px;
+  gap: 60px;
   grid-template-columns: repeat(3, 1fr);
   color: var(--color-white);
   width: 100%;
@@ -828,7 +826,7 @@ nav ul li a:focus {
 }
 
 .parent h3 {
-  font-size: 24px;
+  font-size: 26px;
   /* font-weight: var(--fw-700); */
   background: linear-gradient(80.7deg, white 10.1%, #71717a 63.2%);
   -webkit-text-fill-color: transparent;
@@ -841,7 +839,7 @@ nav ul li a:focus {
   color: var(--Primary-3, #c8deff);
   text-overflow: ellipsis;
   font-weight: var(--fw-500);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 20px; /* 25.2px */
   max-width: 320px;
   /* white-space: nowrap;  */
@@ -1335,6 +1333,14 @@ nav ul li a:focus {
   gap: 10px;
   position: relative;
   overflow: hidden;
+  /* -webkit-mask-image: url(Home/path1.svg);
+  mask-image: url(Home/path1.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  mask-position: left;
+  mask-size: 100% 100%;
+  z-index: 44; */
+
 }
 
 .serviceCardContentArabic {
@@ -2042,7 +2048,7 @@ nav ul li a:focus {
     padding: 0 100px;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   .footer-content {
     padding: 0 20px;
   }
@@ -2104,7 +2110,7 @@ hr {
   color: var(--color-blue-700) !important;
   font-weight: var(--fw-700);
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   .footer-left {
     flex-direction: column;
     justify-content: center;

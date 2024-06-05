@@ -742,6 +742,7 @@ ul li p {
   justify-content: center;
   align-items: center;
   border: 0;
+  cursor: pointer;
 }
 .btnLink {
   background-color: #000;
@@ -757,6 +758,7 @@ ul li p {
   font-size: 16px;
   font-weight: var(--fw-600);
   line-height: 100%; /* 16px */
+  cursor: pointer;
 }
 .btnLink:hover {
   background: none;
@@ -780,9 +782,7 @@ ul li p {
   padding: 16px;
   border-radius: 9.332px;
   border: 1px solid rgba(255, 255, 255, 0.23);
-
   background: rgba(255, 255, 255, 0.05);
-
   backdrop-filter: blur(22.5px);
 }
 .tableContentDiv p {
@@ -999,6 +999,7 @@ ul li p {
   font-weight: var(--fw-500);
   line-height: 100%; /* 16px */
   transition: all 0.7s ease-in-out;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -1179,6 +1180,7 @@ ul li p {
   color: #fff;
   font-weight: var(--fw-500);
   line-height: 100%; /* 16px */
+  cursor: pointer;
 }
 .TouchBtn:hover {
   background: #000;
@@ -1271,7 +1273,7 @@ footer {
     padding: 0 100px;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   .footer-content {
     padding: 0 20px;
   }
@@ -1334,7 +1336,7 @@ hr {
   color: var(--color-blue-700) !important;
   font-weight: var(--fw-700);
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   .footer-left {
     flex-direction: column;
     justify-content: center;

@@ -28,12 +28,22 @@
       "type": "string"
     },
     "blogimage": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich",
+        "maxLengthCharacters": null
+      },
+      "required": false,
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }

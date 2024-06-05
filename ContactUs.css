@@ -1002,6 +1002,10 @@ button[type="submit"]:hover {
 }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  .checkbox-wrapper-13{
+    display: flex;
+    justify-content: center;
+  }
   .checkbox-wrapper-13 input[type="checkbox"] {
     --active: #275efe;
     --active-inner: #fff;
@@ -1134,7 +1138,7 @@ footer {
     padding: 0 100px;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   .footer-content {
     padding: 0 20px;
   }
@@ -1197,7 +1201,7 @@ hr {
   color: var(--color-blue-700) !important;
   font-weight: var(--fw-700);
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   .footer-left {
     flex-direction: column;
     justify-content: center;
