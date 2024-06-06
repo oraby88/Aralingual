@@ -154,23 +154,72 @@ function NumberLanguageAppear() {
 
 /* i18Next */
  
-function generateJSON() {
-  const elements = document.body.querySelectorAll("*");
-  const translation = {};
+// function generateJSON() {
+//   const elements = document.body.querySelectorAll("*");
+//   const translation = {};
  
-  elements.forEach((element) => {
-    const key = element.getAttribute("data-i18n-key");
-    if (key) {
-      translation[key] = element.textContent.trim();
-    }
-  });
+//   elements.forEach((element) => {
+//     const key = element.getAttribute("data-i18n-key");
+//     if (key) {
+//       translation[key] = element.textContent.trim();
+//     }
+//   });
  
-  // Output the generated JSON to console
-  console.log(JSON.stringify(translation, null, 2));
-}
+//   // Output the generated JSON to console
+//   console.log(JSON.stringify(translation, null, 2));
+// }
  
-// Call the function to generate JSON
-document.addEventListener("DOMContentLoaded", generateJSON);
+// // Call the function to generate JSON
+// document.addEventListener("DOMContentLoaded", generateJSON);
+
+
+
+// let dataKey = [];
+// let res;
+// // console.log("sss");
+// function fetchJSONData() {
+//   fetch("./en.json")
+//     .then((res) => {
+//       if (!res.ok) {
+//         throw new Error(`HTTP error! Status: ${res.status}`);
+//       }
+//       return res.json();
+//     })
+//     .then((data) => {
+//       res = data;
+//       console.log(res);
+//       const elements = document.body.querySelectorAll("*");
+//       let x =1;
+//       Object.keys(res[2]).forEach(function (key, index) {
+//         if (key == dataKey[index]) {
+//           x += 1;
+//           console.log(x);
+//           elements.forEach((element) => {
+//             const htmlKey = element.getAttribute("data-i18n-key");
+//             if (key === htmlKey) {
+//               console.log(key);
+//               element.textContent = res[2][key];
+//             }
+//           });
+//         }
+//       });
+//     })
+//     .catch((error) => console.error("Unable to fetch data:", error));
+// }
+// fetchJSONData();
+
+
+// function showJSON() {
+//   const elements = document.body.querySelectorAll("*");
+//   elements.forEach((element) => {
+//     const key = element.getAttribute("data-i18n-key");
+//     if (key !== null) {
+//       dataKey.push(key);
+//     }
+//   });
+//   console.log(dataKey);
+// }
+// showJSON();
 
 
 
