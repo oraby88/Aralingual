@@ -645,66 +645,66 @@ function generateJSON() {
 // Call the function to generate JSON
 document.addEventListener("DOMContentLoaded", generateJSON);
 
-let dataKey = [];
-let res;
-function fetchJSONData() {
-  fetch("./en.json")
-    .then((res) => {
-      if (!res.ok) {
-        throw new Error(`HTTP error! Status: ${res.status}`);
-      }
-      return res.json();
-    })
-    .then((data) => {
-      res = data;
-      const elements = document.body.querySelectorAll("*");
-      let x =0;
-      Object.keys(res[0]).forEach(function (key, index) {
-        if (key == dataKey[index]) {
-          x += 1;
-          console.log(x);
-          elements.forEach((element) => {
-            const htmlKey = element.getAttribute("data-i18n-key");
-            if (key === htmlKey) {
-              console.log(key);
-              element.textContent = res[0][key];
-            }
-          });
-        }
-      });
-    })
-    .catch((error) => console.error("Unable to fetch data:", error));
-}
-fetchJSONData();
+// let dataKey = [];
+// let res;
+// function fetchJSONData() {
+//   fetch("./en.json")
+//     .then((res) => {
+//       if (!res.ok) {
+//         throw new Error(`HTTP error! Status: ${res.status}`);
+//       }
+//       return res.json();
+//     })
+//     .then((data) => {
+//       res = data;
+//       const elements = document.body.querySelectorAll("*");
+//       let x =0;
+//       Object.keys(res[0]).forEach(function (key, index) {
+//         if (key == dataKey[index]) {
+//           x += 1;
+//           console.log(x);
+//           elements.forEach((element) => {
+//             const htmlKey = element.getAttribute("data-i18n-key");
+//             if (key === htmlKey) {
+//               console.log(key);
+//               element.textContent = res[0][key];
+//             }
+//           });
+//         }
+//       });
+//     })
+//     .catch((error) => console.error("Unable to fetch data:", error));
+// }
+// fetchJSONData();
 
 
 
-function showJSON() {
-  const elements = document.body.querySelectorAll("*");
-  const translation = {};
-  // let res;
-  // fetch("en.json")
-  //   .then((response) => {
-  //     response.json();
-  //     // console.log(response.json());
-  //     // res = response.json();
-  //   })
-  //   .then((json) => console.log(json));
+// function showJSON() {
+//   const elements = document.body.querySelectorAll("*");
+//   const translation = {};
+//   // let res;
+//   // fetch("en.json")
+//   //   .then((response) => {
+//   //     response.json();
+//   //     // console.log(response.json());
+//   //     // res = response.json();
+//   //   })
+//   //   .then((json) => console.log(json));
 
-  elements.forEach((element) => {
-    const key = element.getAttribute("data-i18n-key");
-    if (key !== null) {
-      dataKey.push(key);
-    }
-    if (key) {
-      translation[key] = element.textContent.trim();
-    }
-  });
+//   elements.forEach((element) => {
+//     const key = element.getAttribute("data-i18n-key");
+//     if (key !== null) {
+//       dataKey.push(key);
+//     }
+//     if (key) {
+//       translation[key] = element.textContent.trim();
+//     }
+//   });
 
-  console.log(dataKey);
+//   console.log(dataKey);
 
-  // Output the generated JSON to console
-  console.log(JSON.stringify(translation, null, 2));
-}
+//   // Output the generated JSON to console
+//   console.log(JSON.stringify(translation, null, 2));
+// }
 
-showJSON();
+// showJSON();
