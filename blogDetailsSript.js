@@ -109,26 +109,68 @@ function blogDetailsEnglish(direction) {
 }
 
 /* i18Next */
- 
+
 function generateJSON() {
   const elements = document.body.querySelectorAll("*");
   const translation = {};
- 
+
   elements.forEach((element) => {
     const key = element.getAttribute("data-i18n-key");
     if (key) {
       translation[key] = element.textContent.trim();
     }
   });
- 
+
   // Output the generated JSON to console
   console.log(JSON.stringify(translation, null, 2));
 }
- 
+
 // Call the function to generate JSON
 document.addEventListener("DOMContentLoaded", generateJSON);
 
+fetch("http://localhost:1337/api/blog-details/?populate[0]=blogDetailsImage")
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    const res = data.data[0].attributes;
+    console.log(data.data);
+    let container = document.getElementById("left-side-container");
+    // forEach(items in res) {
 
+    // }
+
+    document.getElementById(
+      "Q1"
+    ).innerHTML = `<h3>${data.data[0].attributes.question1}</h3>
+    <p>${data.data[0].attributes.description1}</p>`;
+
+    document.querySelector(
+      ".whyArabicMarketsDiv"
+    ).innerHTML = `<h3>${data.data[0].attributes.question2}</h3>
+    <img src="http://localhost:1337${data.data[0].attributes.blogDetailsImage.data[0].attributes.url}" alt="blogimage"/>
+    <p>${data.data[0].attributes.description2}</p>`;
+
+    document.getElementById(
+      "Q3"
+    ).innerHTML = `<h3>${data.data[0].attributes.question3}</h3>
+    <p>${data.data[0].attributes.description3}</p>`;
+
+    document.querySelector(
+      ".difficultiesInArabicDiv"
+    ).innerHTML = `<h3>${data.data[0].attributes.question4}</h3>
+    <p>${data.data[0].attributes.description4}</p>`;
+
+    document.getElementById(
+      "Q4"
+    ).innerHTML = `<h3>${data.data[0].attributes.question5}</h3>
+    <ul>
+    <li>${data.data[0].attributes.listItem}<p>${res.description5}</p></li>
+    </ul>`;
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 // let dataKey = [];
 // let res;
@@ -164,7 +206,6 @@ document.addEventListener("DOMContentLoaded", generateJSON);
 // }
 // fetchJSONData();
 
-
 // function showJSON() {
 //   const elements = document.body.querySelectorAll("*");
 //   elements.forEach((element) => {
@@ -176,5 +217,3 @@ document.addEventListener("DOMContentLoaded", generateJSON);
 //   console.log(dataKey);
 // }
 // showJSON();
-
-

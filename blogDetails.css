@@ -673,13 +673,19 @@ nav ul li a:focus {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+.paragraph1{
+  color:bisque !important;
+  font-size: 17px;
+  font-weight: var(--fw-500);
+  line-height: 24px; /* 133.333% */
+}
 .whereArabicSection p {
   color: var(--Neutral-5, #dadada);
   font-size: 17px;
   font-weight: var(--fw-500);
   line-height: 24px; /* 133.333% */
 }
+
 .left-side img {
   width: 100%;
 }
