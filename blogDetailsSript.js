@@ -134,43 +134,47 @@ fetch("http://localhost:1337/api/blog-details/?populate[0]=blogDetailsImage")
   })
   .then((data) => {
     const res = data.data[0].attributes;
-    console.log(data.data);
+    console.log(data);
     let container = document.getElementById("left-side-container");
     // forEach(items in res) {
 
     // }
 
-    document.getElementById(
-      "Q1"
-    ).innerHTML = `<h3>${data.data[0].attributes.question1}</h3>
-    <p>${data.data[0].attributes.description1}</p>`;
+    // document.getElementById(
+    //   "Q1"
+    // ).innerHTML = `<h3>${data.data[0].attributes.question1}</h3>
+    // <p>${data.data[0].attributes.description1}</p>`;
 
-    document.querySelector(
-      ".whyArabicMarketsDiv"
-    ).innerHTML = `<h3>${data.data[0].attributes.question2}</h3>
-    <img src="http://localhost:1337${data.data[0].attributes.blogDetailsImage.data[0].attributes.url}" alt="blogimage"/>
-    <p>${data.data[0].attributes.description2}</p>`;
+    // document.querySelector(
+    //   ".whyArabicMarketsDiv"
+    // ).innerHTML = `<h3>${data.data[0].attributes.question2}</h3>
+    // <img src="http://localhost:1337${data.data[0].attributes.blogDetailsImage.data[0].attributes.url}" alt="blogimage"/>
+    // <p>${data.data[0].attributes.description2}</p>`;
 
-    document.getElementById(
-      "Q3"
-    ).innerHTML = `<h3>${data.data[0].attributes.question3}</h3>
-    <p>${data.data[0].attributes.description3}</p>`;
+    // document.getElementById(
+    //   "Q3"
+    // ).innerHTML = `<h3>${data.data[0].attributes.question3}</h3>
+    // <p>${data.data[0].attributes.description3}</p>`;
 
-    document.querySelector(
-      ".difficultiesInArabicDiv"
-    ).innerHTML = `<h3>${data.data[0].attributes.question4}</h3>
-    <p>${data.data[0].attributes.description4}</p>`;
+    // document.querySelector(
+    //   ".difficultiesInArabicDiv"
+    // ).innerHTML = `<h3>${data.data[0].attributes.question4}</h3>
+    // <p>${data.data[0].attributes.description4}</p>`;
 
-    document.getElementById(
-      "Q4"
-    ).innerHTML = `<h3>${data.data[0].attributes.question5}</h3>
-    <ul>
-    <li>${data.data[0].attributes.listItem}<p>${res.description5}</p></li>
-    </ul>`;
+    // document.getElementById(
+    //   "Q4"
+    // ).innerHTML = `<h3>${data.data[0].attributes.question5}</h3>
+    // <ul>
+    // <li>${data.data[0].attributes.listItem}<p>${res.description5}</p></li>
+    // </ul>`;
+
+    document.querySelector(".left-side").innerHTML = `${data.data[0].attributes.descriptions}`
+    document.querySelector(".tableContentDiv").innerHTML = `${data.data[0].attributes.TableOfContent}`
   })
   .catch((error) => {
     console.log(error);
   });
+
 
 // let dataKey = [];
 // let res;

@@ -871,6 +871,7 @@ nav ul li a:focus {
 @media (max-width: 600px) {
   .whyTranslate h3 {
     font-size: 22px !important;
+    line-height: 22px !important;
   }
   .card h3 {
     font-size: 22px !important;
@@ -882,7 +883,7 @@ nav ul li a:focus {
     font-size: 28px !important;
   }
   .specialWord {
-    font-size: 28px !important;
+    font-size: 22px !important;
   }
 }
 @media (max-width: 400px) {
@@ -1109,7 +1110,7 @@ nav ul li a:focus {
     font-size: 28px !important;
   }
   .specialWord {
-    font-size: 28px !important;
+    font-size: 22px !important;
     font-weight: var(--fw-700);
   }
   .whyAraBG {

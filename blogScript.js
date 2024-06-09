@@ -188,24 +188,23 @@ function blogEnglish(direction) {
   console.log("blog english");
 }
 
-
 /* i18Next */
- 
+
 function generateJSON() {
   const elements = document.body.querySelectorAll("*");
   const translation = {};
- 
+
   elements.forEach((element) => {
     const key = element.getAttribute("data-i18n-key");
     if (key) {
       translation[key] = element.textContent.trim();
     }
   });
- 
+
   // Output the generated JSON to console
   console.log(JSON.stringify(translation, null, 2));
 }
- 
+
 // Call the function to generate JSON
 document.addEventListener("DOMContentLoaded", generateJSON);
 
@@ -218,7 +217,6 @@ document.addEventListener("DOMContentLoaded", generateJSON);
 // }
 // blogs();
 
-
 // fetch('http://localhost:1337/api/blogs/1')
 //     .then(function (response) {
 //       return response.text();
@@ -227,27 +225,208 @@ document.addEventListener("DOMContentLoaded", generateJSON);
 //       console.log(body);
 //     });
 
+fetch("http://localhost:1337/api/blogs/1/?populate[0]=blogimage")
+  .then(function (response) {
+    // The API call was successful!
+    return response.json();
+  })
+  .then(function (data) {
+    // This is the JSON from our response
+    let res = data;
+    title = res.data.attributes.title;
 
-fetch('http://localhost:1337/api/blogs/1/?populate[0]=blogimage').then(function (response) {
-	// The API call was successful!
-	return response.json();
-}).then(function (data) {
-	// This is the JSON from our response
-  let res = data;
-  title = res.data.attributes.title
+    console.log(res);
+    document.getElementById("mainCard-heading").innerHTML = `${title}`;
+    document.getElementById(
+      "mainCard-Category-type"
+    ).innerHTML = `${res.data.attributes.Category}`;
+    document.getElementById(
+      "mainCard-paragraph"
+    ).innerHTML = `${res.data.attributes.description}`;
+    document.getElementById(
+      "mainCard-date"
+    ).innerHTML = `${res.data.attributes.PublicationDate}`;
+    document.getElementById(
+      "mainCard-author"
+    ).innerHTML = `${res.data.attributes.author}`;
+  })
+  .catch(function (err) {
+    // There was an error
+    console.warn("Something went wrong.", err);
+  });
 
-	console.log(res);
-  document.getElementById("mainCard-heading").innerHTML = `${title}`;
-  document.getElementById("mainCard-Category-type").innerHTML = `${res.data.attributes.Category}`;
-  document.getElementById("mainCard-paragraph").innerHTML = `${res.data.attributes.description}`;
-  document.getElementById("mainCard-date").innerHTML = `${res.data.attributes.PublicationDate}`
-  document.getElementById("mainCard-author").innerHTML = `${res.data.attributes.author}`
-}).catch(function (err) {
-	// There was an error
-	console.warn('Something went wrong.', err);
-});
+
+function displayCardContainer() {
+  let cards = document.getElementById("blog-card-container");
+  for (let i = 0; i < cardsContainer.data.length; i++) {
+    cards.innerHTML += 
+    `<div class="cardContainer">
+              <div class="Card">
+                <div class="serviceCard">
+                  <div class="serviceCardContent">
+                    <div class="CardsImge-holder">
+                      <img
+                        src="http://localhost:1337${cardsContainer.data[i].attributes.card1Img.data[0].attributes.url}"
+                        alt=""
+                        class="img"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <img src="Frame.svg" alt="" class="frame2" />
+              </div>
+              <div class="cardsWordsContainer" id="cardsWordsContainer">
+                <h4 data-i18n-key="card1-heading">
+                  ${cardsContainer.data[i].attributes.title}
+                </h4>
+                <p data-i18n-key="card1-paragraph">${cardsContainer.data[i].attributes.description}</p>
+                <div class="socialComunicationContainer">
+                  <div class="like-share-container">
+                    <div class="like">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/like.svg"
+                        alt=""
+                      />
+                      <p data-i18n-key="card1-likes">${cardsContainer.data[i].attributes.likes}</p>
+                    </div>
+                    <div class="share">
+                      <img
+                        src="Aralingual - Update Assets 2024/Website/Blog/Icons/share.svg"
+                        alt=""
+                      />
+                      <p data-i18n-key="card1-share">${cardsContainer.data[i].attributes.share}</p>
+                    </div>
+                  </div>
+                  <div class="btnContainer">
+                    <a href="blogDetails.html" class="blogDetailsLink"
+                      ><button class="btn">Read More</button></a
+                    >
+                  </div>
+                </div>
+              </div>
+      </div>`  ;
+  }
+  console.log("end");
+  console.log(cardsContainer);
+}
+
+let cardsContainer = [];
+fetch(`http://localhost:1337/api/card1s?populate=card1Img`)
+  .then(function (response) {
+    // The API call was successful!
+    return response.json();
+  })
+  .then(function (data) {
+    // This is the JSON from our response
+    let res = data;
+    cardsContainer = data;
+    // title = res.data.attributes.title;
+    // description = res.data.attributes.description;
+    // card1Img = res.data[0].attributes.card1Img.data[0].attributes.url;
+    // console.log(title);
+    // console.log(description);
+    // console.log(cardsContainer);
+    console.log(res.data.length);
+    // displayCardContainer();
+
+    //   cardsContainer = res.data.attributes.cardImg
+    //   console.log(
+    //     `http://localhost:1337${res.data.attributes.card1Img.data[0].attributes.url}`
+    //   );
+    //   document.querySelector(
+    //     ".CardsImge-holder"
+    //   ).innerHTML = `<img src="http://localhost:1337${res.data.attributes.card1Img.data[0].attributes.url}" alt="image" class="img"/>`;
+    //   wordsContainer = document.querySelector(
+    //     ".cardsWordsContainer"
+    //   ).innerHTML = `<h4>${title}</h4>
+    // <p>${description}</p>
+    // `;
+    // console.log(res.data.length);
+    // let cards = document.getElementById("blog-card-container");
+    // for (let i = 0; i < res.data.length; i++) {
+    //   cards.innerHTML += 
+    //   `<div class="cardContainer">
+    //             <div class="Card">
+    //               <div class="serviceCard">
+    //                 <div class="serviceCardContent">
+    //                   <div class="CardsImge-holder">
+    //                     <img
+    //                       src="http://localhost:1337${res.data[i].attributes.card1Img.data[0].attributes.url}"
+    //                       alt=""
+    //                       class="img"
+    //                     />
+    //                   </div>
+    //                 </div>
+    //               </div>
+    //               <img src="Frame.svg" alt="" class="frame2" />
+    //             </div>
+    //             <div class="cardsWordsContainer" id="cardsWordsContainer">
+    //               <h4 data-i18n-key="card1-heading">
+    //                 ${res.data[i].attributes.title}
+    //               </h4>
+    //               <p data-i18n-key="card1-paragraph">${res.data[i].attributes.description}</p>
+    //               <div class="socialComunicationContainer">
+    //                 <div class="like-share-container">
+    //                   <div class="like">
+    //                     <img
+    //                       src="Aralingual - Update Assets 2024/Website/Blog/Icons/like.svg"
+    //                       alt=""
+    //                     />
+    //                     <p data-i18n-key="card1-likes">${res.data[i].attributes.likes}</p>
+    //                   </div>
+    //                   <div class="share">
+    //                     <img
+    //                       src="Aralingual - Update Assets 2024/Website/Blog/Icons/share.svg"
+    //                       alt=""
+    //                     />
+    //                     <p data-i18n-key="card1-share">${res.data[i].attributes.share}</p>
+    //                   </div>
+    //                 </div>
+    //                 <div class="btnContainer">
+    //                   <a href="blogDetails.html" class="blogDetailsLink"
+    //                     ><button class="btn">Read More</button></a
+    //                   >
+    //                 </div>
+    //               </div>
+    //             </div>
+    //     </div>`  ;
+    // }
+    displayCardContainer();
+  })
+  .catch(function (err) {
+    // There was an error
+    console.warn("Something went wrong.", err);
+  });
 
 
+// fetch("http://localhost:1337/api/card1s/2/?populate[1]=card1Img")
+//   .then(function (response) {
+//     // The API call was successful!
+//     return response.json();
+//   })
+//   .then(function (data) {
+//     // This is the JSON from our response
+//     let res = data;
+//     title = res.data.attributes.title;
+//     description = res.data.attributes.description;
+//     // card1Img = `http://localhost:1337${data.data.attributes.card1Img.data.attributes.url}`;
+//     // console.log(card1Img);
+//     console.log(title);
+//     console.log(description);
+//     console.log(res);
+//     // document.getElementById(
+//     //   "imgContainer"
+//     // ).innerHTML = `<img src="http://localhost:1337${data.data.attributes.card1Img.data.attributes.url}" alt="image"/>`;
+//     document.querySelector(
+//       ".cardsContainer"
+//     ).innerHTML = `<h4>${title}</h4>
+//     <p>${description}</p>
+//     `;
+//   })
+//   .catch(function (err) {
+//     // There was an error
+//     console.warn("Something went wrong.", err);
+//   });
 
 // let dataKey = [];
 // let res;
@@ -283,7 +462,6 @@ fetch('http://localhost:1337/api/blogs/1/?populate[0]=blogimage').then(function 
 // }
 // fetchJSONData();
 
-
 // function showJSON() {
 //   const elements = document.body.querySelectorAll("*");
 //   elements.forEach((element) => {
@@ -295,4 +473,3 @@ fetch('http://localhost:1337/api/blogs/1/?populate[0]=blogimage').then(function 
 //   console.log(dataKey);
 // }
 // showJSON();
-
