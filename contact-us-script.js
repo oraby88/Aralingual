@@ -111,32 +111,29 @@ function contactEnglish(direction) {
   console.log("Contact Us english");
 }
 
-
 function NumberLanguageAppear() {
   document.querySelector(".phoneDropdown").classList.toggle("display");
 }
 
 /* i18Next */
- 
+
 function generateJSON() {
   const elements = document.body.querySelectorAll("*");
   const translation = {};
- 
+
   elements.forEach((element) => {
     const key = element.getAttribute("data-i18n-key");
     if (key) {
       translation[key] = element.textContent.trim();
     }
   });
- 
+
   // Output the generated JSON to console
   console.log(JSON.stringify(translation, null, 2));
 }
- 
+
 // Call the function to generate JSON
 document.addEventListener("DOMContentLoaded", generateJSON);
-
-
 
 // let dataKey = [];
 // let res;
@@ -172,7 +169,6 @@ document.addEventListener("DOMContentLoaded", generateJSON);
 // }
 // fetchJSONData();
 
-
 // function showJSON() {
 //   const elements = document.body.querySelectorAll("*");
 //   elements.forEach((element) => {
@@ -185,4 +181,30 @@ document.addEventListener("DOMContentLoaded", generateJSON);
 // }
 // showJSON();
 
+function ValidateEmail(input) {
+  var validRegex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
+  if (input.value.match(validRegex)) {
+    alert("Valid email address!");
+    document.contactForm.email.focus();
+    return true;
+
+  } else {
+    alert("Invalid email address!");
+    document.contactForm.email.focus();
+    return false;
+  }
+}
+
+function mobileNumber(){
+  var Number = document.getElementById('phone').value;
+  var IndNum = /^([0|\+[0-9]{1,5})?([7-9][0-9]{9})$/;
+  if(IndNum.test(Number)){
+     return;
+ }
+ else{
+     $('#errMessage').text('please enter valid mobile number');
+     document.getElementById('profile_telephoneNumber').focus();
+ }
+}

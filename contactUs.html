@@ -208,13 +208,14 @@
             <h3 data-i18n-key="contactForm-heading">
               Get in Touch with <span class="special-word">Aralingual</span>
             </h3>
-            <form action="post">
+            <form action="post" name="contactForm">
               <div class="firstNameContainer">
                 <label for="firstName" data-i18n-key="fName">First Name</label>
                 <input
                   type="text"
                   placeholder="Enter First Name"
                   id="firstName"
+                  required
                 />
               </div>
               <div class="lastNameContainer">
@@ -223,11 +224,12 @@
                   type="text"
                   placeholder="Enter Last Name"
                   id="lastName"
+                  required
                 />
               </div>
               <div class="emailContainer">
                 <label for="email" data-i18n-key="email">Email</label>
-                <input type="email" placeholder="Enter your Email" id="email" />
+                <input type="email" placeholder="Enter your Email" id="email" name="email" required />
               </div>
               <div class="phoneContainer">
                 <label for="phone" data-i18n-key="phone">Phone</label>
@@ -309,6 +311,7 @@
                     type="number"
                     placeholder="Enter Phone Number"
                     id="phone"
+                    required
                   />
                 </div>
               </div>
@@ -332,7 +335,7 @@
                 </div>
               </div>
               <div class="btnContainer">
-                <div class="submitContainer"><button type="submit" id="btn" data-i18n-key="send-form-button">Send Now</button></div>
+                <div class="submitContainer"><button type="submit" id="btn" data-i18n-key="send-form-button" onclick="ValidateEmail(document.contactForm.email)">Send Now</button></div>
               </div>
             </form>
           </div>

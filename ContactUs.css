@@ -866,6 +866,7 @@ button[type="submit"] {
   font-weight: var(--fw-500);
   line-height: 100%; /* 16px */
   border: 0;
+  cursor: pointer;
     
 }
 button[type="submit"]:hover {
@@ -964,6 +965,7 @@ button[type="submit"]:hover {
   display: flex;
   align-items: center;
   gap: 5px;
+  cursor: pointer;
 }
 .btnInfo:hover{
   background: transparent;
