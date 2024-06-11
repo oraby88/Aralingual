@@ -148,7 +148,7 @@
       </nav>
     </header>
     <article>
-      <main>
+      <main class="main" onclick="hideDropdown()">
         <img
           src="Aralingual - Update Assets 2024/Website/Contact us/Images/contactUsLeftGlow.png"
           alt=""
@@ -236,31 +236,31 @@
                 <div class="languageDropdown">
                   <div class="options2" onclick="NumberLanguageAppear()">
                     <div class="phoneSelect" data-i18n-key="phoneEN-code">
+                      <!-- <span class="ENCode">
                       <img
                         src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
                         alt=""
-                        
-                      />+1
+                      />+1</span>
                       <i
                         class="fa-solid fa-chevron-down"
                         style="font-size: 12px; padding-top: 5px"
-                      ></i>
+                      ></i> -->
                     </div>
                     <div class="phoneDropdown">
-                      <ul>
-                        <li onclick="changeLang('ltr')">
-                          <a href="#" class="language" data-i18n-key="phoneAR-code">
+                      <ul class="countryCodeList">
+                        <!-- <li onclick="showARCode()" class="AR">
+                          <span class="ARCode" data-i18n-key="phoneAR-code">
                             <img
                               src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
                               alt=""
-                          />+966</a>
+                          />+966</span>
                         </li>
-                        <li onclick="changeLang('rtl')">
-                          <a href="#" class="language" data-i18n-key="phoneCN-code">
+                        <li onclick="showCNCode()">
+                          <span class="CNCode" data-i18n-key="phoneCN-code">
                             <img
                               src="Aralingual - Update Assets 2024/Assets/Icon language/CN.svg"
                               alt=""
-                          />+86</a>
+                          />+86</span>
                         </li>
                         <li onclick="changeLang('rtl')">
                           <a href="#" class="language" data-i18n-key="phoneJA-code">
@@ -303,7 +303,7 @@
                               src="Aralingual - Update Assets 2024/Assets/Icon language/SE.svg"
                               alt=""
                           />+46</a>
-                        </li>
+                        </li> -->
                       </ul>
                     </div>
                   </div>
@@ -322,7 +322,6 @@
                   placeholder="Enter your Message"
                   rows="7"
                   cols="70"
-                  minlength="7"
                 ></textarea>
               </div>
               <div class="checkAgreeContainer">
@@ -398,7 +397,6 @@
             </ul>
             <div class="social-links">
               <a href="#"><img src="Facebook.svg" alt="Facebook" /></a>
-              <a href="#"><img src="Twitter.svg" alt="Twitter" /></a>
               <a href="#"><img src="Aralingual - Update Assets 2024/Website/Home/Icons/Linkedin.svg" alt="Linkedin" /></a>
               <a href="#"><img src="Instagram.svg" alt="Instagram" /></a>
               <a href="#"><img src="new-twitter.svg" alt="new-twitter" /></a>

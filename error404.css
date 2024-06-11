@@ -577,6 +577,7 @@ nav ul li a:focus {
   color: #fff;
   font-weight: var(--fw-500);
   line-height: 100%; /* 16px */
+  cursor: pointer;
 }
 .back-to-home-Btn:hover {
   background: #000;

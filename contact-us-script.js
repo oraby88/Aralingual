@@ -110,30 +110,245 @@ function contactEnglish(direction) {
   localStorage.setItem("language", "en");
   console.log("Contact Us english");
 }
+// function showARCode() {
+//   document.querySelector(
+//     ".phoneSelect"
+//   ).innerHTML = `<img src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg" alt=""/>+966
+//    <i class="fa-solid fa-chevron-down" style="font-size: 12px; padding-top: 5px"></i>`;
+
+//   document.querySelector(".ARCode").innerHTML = `<img
+//                         src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
+//                         alt=""
+
+//                       />+1`;
+// }
+// function showCNCode() {
+//   var target = document.querySelector(".ENCode");
+//   var wrap = document.createElement("span");
+//   wrap.appendChild(target.cloneNode(true));
+//   // alert(wrap.innerHTML);
+//   document.querySelector(".ENCode").classList.add("hideEN showCN");
+//   // document.querySelector(".CNCode").classList.remove("showCN");
+
+//   // document.querySelector(
+//   //   ".phoneSelect"
+//   // ).innerHTML = `<img src="Aralingual - Update Assets 2024/Assets/Icon language/CN.svg" alt=""/>+86
+//   //  <i class="fa-solid fa-chevron-down" style="font-size: 12px; padding-top: 5px"></i>`;
+// }
+
+let countryCode = [
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/EN.svg",
+    countryCode: "+1",
+    dataKey: "phoneEN-code",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/AR.svg",
+    countryCode: "+966",
+    dataKey: "phoneAR-code",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/CN.svg",
+    countryCode: "+86",
+    dataKey: "phoneCN-code",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/JA.svg",
+    countryCode: "+82",
+    dataKey: "phoneJA-code",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/KO.svg",
+    countryCode: "+81",
+    dataKey: "phoneKO-code",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/DE.svg",
+    countryCode: "+49",
+    dataKey: "phoneDE-code",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/FR.svg",
+    countryCode: "+33",
+    dataKey: "phoneFR-code",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/PO.svg",
+    countryCode: "+48",
+    dataKey: "phonePO-code",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/SE.svg",
+    countryCode: "+46",
+    dataKey: "phoneSE-code",
+  },
+];
+
+for (let i = 0; i < countryCode.length; i++) {
+  // let img = document.createElement("img");
+  // img.setAttribute("src", countryCode[i].imgUrl);
+  // img.setAttribute("alt", "country");
+  // let span = document.createElement("span");
+  // span.innerHTML = countryCode[i].countryCode;
+  // let div = document.createElement("div");
+  // div.appendChild(img);
+  // div.appendChild(span);
+  // document.querySelector(".phoneSelect").appendChild(div);
+  // console.log(img);
+  document.querySelector(
+    ".countryCodeList"
+  ).innerHTML += `<li class="AR" onclick="chooseCode(${i})">
+                          <span class="ARCode" data-i18n-key=${countryCode[i].dataKey}><img src="${countryCode[i].imgUrl}" alt="country"> ${countryCode[i].countryCode}
+                          </span></li>`;
+}
+
+document.querySelector(".phoneSelect").innerHTML = `
+                      <span class="ENCode">
+                      <img
+                        src="${countryCode[0].imgUrl}"}"
+                        alt=""
+                      />${countryCode[0].countryCode}</span>
+                      <i
+                        class="fa-solid fa-chevron-down"
+                        style="font-size: 12px; padding-top: 5px"
+                      ></i>`;
+
+function chooseCode(index) {
+  document.querySelector(".phoneSelect").innerHTML = `<span class="ENCode">
+                          <img
+                            src="${countryCode[index].imgUrl}"}"
+                            alt=""
+                          />${countryCode[index].countryCode}</span>
+                          <i
+                            class="fa-solid fa-chevron-down"
+                            style="font-size: 12px; padding-top: 5px"
+                          ></i>`;
+  console.log("index");
+}
+
+const main = document.querySelector(".main");
+window.document.addEventListener("click", () => {
+  dropdown.classList.remove("dropdown__window--active");
+  console.log("hide");
+});
+dropdown.removeEventListener("click", () => {
+  dropdown.classList.remove("dropdown__window--active");
+  console.log("hide");
+});
 
 function NumberLanguageAppear() {
-  document.querySelector(".phoneDropdown").classList.toggle("display");
+  document
+    .querySelector(".phoneDropdown")
+    .classList.toggle("dropdown__window--active");
 }
+
+document.body.MouseEvent("");
+
+// document.body.querySelectorAll("phoneDropdown").forEach((dropdown) => {
+//   dropdown.parentElement.addEventListener(
+//     "change",
+//     (event) => {
+//       if (event.target !== dropdown) {
+//         //Make sure that this event was indeed on the element we wanted to track
+//         return;
+//       }
+//       //Insert whatever other logic here
+//       event.stopImmediatePropagation();
+//     },
+//     { capture: true }
+//   );
+// });
+
+// function toggleDropdown() {
+//   const dropdown = document.querySelector("phoneDropdown");
+//   if (dropdown) {
+//     dropdown.classList.toggle("show");
+//   }
+// }
+
+// function closeDropdown(event) {
+//   const target = event.target;
+//   if (!target.matches("#dropdownButton")) {
+//     // const dropdown = document.getElementsByClassName("dropdown-content");
+//     for (let i = 0; i < dropdown.length; i++) {
+//       const openDropdown = dropdown[i];
+//       if (openDropdown.classList.contains("dropdown__window--active")) {
+//         openDropdown.classList.remove("dropdown__window--active");
+//       }
+//     }
+//   }
+// }
+
+// window.addEventListener("DOMContentLoaded", () => {
+//   const button = document.querySelector("phoneDropdown");
+//   if (button) {
+//     button.addEventListener("click", toggleDropdown);
+//   }
+//   window.addEventListener("click", closeDropdown);
+// });
+
+const option = document.querySelector(".options2");
+const dropdown = document.querySelector(".phoneDropdown");
+
+// document.addEventListener("click", function (event) {
+//   const clickedElement = event.target;
+//   // const languageToggle = document.querySelector(".language-toggle");
+
+//   // Check if the clicked element is not part of the dropdown menu
+//   if (!clickedElement.classList.contains("dropdown__window--active")) {
+//     clickedElement.classList.toggle("dropdown__window--active");
+//     console.log("inside");
+//   }
+//   else if(clickedElement.classList.contains("dropdown__window--active")) {
+//     dropdown.classList.toggle("dropdown__window--active");
+//     console.log("outside");
+//   }
+// });
+
+// document.querySelector(".phoneDropdown").classList.remove("dropdown__window--active");
+// document.querySelector("#services").classList.remove("active");
+
+// option.addEventListener('click', (event) => {
+//   dropdown.classList.toggle('dropdown__window--active');
+// });
+
+// option.addEventListener('blur', (event) => {
+//   dropdown.classList.remove('dropdown__window--active');
+// });
+
+// document.body.addEventListener("click", (event) => {
+//   // dropdown.classList.remove('dropdown__window--active');
+//   if (dropdown.classList.contains("dropdown__window--active")) {
+//     dropdown.classList.remove("dropdown__window--active");
+//   }
+// });
+
+// window.onclick = function(e){
+//   if (!e.target.matches('.options2') &&
+//         dropdown.classList.contains('dropdown__window--active')){
+//       dropdown.classList.remove('dropdown__window--active')
+//  }
+// }
 
 /* i18Next */
 
-function generateJSON() {
-  const elements = document.body.querySelectorAll("*");
-  const translation = {};
+// function generateJSON() {
+//   const elements = document.body.querySelectorAll("*");
+//   const translation = {};
 
-  elements.forEach((element) => {
-    const key = element.getAttribute("data-i18n-key");
-    if (key) {
-      translation[key] = element.textContent.trim();
-    }
-  });
+//   elements.forEach((element) => {
+//     const key = element.getAttribute("data-i18n-key");
+//     if (key) {
+//       translation[key] = element.textContent.trim();
+//     }
+//   });
 
-  // Output the generated JSON to console
-  console.log(JSON.stringify(translation, null, 2));
-}
+//   // Output the generated JSON to console
+//   console.log(JSON.stringify(translation, null, 2));
+// }
 
-// Call the function to generate JSON
-document.addEventListener("DOMContentLoaded", generateJSON);
+// // Call the function to generate JSON
+// document.addEventListener("DOMContentLoaded", generateJSON);
 
 // let dataKey = [];
 // let res;
@@ -189,7 +404,6 @@ function ValidateEmail(input) {
     alert("Valid email address!");
     document.contactForm.email.focus();
     return true;
-
   } else {
     alert("Invalid email address!");
     document.contactForm.email.focus();
@@ -197,14 +411,13 @@ function ValidateEmail(input) {
   }
 }
 
-function mobileNumber(){
-  var Number = document.getElementById('phone').value;
+function mobileNumber() {
+  var Number = document.getElementById("phone").value;
   var IndNum = /^([0|\+[0-9]{1,5})?([7-9][0-9]{9})$/;
-  if(IndNum.test(Number)){
-     return;
- }
- else{
-     $('#errMessage').text('please enter valid mobile number');
-     document.getElementById('profile_telephoneNumber').focus();
- }
+  if (IndNum.test(Number)) {
+    return;
+  } else {
+    $("#errMessage").text("please enter valid mobile number");
+    document.getElementById("profile_telephoneNumber").focus();
+  }
 }
