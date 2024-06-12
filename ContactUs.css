@@ -49,7 +49,7 @@ body {
   position: relative;
   z-index: 99999;
 }
-.main{
+.main {
   z-index: 99;
 }
 section {
@@ -296,36 +296,52 @@ nav ul li a:focus {
   width: 100%;
   list-style-type: none;
 }
-.dropDown,
+.dropDown {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  top: 65%;
+  right: 0%;
+  background-color: black;
+  border-radius: 5px;
+  width: 80px;
+  margin-top: 10px;
+  transition: all 1s ease-in-out;
+  /* justify-content: center; */
+}
+@media screen and (max-width: 1024px) {
+  .dropDown {
+    margin-right: 20px;
+  }
+}
 .phoneDropdown {
   display: none;
+  width: fit-content;
+  top: 42px;
+  right: 0;
+  z-index: 99999;
   position: absolute;
   z-index: 3;
   top: 55%;
   right: 0%;
   background-color: black;
   border-radius: 10px;
-  width: 90px;
+  /* width: 90px; */
   margin-top: 10px;
   transition: all 1s ease-in-out;
-  /* justify-content: center; */
+  left: 0;
+  top: 90%;
 }
-.phoneDropdown {
-  width: fit-content;
-  top: 42px;
-  right: 0;
-  overflow: hidden;
-  display: none;
-  visibility: hidden;
-  z-index: 99999  ;
+.showDropdown {
+  display: flex;
 }
 .phoneDropdown a {
   text-decoration: none;
   color: var(--color-white);
 }
-.phoneDropdown {
-  left: 0;
-}
+
+
+
 .dropDownArabic {
   right: auto;
   left: 0;
@@ -824,26 +840,27 @@ nav ul li a:focus {
   display: block;
   margin-bottom: 5px;
 }
-#phone::-webkit-inner-spin-button, #phone::-webkit-outer-spin-button {
+#phone::-webkit-inner-spin-button,
+#phone::-webkit-outer-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   margin: 0;
 }
-.CNCode , .ARCode , .ENCode{
+.CNCode,
+.ARCode,
+.ENCode {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.hideEN{
+.hideEN {
   display: none;
 }
-.showCN{
+.showCN {
   display: flex;
 }
-
-
 
 .contactForm form input,
 .phoneSelect,
@@ -860,7 +877,7 @@ textarea {
   font-weight: 400;
   /* line-height: 150%; */
 }
-.phoneSelect{
+.phoneSelect {
   z-index: 9999;
 }
 textarea {
@@ -887,6 +904,9 @@ textarea::placeholder,
 .dropdown__window--active {
   display: flex !important;
   visibility: visible !important;
+}
+.phoneDropdown.active .dropdown-content {
+  display: flex;
 }
 
 .languageDropdown {

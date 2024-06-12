@@ -30,12 +30,17 @@ var x = window.matchMedia("(max-width: 900px)");
 function myFunction(x) {
   if (x.matches) {
     // If media query matches
-    document.querySelector(".dropDown").classList.remove("display");
+    document.querySelector(".dropDown").classList.remove("showDropdown");
   }
 }
 x.addEventListener("change", function () {
   myFunction(x);
 });
+
+let langIndex = localStorage.getItem("langIndex")
+  ? localStorage.getItem("langIndex")
+  : 0;
+console.log(localStorage.getItem("langIndex"));
 
 let lang = localStorage.getItem("language");
 console.log("Current Langugae from storage: " + lang);
@@ -52,6 +57,7 @@ onload = function () {
       console.log("choose english " + lang);
     }
   }
+  localStorage.setItem("langIndex", langIndex);
 };
 
 function browserLanguage() {
@@ -68,13 +74,11 @@ function browserLanguage() {
 
 function contactArabic(direction) {
   document.body.style.direction = direction;
-  document.querySelector(".showArabicLanguageIcon").classList.add("display");
-  document.querySelector(".englishIcone").classList.add("display");
-  document.querySelector(".arabicIcon").classList.add("nonDisplay");
+  // document.querySelector(".showArabicLanguageIcon").classList.add("display");
+  // document.querySelector(".englishIcone").classList.add("display");
+  // document.querySelector(".arabicIcon").classList.add("nonDisplay");
   document.querySelector(".dropDown").classList.add("dropDownArabic");
-  document
-    .querySelector(".showEnglishLanguageIcon")
-    .classList.add("nonDisplay");
+  // document.querySelector(".showEnglishLanguageIcon").classList.add("nonDisplay");
   document.querySelector(".dropDown").classList.remove("display");
 
   document.getElementById("btn").style.float = "left";
@@ -90,13 +94,11 @@ function contactArabic(direction) {
 
 function contactEnglish(direction) {
   document.body.style.direction = direction;
-  document.querySelector(".showArabicLanguageIcon").classList.remove("display");
-  document.querySelector(".englishIcone").classList.remove("display");
-  document.querySelector(".arabicIcon").classList.remove("nonDisplay");
+  // document.querySelector(".showArabicLanguageIcon").classList.remove("display");
+  // document.querySelector(".englishIcone").classList.remove("display");
+  // document.querySelector(".arabicIcon").classList.remove("nonDisplay");
   document.querySelector(".dropDown").classList.remove("dropDownArabic");
-  document
-    .querySelector(".showEnglishLanguageIcon")
-    .classList.remove("nonDisplay");
+  // document.querySelector(".showEnglishLanguageIcon").classList.remove("nonDisplay");
   document.querySelector(".dropDown").classList.remove("display");
   document.getElementById("btn").style.float = "right";
   document
@@ -110,6 +112,116 @@ function contactEnglish(direction) {
   localStorage.setItem("language", "en");
   console.log("Contact Us english");
 }
+
+console.log(localStorage.getItem("langIndex"));
+
+let countrysList = [
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/EN.svg",
+    countryWord: "EN",
+    dataKey: "phoneEN-code",
+    function: "contactEnglish('ltr')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/AR.svg",
+    countryWord: "AR",
+    dataKey: "phoneAR-code",
+    function: "contactArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/CN.svg",
+    countryWord: "CN",
+    dataKey: "phoneCN-code",
+    function: "contactArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/JA.svg",
+    countryWord: "JA",
+    dataKey: "phoneJA-code",
+    function: "contactArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/KO.svg",
+    countryWord: "KO",
+    dataKey: "phoneKO-code",
+    function: "contactArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/DE.svg",
+    countryWord: "DE",
+    dataKey: "phoneDE-code",
+    function: "contactArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/FR.svg",
+    countryWord: "FR",
+    dataKey: "phoneFR-code",
+    function: "contactArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/PO.svg",
+    countryWord: "PO",
+    dataKey: "phonePO-code",
+    function: "contactArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/SE.svg",
+    countryWord: "SE",
+    dataKey: "phoneSE-code",
+    function: "contactArabic('rtl')",
+  },
+];
+
+for (let i = 0; i < countrysList.length; i++) {
+  document.querySelector(
+    ".countrysWordList"
+  ).innerHTML += `<li onclick="[${countrysList[i].function}, chooseLang(${i})]" class="arabicIcon">
+              <a href="#" class="language" data-i18n-key="${countrysList[i].dataKey}"
+                >${countrysList[i].countryWord}
+                <img
+                  src="${countrysList[i].imgUrl}"
+                  alt=""
+              /></a>
+            </li>`;
+}
+let index = localStorage.getItem("langIndex")
+  ? localStorage.getItem("langIndex")
+  : 0;
+
+document.querySelector(
+  ".select"
+).innerHTML = `<div class="showEnglishLanguageIcon">
+                ${countrysList[index].countryWord}
+                <img
+                  src="${countrysList[index].imgUrl}"
+                  alt=""
+                />&nbsp;
+                <i
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 12px; padding-top: 5px"
+                ></i>
+              </div>`;
+
+function chooseLang(index) {
+  document.querySelector(
+    ".select"
+  ).innerHTML = `<div class="showEnglishLanguageIcon">
+              ${countrysList[index].countryWord}  
+                <img
+                  src="${countrysList[index].imgUrl}"
+                  alt=""
+                />
+                <i
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 12px; padding-top: 5px"
+                ></i>
+              </div>`;
+  langIndex = index;
+  localStorage.setItem("langIndex", langIndex);
+
+  console.log("selected");
+}
+
 // function showARCode() {
 //   document.querySelector(
 //     ".phoneSelect"
@@ -226,23 +338,37 @@ function chooseCode(index) {
   console.log("index");
 }
 
-const main = document.querySelector(".main");
-window.document.addEventListener("click", () => {
-  dropdown.classList.remove("dropdown__window--active");
-  console.log("hide");
-});
-dropdown.removeEventListener("click", () => {
-  dropdown.classList.remove("dropdown__window--active");
-  console.log("hide");
+// function NumberLanguageAppear() {
+//   document.querySelector(".phoneDropdown").classList.toggle("dropdown__window--active");
+// }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var dropdown = document.getElementById("dropdown");
+  var dropdownContent = document.getElementById("dropdownContent");
+
+  dropdown.addEventListener("click", function (event) {
+    dropdownContent.classList.toggle("showDropdown");
+    event.stopPropagation();
+  });
+
+  document.addEventListener("click", function () {
+    dropdownContent.classList.remove("showDropdown");
+  });
 });
 
-function NumberLanguageAppear() {
-  document
-    .querySelector(".phoneDropdown")
-    .classList.toggle("dropdown__window--active");
-}
+document.addEventListener("DOMContentLoaded", function () {
+  var dropdown = document.getElementById("dropdown1");
+  var dropdownContent = document.getElementById("dropdownContent1");
 
-document.body.MouseEvent("");
+  dropdown.addEventListener("click", function (event) {
+    dropdownContent.classList.toggle("showDropdown");
+    event.stopPropagation();
+  });
+
+  document.addEventListener("click", function () {
+    dropdownContent.classList.remove("showDropdown");
+  });
+});
 
 // document.body.querySelectorAll("phoneDropdown").forEach((dropdown) => {
 //   dropdown.parentElement.addEventListener(
@@ -286,9 +412,6 @@ document.body.MouseEvent("");
 //   }
 //   window.addEventListener("click", closeDropdown);
 // });
-
-const option = document.querySelector(".options2");
-const dropdown = document.querySelector(".phoneDropdown");
 
 // document.addEventListener("click", function (event) {
 //   const clickedElement = event.target;

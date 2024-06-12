@@ -44,99 +44,14 @@
           <li><a href="FAQs.html">FAQ</a></li>
           <li><a href="Blog.html" class="active">BLOG</a></li>
           <li><a href="contactUs.html">CONTACT US</a></li>
-          <li class="options" onclick="appear()">
-            <div class="select">
-              <div class="showEnglishLanguageIcon">
-                EN
-                <img
-                  src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
-                  alt=""
-                />&nbsp;
-                <i
-                  class="fa-solid fa-chevron-down"
-                  style="font-size: 12px; padding-top: 5px"
-                ></i>
-              </div>
-              <div class="showArabicLanguageIcon">
-                AR
-                <img
-                  src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
-                  alt=""
-                />
-                <i
-                  class="fa-solid fa-chevron-down"
-                  style="font-size: 12px; padding-top: 5px"
-                ></i>
-              </div>
+          <li class="options dropdown1" id="dropdown1">
+            <div class="select dropbtn">
+              
             </div>
           </li>
         </ul>
-        <div class="dropDown">
-          <ul>
-            <li onclick="blogDetailsArabic('rtl')" class="arabicIcon">
-              <a href="#" class="language"
-                >AR
-                <img
-                  src="Aralingual - Update Assets 2024/Assets/Icon language/AR.svg"
-                  alt=""
-              /></a>
-            </li>
-            <li onclick="blogDetailsEnglish('ltr')" class="englishIcone">
-              <a href="#" class="language"
-                >EN
-                <img
-                  src="Aralingual - Update Assets 2024/Assets/Icon language/EN.svg"
-                  alt=""
-              /></a>
-            </li>
-            <li onclick="changeLang('rtl')">
-              <a href="#" class="language"
-                >JA
-                <img
-                  src="Aralingual - Update Assets 2024/Assets/Icon language/JA.svg"
-                  alt=""
-              /></a>
-            </li>
-            <li onclick="changeLang('rtl')">
-              <a href="#" class="language"
-                >KO
-                <img
-                  src="Aralingual - Update Assets 2024/Assets/Icon language/KO.svg"
-                  alt=""
-              /></a>
-            </li>
-            <li onclick="changeLang('rtl')">
-              <a href="#" class="language"
-                >DE
-                <img
-                  src="Aralingual - Update Assets 2024/Assets/Icon language/DE.svg"
-                  alt=""
-              /></a>
-            </li>
-            <li onclick="changeLang('rtl')">
-              <a href="#" class="language"
-                >FR
-                <img
-                  src="Aralingual - Update Assets 2024/Assets/Icon language/FR.svg"
-                  alt=""
-              /></a>
-            </li>
-            <li onclick="changeLang('rtl')">
-              <a href="#" class="language"
-                >PO
-                <img
-                  src="Aralingual - Update Assets 2024/Assets/Icon language/PO.svg"
-                  alt=""
-              /></a>
-            </li>
-            <li onclick="changeLang('rtl')">
-              <a href="#" class="language"
-                >SE
-                <img
-                  src="Aralingual - Update Assets 2024/Assets/Icon language/SE.svg"
-                  alt=""
-              /></a>
-            </li>
+        <div class="dropDown dropdown-content" id="dropdownContent1">
+          <ul class="countrysWordList">
           </ul>
         </div>
         <div class="humbrger" id="humbrger" onclick="show()">
@@ -489,7 +404,7 @@
                     What Are The Games That Thrive In The Arab World?
                   </p>
                   <p data-i18n-key="tableOfContent-question4">
-                    What Are The Difficulties Present In The Arabic Market?
+                    What Are The Difficulties Present In The Arabic Marke t?
                   </p>
                   <p data-i18n-key="tableOfContent-question5">
                     What Are The Essentials Of Game Localization And Game

@@ -94,7 +94,7 @@ article {
   padding-top: 30px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 900px) {
   section {
     padding: 0 20px;
   }
@@ -290,6 +290,9 @@ nav ul li a:focus {
 .dropDownArabic {
   right: auto;
   left: 0;
+}
+.showDropdown {
+  display: flex;
 }
 
 .mini-nav-dropDown {

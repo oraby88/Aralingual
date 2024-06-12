@@ -276,18 +276,26 @@ nav ul li a:focus {
 .dropDown {
   display: none;
   position: absolute;
-  z-index: 1;
-  top: 55%;
-  right: 0;
+  z-index: 3;
+  top: 65%;
+  right: 0%;
   background-color: black;
-  border-radius: 10px;
-  width: 90px;
+  border-radius: 5px;
+  width: 80px;
   margin-top: 10px;
   transition: all 1s ease-in-out;
-  justify-content: center;
+  /* justify-content: center; */
+}
+/* @media screen and (max-width: 1024px) {
+  .dropDown {
+    margin-right: 20px;
+  }
+} */
+.showDropdown {
+  display: flex;
 }
 .dropDownArabic {
-  display: none;
+  /* display: none; */
   right: auto;
   left: 0;
 }
@@ -691,10 +699,9 @@ nav ul li a:focus {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 42px;
-  font-weight: var(--fw-700);
-  line-height: 52px;
+  font-weight: 700;
 }
+
 .whyTranslate p {
   color: var(--Neutral-4, #c5c5c5);
   text-align: center;
@@ -882,9 +889,7 @@ nav ul li a:focus {
   .whyAraContainer h3 {
     font-size: 28px !important;
   }
-  .specialWord {
-    font-size: 22px !important;
-  }
+  
 }
 @media (max-width: 400px) {
   .cardImgContainer img {
@@ -1109,10 +1114,7 @@ nav ul li a:focus {
   .whyAraContainer h3 {
     font-size: 28px !important;
   }
-  .specialWord {
-    font-size: 22px !important;
-    font-weight: var(--fw-700);
-  }
+  
   .whyAraBG {
     /* Add the blur effect */
     filter: drop-shadow(200px);

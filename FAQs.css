@@ -304,6 +304,10 @@ backdrop-filter: blur(22.5px);
   left: 0;
 }
 
+.showDropdown {
+  display: flex;
+}
+
 .mini-nav-dropDown {
   display: none;
   margin-left: 100px;

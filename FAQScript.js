@@ -34,12 +34,15 @@ var x = window.matchMedia("(max-width: 900px)");
 function myFunction(x) {
   if (x.matches) {
     // If media query matches
-    document.querySelector(".dropDown").classList.remove("display");
+    document.querySelector(".dropDown").classList.remove("showDropdown");
   }
 }
 x.addEventListener("change", function () {
   myFunction(x);
 });
+
+let langInex =  localStorage.getItem("langIndex") ? localStorage.getItem("langIndex") : 0;
+console.log(localStorage.getItem("langIndex"));
 
 let lang = localStorage.getItem("language");
 console.log("Current Langugae from storage: " + lang);
@@ -56,6 +59,7 @@ onload = function () {
       console.log("choose english " + lang);
     }
   }
+  localStorage.setItem("langIndex", langInex);
 };
 
 function browserLanguage() {
@@ -75,12 +79,10 @@ function FAQArabic(direction) {
   // console.log("aviooo");
   document.querySelector(".dropDown").classList.remove("display");
   document.querySelector(".dropDown").classList.add("dropDownArabic");
-  document.querySelector(".showArabicLanguageIcon").classList.add("display");
-  document.querySelector(".englishIcone").classList.add("display");
-  document.querySelector(".arabicIcon").classList.add("nonDisplay");
-  document
-    .querySelector(".showEnglishLanguageIcon")
-    .classList.add("nonDisplay");
+  // document.querySelector(".showArabicLanguageIcon").classList.add("display");
+  // document.querySelector(".englishIcone").classList.add("display");
+  // document.querySelector(".arabicIcon").classList.add("nonDisplay");
+  // document.querySelector(".showEnglishLanguageIcon").classList.add("nonDisplay");
   document.querySelector(".bar2").classList.add("bar2Arabic");
   console.log("FAQ arabic");
   hide();
@@ -92,13 +94,11 @@ function FAQArabic(direction) {
 
 function FAQEnglish(direction) {
   document.body.style.direction = direction;
-  document.querySelector(".showArabicLanguageIcon").classList.remove("display");
-  document.querySelector(".englishIcone").classList.remove("display");
-  document.querySelector(".arabicIcon").classList.remove("nonDisplay");
+  // document.querySelector(".showArabicLanguageIcon").classList.remove("display");
+  // document.querySelector(".englishIcone").classList.remove("display");
+  // document.querySelector(".arabicIcon").classList.remove("nonDisplay");
   document.querySelector(".dropDown").classList.remove("dropDownArabic");
-  document
-    .querySelector(".showEnglishLanguageIcon")
-    .classList.remove("nonDisplay");
+  // document.querySelector(".showEnglishLanguageIcon").classList.remove("nonDisplay");
   document.querySelector(".dropDown").classList.remove("display");
   document.querySelector(".bar2").classList.remove("bar2Arabic");
   hide();
@@ -149,6 +149,129 @@ function newNonDisplay(parentId) {
 function NumberLanguageAppear() {
   document.querySelector(".phoneDropdown").classList.toggle("display");
 }
+
+
+console.log(localStorage.getItem("langIndex"));
+
+let countrysList = [
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/EN.svg",
+    countryWord: "EN",
+    dataKey: "phoneEN-code",  
+    function: "FAQEnglish('ltr')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/AR.svg",
+    countryWord: "AR",
+    dataKey: "phoneAR-code",
+    function: "FAQArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/CN.svg",
+    countryWord: "CN",
+    dataKey: "phoneCN-code",
+    function: "FAQArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/JA.svg",
+    countryWord: "JA",
+    dataKey: "phoneJA-code",
+    function: "FAQArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/KO.svg",
+    countryWord: "KO",
+    dataKey: "phoneKO-code",
+    function: "FAQArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/DE.svg",
+    countryWord: "DE",
+    dataKey: "phoneDE-code",
+    function: "FAQArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/FR.svg",
+    countryWord: "FR",
+    dataKey: "phoneFR-code",
+    function: "FAQArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/PO.svg",
+    countryWord: "PO",
+    dataKey: "phonePO-code",
+    function: "FAQArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/SE.svg",
+    countryWord: "SE",
+    dataKey: "phoneSE-code",
+    function: "FAQArabic('rtl')",
+  },
+];
+
+for (let i = 0; i < countrysList.length; i++) {
+  document.querySelector(
+    ".countrysWordList"
+  ).innerHTML += `<li onclick="[${countrysList[i].function}, chooseCode(${i})]" class="arabicIcon">
+              <a href="#" class="language" data-i18n-key="${countrysList[i].dataKey}"
+                >${countrysList[i].countryWord}
+                <img
+                  src="${countrysList[i].imgUrl}"
+                  alt=""
+              /></a>
+            </li>`;
+}
+let index = localStorage.getItem("langIndex") ? localStorage.getItem("langIndex") : 0;
+document.querySelector(
+  ".select"
+).innerHTML = `<div class="showEnglishLanguageIcon">
+                ${countrysList[index].countryWord}
+                <img
+                  src="${countrysList[index].imgUrl}"
+                  alt=""
+                />&nbsp;
+                <i
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 12px; padding-top: 5px"
+                ></i>
+              </div>`;
+
+function chooseCode(index) {
+  document.querySelector(
+    ".select"
+  ).innerHTML = `<div class="showEnglishLanguageIcon">
+              ${countrysList[index].countryWord}
+                <img
+                  src="${countrysList[index].imgUrl}"
+                  alt=""
+                />
+                <i
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 12px; padding-top: 5px"
+                ></i>
+              </div>`;
+  langInex = index;
+  localStorage.setItem("langIndex", langInex);
+
+  console.log("selected");
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  var dropdown = document.getElementById("dropdown1");
+  var dropdownContent = document.getElementById("dropdownContent1");
+
+  dropdown.addEventListener("click", function (event) {
+    dropdownContent.classList.toggle("showDropdown");
+    event.stopPropagation();
+  });
+
+  document.addEventListener("click", function () {
+    dropdownContent.classList.remove("showDropdown");
+  });
+});
+
 
 
 

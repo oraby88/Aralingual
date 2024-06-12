@@ -279,18 +279,22 @@ nav ul li a:focus {
   display: none;
   position: absolute;
   z-index: 3;
-  top: 55%;
+  top: 65%;
   right: 0%;
   background-color: black;
-  border-radius: 10px;
-  width: 90px;
+  border-radius: 5px;
+  width: 80px;
   margin-top: 10px;
   transition: all 1s ease-in-out;
-  justify-content: center;
+  /* justify-content: center; */
 }
+
 .dropDownArabic {
   right: auto;
   left: 0;
+}
+.showDropdown {
+  display: flex;
 }
 
 .mini-nav-dropDown {
@@ -425,6 +429,7 @@ nav ul li a:focus {
     left: 16%;
     width: 70%;
     z-index: 100 !important;
+    justify-content: center;
   }
   .dropDown ul li a {
     display: flex;

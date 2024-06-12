@@ -287,6 +287,9 @@
     right: auto;
     left: 0;
   }
+  .showDropdown {
+    display: flex;
+  }
   
   .mini-nav-dropDown {
     display: none;
