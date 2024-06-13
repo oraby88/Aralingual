@@ -1,7 +1,7 @@
 const pageParams = new URLSearchParams(window.location.search);
 let pageNumber = pageParams.get("page") ? pageParams.get("page") : 1;
 console.log(pageNumber);
-const PAGE_SIZE = 3;
+const PAGE_SIZE = 9;
 
 function appear() {
   document.querySelector(".dropDown").classList.toggle("display");
@@ -42,8 +42,9 @@ x.addEventListener("change", function () {
   myFunction(x);
 });
 
-
-let langInex =  localStorage.getItem("langIndex") ? localStorage.getItem("langIndex") : 0;
+let langInex = localStorage.getItem("langIndex")
+  ? localStorage.getItem("langIndex")
+  : 0;
 console.log(localStorage.getItem("langIndex"));
 
 let lang = localStorage.getItem("language");
@@ -194,7 +195,7 @@ function blogEnglish(direction) {
   console.log("blog english");
 }
 
-// i18Next 
+// i18Next
 // function generateJSON() {
 //   const elements = document.body.querySelectorAll("*");
 //   const translation = {};
@@ -240,6 +241,7 @@ fetch("http://localhost:1337/api/blogs/1/?populate[0]=blogimage")
     console.warn("Something went wrong.", err);
   });
 
+let cardsContainer = [];
 function displayCardContainer() {
   let cards = document.getElementById("blog-card-container");
   for (let i = 0; i < cardsContainer.data.length; i++) {
@@ -292,7 +294,6 @@ function displayCardContainer() {
   console.log(cardsContainer);
 }
 
-let cardsContainer = [];
 function getBlogs() {
   fetch(
     `http://localhost:1337/api/card1s?populate=card1Img&pagination[page]=${pageNumber}&pagination[pageSize]=${PAGE_SIZE}`
@@ -330,9 +331,7 @@ function getBlogs() {
       console.warn("Something went wrong.", err);
     });
 }
-
 getBlogs();
-
 
 
 console.log(localStorage.getItem("langIndex"));
@@ -406,7 +405,9 @@ for (let i = 0; i < countrysList.length; i++) {
               /></a>
             </li>`;
 }
-let index = localStorage.getItem("langIndex") ? localStorage.getItem("langIndex") : 0;
+let index = localStorage.getItem("langIndex")
+  ? localStorage.getItem("langIndex")
+  : 0;
 document.querySelector(
   ".select"
 ).innerHTML = `<div class="showEnglishLanguageIcon">
@@ -441,7 +442,6 @@ function chooseCode(index) {
   console.log("selected");
 }
 
-
 document.addEventListener("DOMContentLoaded", function () {
   var dropdown = document.getElementById("dropdown1");
   var dropdownContent = document.getElementById("dropdownContent1");
@@ -455,7 +455,3 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdownContent.classList.remove("showDropdown");
   });
 });
-
-
-
-

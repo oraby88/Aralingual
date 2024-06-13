@@ -37,7 +37,9 @@ x.addEventListener("change", function () {
   myFunction(x);
 });
 
-let langInex =  localStorage.getItem("langIndex") ? localStorage.getItem("langIndex") : 0;
+let langInex = localStorage.getItem("langIndex")
+  ? localStorage.getItem("langIndex")
+  : 0;
 console.log(localStorage.getItem("langIndex"));
 
 let lang = localStorage.getItem("language");
@@ -96,7 +98,7 @@ function blogDetailsEnglish(direction) {
   // document.querySelector(".showEnglishLanguageIcon").classList.remove("nonDisplay");
   document.querySelector(".dropDown").classList.remove("display");
   document.querySelector(".bar2").classList.remove("bar2Arabic");
-  // document.querySelector(".tableOfContentList").classList.remove("tableOfContentListArabic");  
+  // document.querySelector(".tableOfContentList").classList.remove("tableOfContentListArabic");
 
   hide();
 
@@ -124,6 +126,88 @@ function blogDetailsEnglish(direction) {
 
 // // Call the function to generate JSON
 // document.addEventListener("DOMContentLoaded", generateJSON);
+
+let blogCardsArray = [];
+
+fetch(
+  `http://localhost:1337/api/card1s?populate=card1Img&sort=publishedAt:DESC`
+)
+  .then(function (response) {
+    // The API call was successful!
+    return response.json();
+  })
+  .then(function (data) {
+    // This is the JSON from our response
+    let res = data;
+    // title = res.data.attributes.title;
+    blogCardsArray = res;
+    console.log(blogCardsArray);
+    // document.getElementById("mainCard-heading").innerHTML = `${title}`;
+    // document.getElementById(
+    //   "mainCard-Category-type"
+    // ).innerHTML = `${res.data.attributes.Category}`;
+    // document.getElementById(
+    //   "mainCard-paragraph"
+    // ).innerHTML = `${res.data.attributes.description}`;
+    // document.getElementById(
+    //   "mainCard-date"
+    // ).innerHTML = `${res.data.attributes.PublicationDate}`;
+    // document.getElementById(
+    //   "mainCard-author"
+    // ).innerHTML = `${res.data.attributes.author}`;
+    console.log(
+      blogCardsArray.data[0].attributes.card1Img.data[0].attributes.url
+    );
+    displayCardContainer();
+  })
+  .catch(function (err) {
+    // There was an error
+    console.warn("Something went wrong.", err);
+  });
+
+function displayCardContainer() {
+  let cards = document.querySelector(".blogCardsContainer");
+  for (let i = 0; i < 4; i++) {
+    cards.innerHTML += `<div class="cardContainer">
+                      <div class="Card">
+                        <div class="serviceCard">
+                          <div class="serviceCardContent">
+                            <div class="CardsImge-holder">
+                              <img
+                                src="http://localhost:1337${blogCardsArray.data[i].attributes.card1Img
+                                  .data[0].attributes.url}"
+                                alt=""
+                                class="img"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <img src="Frame.svg" alt="" class="frame2" />
+                      </div>
+                      <div class="cardsWordsContainer">
+                        <h4 data-i18n-key="latest-blog1-heading">
+                          ${blogCardsArray.data[i].attributes.title}
+                        </h4>
+                        <p data-i18n-key="latest-blog1-date-time">
+                          ${blogCardsArray.data[i].attributes.publishedAt}
+                        </p>
+                        <div class="socialComunicationContainer">
+                          <div class="btnContainer">
+                            <button
+                              class="btn"
+                              data-i18n-key="latest-blog1-readmore"
+                            >
+                              Read More
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr class="hr" />
+                    `;
+  }
+}
+displayCardContainer();
 
 fetch("http://localhost:1337/api/blog-details/?populate[0]=blogDetailsImage")
   .then((response) => {
@@ -165,136 +249,140 @@ fetch("http://localhost:1337/api/blog-details/?populate[0]=blogDetailsImage")
     // <li>${data.data[0].attributes.listItem}<p>${res.description5}</p></li>
     // </ul>`;
 
-    document.querySelector(".left-side").innerHTML = `${data.data[0].attributes.descriptions}`
-    document.querySelector(".tableContentDiv").innerHTML = `${data.data[0].attributes.TableOfContent}`
+    document.querySelector(
+      ".left-side"
+    ).innerHTML = `${data.data[0].attributes.descriptions}`;
+    document.querySelector(
+      ".tableContentDiv"
+    ).innerHTML = `${data.data[0].attributes.TableOfContent}`;
   })
   .catch((error) => {
     console.log(error);
   });
 
+lconsole.log(localStorage.getItem("langIndex"));
 
-  console.log(localStorage.getItem("langIndex"));
 
-  let countrysList = [
-    {
-      imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/EN.svg",
-      countryWord: "EN",
-      dataKey: "phoneEN-code",
-      function: "blogDetailsEnglish('ltr')",
-    },
-    {
-      imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/AR.svg",
-      countryWord: "AR",
-      dataKey: "phoneAR-code",
-      function: "blogDetailsArabic('rtl')",
-    },
-    {
-      imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/CN.svg",
-      countryWord: "CN",
-      dataKey: "phoneCN-code",
-      function: "blogDetailsArabic('rtl')",
-    },
-    {
-      imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/JA.svg",
-      countryWord: "JA",
-      dataKey: "phoneJA-code",
-      function: "blogDetailsArabic('rtl')",
-    },
-    {
-      imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/KO.svg",
-      countryWord: "KO",
-      dataKey: "phoneKO-code",
-      function: "blogDetailsArabic('rtl')",
-    },
-    {
-      imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/DE.svg",
-      countryWord: "DE",
-      dataKey: "phoneDE-code",
-      function: "blogDetailsArabic('rtl')",
-    },
-    {
-      imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/FR.svg",
-      countryWord: "FR",
-      dataKey: "phoneFR-code",
-      function: "blogDetailsArabic('rtl')",
-    },
-    {
-      imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/PO.svg",
-      countryWord: "PO",
-      dataKey: "phonePO-code",
-      function: "blogDetailsArabic('rtl')",
-    },
-    {
-      imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/SE.svg",
-      countryWord: "SE",
-      dataKey: "phoneSE-code",
-      function: "blogDetailsArabic('rtl')",
-    },
-  ];
-  
-  for (let i = 0; i < countrysList.length; i++) {
-    document.querySelector(
-      ".countrysWordList"
-    ).innerHTML += `<li onclick="[${countrysList[i].function}, chooseCode(${i})]" class="arabicIcon">
-                <a href="#" class="language" data-i18n-key="${countrysList[i].dataKey}"
-                  >${countrysList[i].countryWord}
-                  <img
-                    src="${countrysList[i].imgUrl}"
-                    alt=""
-                /></a>
-              </li>`;
-  }
-  let index = localStorage.getItem("langIndex") ? localStorage.getItem("langIndex") : 0;
+let countrysList = [
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/EN.svg",
+    countryWord: "EN",
+    dataKey: "phoneEN-code",
+    function: "blogDetailsEnglish('ltr')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/AR.svg",
+    countryWord: "AR",
+    dataKey: "phoneAR-code",
+    function: "blogDetailsArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/CN.svg",
+    countryWord: "CN",
+    dataKey: "phoneCN-code",
+    function: "blogDetailsArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/JA.svg",
+    countryWord: "JA",
+    dataKey: "phoneJA-code",
+    function: "blogDetailsArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/KO.svg",
+    countryWord: "KO",
+    dataKey: "phoneKO-code",
+    function: "blogDetailsArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/DE.svg",
+    countryWord: "DE",
+    dataKey: "phoneDE-code",
+    function: "blogDetailsArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/FR.svg",
+    countryWord: "FR",
+    dataKey: "phoneFR-code",
+    function: "blogDetailsArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/PO.svg",
+    countryWord: "PO",
+    dataKey: "phonePO-code",
+    function: "blogDetailsArabic('rtl')",
+  },
+  {
+    imgUrl: "Aralingual - Update Assets 2024/Assets/Icon language/SE.svg",
+    countryWord: "SE",
+    dataKey: "phoneSE-code",
+    function: "blogDetailsArabic('rtl')",
+  },
+];
+
+for (let i = 0; i < countrysList.length; i++) {
+  document.querySelector(
+    ".countrysWordList"
+  ).innerHTML += `<li onclick="[${countrysList[i].function}, chooseCode(${i})]" class="arabicIcon">
+              <a href="#" class="language" data-i18n-key="${countrysList[i].dataKey}"
+                >${countrysList[i].countryWord}
+                <img
+                  src="${countrysList[i].imgUrl}"
+                  alt=""
+              /></a>
+            </li>`;
+}
+let index = localStorage.getItem("langIndex")
+  ? localStorage.getItem("langIndex")
+  : 0;
+
+document.querySelector(
+  ".select"
+).innerHTML = `<div class="showEnglishLanguageIcon">
+                ${countrysList[0].countryWord}
+                <img
+                  src="${countrysList[0].imgUrl}"
+                  alt=""
+                />&nbsp;
+                <i
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 12px; padding-top: 5px"
+                ></i>
+              </div>`;
+
+function chooseCode(index) {
   document.querySelector(
     ".select"
   ).innerHTML = `<div class="showEnglishLanguageIcon">
-                  ${countrysList[index].countryWord}
-                  <img
-                    src="${countrysList[index].imgUrl}"
-                    alt=""
-                  />&nbsp;
-                  <i
-                    class="fa-solid fa-chevron-down"
-                    style="font-size: 12px; padding-top: 5px"
-                  ></i>
-                </div>`;
-  
-  function chooseCode(index) {
-    document.querySelector(
-      ".select"
-    ).innerHTML = `<div class="showEnglishLanguageIcon">
-                ${countrysList[index].countryWord}
-                  <img
-                    src="${countrysList[index].imgUrl}"
-                    alt=""
-                  />
-                  <i
-                    class="fa-solid fa-chevron-down"
-                    style="font-size: 12px; padding-top: 5px"
-                  ></i>
-                </div>`;
-    langInex = index;
-    localStorage.setItem("langIndex", langInex);
-  
-    console.log("selected");
-  }
-  
-  
-  document.addEventListener("DOMContentLoaded", function () {
-    var dropdown = document.getElementById("dropdown1");
-    var dropdownContent = document.getElementById("dropdownContent1");
-  
-    dropdown.addEventListener("click", function (event) {
-      dropdownContent.classList.toggle("showDropdown");
-      event.stopPropagation();
-    });
-  
-    document.addEventListener("click", function () {
-      dropdownContent.classList.remove("showDropdown");
-    });
-  });
-  
+              ${countrysList[index].countryWord}
+                <img
+                  src="${countrysList[index].imgUrl}"
+                  alt=""
+                />
+                <i
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 12px; padding-top: 5px"
+                ></i>
+              </div>`;
+  langInex = index;
+  localStorage.setItem("langIndex", langInex);
 
+  console.log("selected");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  var dropdown = document.getElementById("dropdown1");
+  var dropdownContent = document.getElementById("dropdownContent1");
+
+  dropdown.addEventListener("click", function (event) {
+    dropdownContent.classList.toggle("showDropdown");
+    event.stopPropagation();
+  });
+
+  document.addEventListener("click", function () {
+    dropdownContent.classList.remove("showDropdown");
+  });
+});
 
 // let dataKey = [];
 // let res;

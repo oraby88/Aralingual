@@ -94,7 +94,7 @@ article {
   padding-top: 30px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 900px) {
   section {
     padding: 0 20px;
   }
@@ -148,6 +148,11 @@ nav {
   width: 50%;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width:1024px) {
+  .nav-list{
+    width: 74%;
+  }
 }
 /* .nav-list li{
     background-color: #ffffff33;
@@ -1160,7 +1165,7 @@ nav ul li a:focus {
     padding: 0 100px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 900px) {
   .footer-content {
     padding: 0 20px;
   }
@@ -1239,7 +1244,7 @@ hr {
   }
   .footer-left ul {
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-around; 
   }
 }
 @media screen and (max-width: 600px) {
